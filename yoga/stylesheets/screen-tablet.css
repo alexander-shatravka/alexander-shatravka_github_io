@@ -1,0 +1,176 @@
+@media screen and (max-width: 1023px){
+    #wrapper {
+        max-width: 768px;
+        margin: 0 auto;
+    }
+
+    .container {
+        max-width: 690px;
+        margin: 0 auto;
+        min-width: 690px;
+    }
+
+    .form-block form {
+        margin-left: 3%;
+        margin-top: 100px;
+    }
+
+    .form-block h1{
+        font-size: 32px;
+        line-height: 50px;
+        padding-right: 0;
+    }
+    .form-block h4{
+        font-size: 32px;
+        line-height: 40px;
+        width: 80%;
+        margin-top: 10px;
+    }
+
+
+    .our-classes > .container > span {
+        margin-bottom: 40px;
+    }
+
+    .class{
+        width: 47%;
+        margin-right: 2%;
+    }
+
+
+    .class .descr{
+        margin-top: 0;
+    }
+
+    .class .descr h6{
+        margin-bottom: 20px;
+    }
+
+    .gallery a{
+        display: inline-block;
+        overflow: hidden;
+        width: 33%;
+        height: 240px;
+        margin: 0;
+    }
+    .gallery a:before {
+        width: 33%;
+        height: 240px;
+    }
+
+    .gallery img{
+        height: 240px;
+        width: 300px;
+        margin-left: -20px
+    }
+    .about-text {
+        width: 100%;
+    }
+    .slider-container {
+        position: relative;
+        display: block;
+        float: right;
+        width: 80%;
+        margin-top: 40px;
+        height: 250px;
+        border-bottom: 10px solid #F1F1F1;
+        border-right: 10px solid #F1F1F1;
+        border-radius: 20px;
+    }
+
+    .mySlides{
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .mySlides img{
+        height: 300px;
+    }
+
+    .features-wrapper {
+        margin: 70px auto;
+    }
+
+    .feature{
+        width: 33%;
+        height: 270px;
+    }
+    .feature:nth-child(7){
+        margin-left: 15%;
+    }
+
+    .price .cost {
+        font-size: 40px;
+        margin-left: 0;
+    }
+
+    .price .dollar{
+        top: 0;
+        font-size: 25px;
+    }
+
+    .price .per{
+        font-size: 15px;
+    }
+
+    .product ul{
+        margin-top: 60px;
+        width: 86%;
+        margin-left: 6%;
+    }
+
+    .product .buy{
+        left: 10%;
+    }
+
+    .product li{
+        margin-top: 30px;
+        font-size: 15px;
+    }
+
+
+    .quote {
+        margin-top: 40px;
+        width: 50%;
+    }
+
+    .quote .who {
+        display: inline-block;
+        position: absolute;
+        bottom: -40px;
+    }
+    .next-trainer {
+        left: -170px;
+        top: 150px
+    }
+
+    .quote p:after {
+        padding-bottom: 0;
+    }
+
+    .f-about {
+        width: 40%;
+        margin-right: 0%;
+    }
+
+    .f-contact {
+        width: 50%;
+    }
+
+    .f-contact li {
+        width: 40%;
+        margin-right: 8%;
+    }
+    .f-contact li:nth-child(3) {
+        width: 100%;
+    }
+
+    #about {
+        top: -100px;
+    }
+
+    #elements {
+        top: -50px;
+    }
+
+}
