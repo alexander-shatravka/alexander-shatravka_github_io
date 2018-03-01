@@ -2,6 +2,7 @@
     #wrapper {
         max-width: 375px;
         margin: 0 auto;
+        overflow-x: hidden;
 
     }
 
@@ -12,7 +13,8 @@
     }
 
     #header{
-        position: absolute;
+        position: relative;
+        margin-bottom: -80px;
     }
 
     #logo{
@@ -42,11 +44,11 @@
     .nav {
         padding-top: 20px;
         width: 385px;
-        height: 500px;
+        height: 480px;
         background: white;
         z-index: 999999;
         position: absolute;
-        right: -450px;
+        right: -550px;
         top: 50px;
         transition: right 0.35s ease-out;
         overflow-y: scroll;
@@ -58,6 +60,7 @@
     }
 
     .nav-show{
+        left: 0;
         right: 0;
     }
 
@@ -67,7 +70,7 @@
         right: 0;
         top: 0;
         height: 100%;
-        width: 60px;
+        width: 80px;
         border-left: 1px solid #E5E5E5;
         background: url("../img/ico_menu.png") no-repeat center center;
         cursor: pointer;
@@ -79,7 +82,7 @@
         right: 0;
         top: 0;
         height: 100%;
-        width: 60px;
+        width: 80px;
         border-left: none;
         background: url("../img/ico_close.png") no-repeat center center;
     }
@@ -91,6 +94,7 @@
         margin-left: 0;
         text-align: left;
         margin-bottom: 30px;
+        padding-left: 10px;
     }
 
     .nav li:nth-child(n+4){
@@ -117,6 +121,237 @@
     #header.default #logo img{
         margin-top: 10px;
         height: 50px;
+    }
+
+    #header.default .nav{
+        width: 100%;
+        height: 500px;
+    }
+
+    .form-block .form-descr{
+        float: none;
+        width: 100%;
+        position: relative;
+        top: 0;
+    }
+    .form-descr h1{
+        position: absolute;
+        top: 0;
+        margin-top: 20px;
+        width: 80%;
+        left: 15%;
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .form-descr h4{
+        position: absolute;
+        bottom: -80px;
+        margin-top: 0px;
+        width: 70%;
+        left: 15%;
+        font-size: 30px;
+        line-height: 28px;
+    }
+
+    .class{
+        float: none;
+        width: 100%;
+    }
+
+    .our-classes {
+        margin-top: 50px;
+    }
+
+    .our-classes h2{
+        font-size: 23px;
+        text-align: center;
+    }
+
+    .class .descr h6{
+        margin-top: 0px;
+        margin-bottom: 5px;
+        font-size: 17px;
+    }
+
+    .class .descr p{
+        font-size: 13px;
+    }
+
+    .class {
+        height: 240px;
+    }
+
+    .gallery{
+        margin-top: 20px;
+    }
+
+    .gallery a{
+        width: 50%;
+    }
+    .gallery a:before{
+        width: 50%;
+    }
+
+    .about {
+        margin-top: 50px;
+    }
+
+    .about h2 {
+        font-size: 26px;
+    }
+
+    .about p{
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+
+    .about .slider-container{
+        float: none;
+        width: 100%;
+    }
+
+    .features{
+        margin-top: 80px;
+        height: 1300px;
+    }
+
+    .feature{
+        width: 50%;
+        height: 300px;
+    }
+    .feature:nth-child(7) {
+        margin-left: 0;
+    }
+
+    .shop{
+        margin-top: 120px;
+    }
+
+    .product{
+        width: 100%;
+        height: 200px;
+        margin-bottom: 30px;
+    }
+
+    .product .price{
+        float: left;
+        width: 30%;
+        height: 100%;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+    }
+
+    .product ul{
+        margin-top: 40px;
+        margin-left: -20px;
+        width: 60%;
+        float: right;
+    }
+    .product li{
+        margin-top: 8px;
+    }
+
+    .price .per{
+        display: none;
+    }
+
+    .price .cost{
+        line-height: 200px;
+    }
+
+    .product .buy {
+        bottom: 10px;
+        width: 40%;
+        margin: 0;
+        left: 45%;
+    }
+
+    .product .buy a{
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .avatar{
+        margin: 0 auto -20px;
+        float: none;
+    }
+
+    .quotes {
+        height: 450px;
+        padding-top: 30px;
+    }
+
+    .quotes-block{
+        margin-top: -30px;
+        padding-bottom: 30px;
+        height: 520px;
+    }
+
+    .quote{
+        float: none;
+        width: 280px;
+        position: relative;
+        margin: 40px auto;
+        padding-left: 10px;
+        border-left: 0;
+    }
+
+    .quote .who {
+        bottom: -100px;
+    }
+
+    .quote p:after{
+        margin-bottom: -40px;
+    }
+
+    .quote p{
+        width: 100%;
+    }
+
+    .next-trainer{
+        left: 0;
+        width: 100%;
+        top: 220px;
+    }
+
+    .f-about{
+        width: 100%;
+        float: none;
+        margin-top: 40px;
+        padding-left: 0;
+    }
+
+    #footer {
+        height: 600px;
+    }
+
+    #footer .f-about h4{
+        font-size: 17px;
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+    .f-share{
+        float: none;
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+
+    .f-contact{
+        margin-top: 50px;
+        margin-left: 0;
+        float: none;
+        width: 100%;
+    }
+
+    #footer .f-contact h4{
+        margin-bottom: 10px;
+        font-size: 17px;
+    }
+
+    .f-contact li{
+        margin-bottom: 10px;
     }
 
 }
