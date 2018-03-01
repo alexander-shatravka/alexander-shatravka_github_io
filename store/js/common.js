@@ -18,6 +18,15 @@ for(var k = 0; k < navigation.length; k++){
     }
 }
 
+function active() {
+        for(var i = 0; i < navigation.length; i++) {
+        	if (navigation[i].innerText === localStorage['active-nav']){
+        		navigation[i].classList.add("active-nav");
+        	};    
+    	}
+    }
+ active()
+
 var searchIco = document.querySelector(".search-icon");
 var searchField = document.querySelector(".search");
 
