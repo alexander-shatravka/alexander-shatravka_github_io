@@ -48,7 +48,7 @@
         background: white;
         z-index: 999999;
         position: absolute;
-        right: -550px;
+        right: -800px;
         top: 50px;
         transition: right 0.35s ease-out;
         overflow-y: scroll;

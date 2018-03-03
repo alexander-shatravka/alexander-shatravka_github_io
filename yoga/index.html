@@ -233,27 +233,87 @@
             <div id="blog"></div>
             <div class="container clearfix">
                 <div class="quotes">
-                    <a href=""><div class="avatar"><img src="img/avatar.jpg" alt=""></div></a>
-                    <div class="quote"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure.</p>
-                        <div class="who">
-                            <a href="">
-                                <span>Trainer</span><br>
-                                Laura Shepard
-                            </a>
-                        </div>
-                        <div class="next-trainer">
-                            <a href="#" class="prev-tr  "></a>
-                            <div class="avatar-tr"></div>
-                            <h6>Sara Taylor</h6>
-                            <span>Trainer</span>
-                            <a href="#" class="next-tr"></a>
+                    <div class="mySlides-quote fade">
+                        <a href=""><div class="avatar"><img src="img/avatar.jpg" alt=""></div></a>
+                        <div class="quote"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure.</p>
+                            <div class="who">
+                                <a href="">
+                                    <span>Trainer</span><br>
+                                    Laura Shepard
+                                </a>
+                            </div>
+                            <div class="next-trainer">
+                                <a class="prev-tr" onclick="plusSlidesQ(-1)"></a>
+                                <div class="avatar-tr"><img src="img/avatar2.jpg" alt=""></div>
+                                <h6>Sara Taylor</h6>
+                                <span>Trainer</span>
+                                <a class="next-tr" onclick="plusSlidesQ(1)"></a>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="mySlides-quote fade">
+                        <a href=""><div class="avatar"><img src="img/avatar2.jpg" alt=""></div></a>
+                        <div class="quote"><p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+                            <div class="who">
+                                <a href="">
+                                    <span>Trainer</span><br>
+                                    Sara Taylor
+                                </a>
+                            </div>
+                            <div class="next-trainer">
+                                <a class="prev-tr" onclick="plusSlidesQ(-1)"></a>
+                                <div class="avatar-tr"><img src="img/avatar3.jpg" alt=""></div>
+                                <h6>Amy Lee</h6>
+                                <span>Trainer</span>
+                                <a class="next-tr" onclick="plusSlidesQ(1)"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mySlides-quote fade">
+                        <a href=""><div class="avatar"><img src="img/avatar3.jpg" alt=""></div></a>
+                        <div class="quote"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure.</p>
+                            <div class="who">
+                                <a href="">
+                                    <span>Trainer</span><br>
+                                    Amy lee
+                                </a>
+                            </div>
+                            <div class="next-trainer">
+                                <a class="prev-tr" onclick="plusSlidesQ(-1)"></a>
+                                <div class="avatar-tr"><img src="img/avatar2.jpg" alt=""></div>
+                                <h6>Jennifer Lawrence</h6>
+                                <span>Trainer</span>
+                                <a class="next-tr" onclick="plusSlidesQ(1)"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mySlides-quote fade">
+                        <a href=""><div class="avatar"><img src="img/avatar4.jpg" alt=""></div></a>
+                        <div class="quote"><p> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+                            <div class="who">
+                                <a href="">
+                                    <span>Trainer</span><br>
+                                    Jennifer Lawrence
+                                </a>
+                            </div>
+                            <div class="next-trainer">
+                                <a class="prev-tr" onclick="plusSlidesQ(-1)"></a>
+                                <div class="avatar-tr"><img src="img/avatar.jpg" alt=""></div>
+                                <h6>Laura Shepard</h6>
+                                <span>Trainer</span>
+                                <a class="next-tr" onclick="plusSlidesQ(1)"></a>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="bullets">
-                        <a href="#" class="dot"><div></div></a>
-                        <a href="#" class="dot active"><div></div></a>
-                        <a href="#" class="dot"><div></div></a>
-                        <a href="#" class="dot"><div></div></a>
+                        <a class="dot-q" onclick="currentSlideQ(1)"><div></div></a>
+                        <a class="dot-q" onclick="currentSlideQ(2)"><div></div></a>
+                        <a class="dot-q" onclick="currentSlideQ(3)"><div></div></a>
+                        <a class="dot-q" onclick="currentSlideQ(4)"><div></div></a>
                     </div>
                 </div>
             </div>
@@ -300,7 +360,8 @@
     <script type="text/javascript" src="js/header-fixer.js"></script>
     <script type="text/javascript" src="js/anchors.js"></script>
     <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/sliderQ.js"></script>
     <script type="text/javascript" src="js/class-adder.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
 </body>
 </html>

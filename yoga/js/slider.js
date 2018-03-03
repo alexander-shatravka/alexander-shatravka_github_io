@@ -1,42 +1,58 @@
 var slideIndex = 1;
-showSlides(slideIndex);
+
+var myTimer = setInterval(function () {
+    AutoShowSlides(slideIndex)
+},10000);
 
 function plusSlides(n) {
+    clearInterval(myTimer);
+    myTimer = setInterval(function () {
+        AutoShowSlides(slideIndex)
+    },10000);
     showSlides(slideIndex += n);
 }
 
 function currentSlide(n) {
+    clearInterval(myTimer);
+    myTimer = setInterval(function () {
+        AutoShowSlides(slideIndex)
+    },10000);
     showSlides(slideIndex = n);
 }
 
+
 function showSlides(n) {
-    var i;
     var slides = document.getElementsByClassName("mySlides");
     var dots = document.getElementsByClassName("dot");
     if (n > slides.length) {slideIndex = 1}
     if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
+    for (var i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+        dots[i].className = dots[i].className.replace(" active-dot", "");
     }
     slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
+    dots[slideIndex-1].className += " active-dot";
 }
+showSlides()
 
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
+function AutoShowSlides(n) {
     var slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (var i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    slideIndex++;
-    if (slideIndex> slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active-dot", "");
+    }
     slides[slideIndex-1].style.display = "block";
-
+    dots[slideIndex-1].className += " active-dot";
+    slideIndex++
 }
-setTimeout(showSlides, 5000);
+setTimeout(function () {
+    AutoShowSlides(slideIndex)
+},10000);
+
