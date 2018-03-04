@@ -33,7 +33,7 @@ close.onclick = function () {
     catalogItems.classList.toggle('dark');
 };
 
-var aciveFilter = document.querySelectorAll('.category');
+var aciveFilter = document.querySelectorAll('.category li');
 var filtersList = document.querySelectorAll('.filters-list li');
 
 for (var k = 0; k < aciveFilter.length; k++) {
