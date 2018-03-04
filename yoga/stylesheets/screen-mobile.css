@@ -128,11 +128,16 @@
         height: 500px;
     }
 
+    .form-block form{
+        z-index: 2;
+    }
+
     .form-block .form-descr{
         float: none;
         width: 100%;
         position: relative;
         top: 0;
+        z-index: 1;
     }
     .form-descr h1{
         position: absolute;

@@ -1,58 +1,58 @@
-var slideIndex = 1;
+var slideIndexQ = 1;
 
 var myTimer = setInterval(function () {
-    AutoShowSlides(slideIndex)
+    AutoShowSlidesQ(slideIndexQ)
 },10000);
 
 function plusSlidesQ(k) {
     clearInterval(myTimer);
     myTimer = setInterval(function () {
-        AutoShowSlides(slideIndex)
+        AutoShowSlidesQ(slideIndexQ)
     },10000);
-    showSlides(slideIndex += k);
+    showSlidesQ(slideIndexQ += k);
 }
 
 function currentSlideQ(k) {
     clearInterval(myTimer);
     myTimer = setInterval(function () {
-        AutoShowSlides(slideIndex)
+        AutoShowSlidesQ(slideIndexQ)
     },10000);
-    showSlides(slideIndex = k);
+    showSlidesQ(slideIndexQ = k);
 }
 
 
-function showSlides(k) {
+function showSlidesQ(k) {
     var slides = document.getElementsByClassName("mySlides-quote");
     var dots = document.getElementsByClassName("dot-q");
-    if (k > slides.length) {slideIndex = 1}
-    if (k < 1) {slideIndex = slides.length}
+    if (k > slides.length) {slideIndexQ = 1}
+    if (k < 1) {slideIndexQ = slides.length}
     for (var i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
+    slides[slideIndexQ-1].style.display = "block";
+    dots[slideIndexQ-1].className += " active";
 }
-showSlides()
+showSlidesQ()
 
-function AutoShowSlides(k) {
+function AutoShowSlidesQ(k) {
     var slides = document.getElementsByClassName("mySlides-quote");
     var dots = document.getElementsByClassName("dot-q");
-    if (k > slides.length) {slideIndex = 1}
-    if (k < 1) {slideIndex = slides.length}
+    if (k > slides.length) {slideIndexQ = 1}
+    if (k < 1) {slideIndexQ = slides.length}
     for (var i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    slideIndex++
+    slides[slideIndexQ-1].style.display = "block";
+    dots[slideIndexQ-1].className += " active";
+    slideIndexQ++
 }
 setTimeout(function () {
-    AutoShowSlides(slideIndex)
+    AutoShowSlidesQ(slideIndexQ)
 },10000);
 
