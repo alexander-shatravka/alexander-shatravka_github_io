@@ -195,19 +195,21 @@ a, a:hover {
 
 .caption{
     position: absolute;
-    top: 260px;
+    top: 250px;
     visibility: hidden;
     height: 70px;
     left: 15%;
     width: 70%;
     text-align: center;
-    z-index: 99;
+    z-index: 9999;
     font-family: "Raleway", sans-serif;
     color: #e5e5e5;
+    cursor: default;
 }
 
 .works-container .work-item:hover .caption{
     visibility: visible;
+    cursor: default;
 }
 
 .caption .project-name{
