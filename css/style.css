@@ -187,7 +187,7 @@ a, a:hover {
 
 }
 
-.works-container a:hover{
+.works-container .work-item:hover a {
     -webkit-box-shadow: 10px 36px 112px 6px rgba(0,0,0,0.54);
     -moz-box-shadow: 10px 36px 112px 6px rgba(0,0,0,0.54);
     box-shadow: 10px 36px 112px 6px rgba(0,0,0,0.54);
