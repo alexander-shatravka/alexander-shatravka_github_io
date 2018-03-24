@@ -1,7 +1,7 @@
 ﻿
 window.onload = function localContainer() {
     // FOR REFRESHING ITEMS IN BAG (BACK 4 CUSTOM ITEMS) DELETE NEXT LINE OF CODE AND REFRESH BAG PAGE, AFTER THAT INSERT CODE AGAIN;
-    var itemsToBag = ''
+    var itemsToBag = '';
     if(localStorage['item-to-bag']){
          itemsToBag = JSON.parse(localStorage['item-to-bag']);
     }
@@ -68,6 +68,7 @@ window.onload = function localContainer() {
     for (var k = 0; k < remove.length; k++) {
         remove[k].onclick = function () {
             this.parentNode.parentNode.remove();
+            if (this.parentNode.parentNode.remove())
             calculateTotalAmount();
             emptyBagMessage();
         }
@@ -83,7 +84,7 @@ window.onload = function localContainer() {
     };
 
     function emptyBagMessage() {
-        if (bagContainer.childNodes.length <= 5) {
+        if (bagContainer.children.length === 0) {
             message.style.display = "block";
         }
         if (successMessage.style.display === "block") {
