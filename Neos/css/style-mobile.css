@@ -57,7 +57,7 @@
     @media screen and (max-width: 500px){
         .tracking-button-block{
             position: absolute;
-            top: -250px;
+            top: -210px;
             right: 10px;
             width: 215px;
             height: 60px;
@@ -66,6 +66,11 @@
         .tracking-button{
             font-size: 25px;
             font-weight: bold;
+        }
+
+        .header-center{
+            height: 180px;
+            top: 25%;
         }
     }
 
@@ -111,7 +116,7 @@
     }
 
     .about-block{
-        margin-top: 80px;
+        margin-top: 20px;
     }
 
     .article {
@@ -122,14 +127,17 @@
         width: 100%;
         padding: 0 10px;
         margin-left: 0;
-        text-align: justify;
+        text-align: left;
+        font-size: 45px;
     }
 
     .article p{
         text-align: justify ;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         text-indent: 40px;
         padding: 0 5px;
+        font-size: 25px;
+        line-height: 30px;
     }
 
     .bonuses{
@@ -146,6 +154,7 @@
         width: 100%;
         margin-left: 0;
         font-size: 50px;
+        margin-bottom: 10px;
     }
 
     .price-item{
@@ -257,7 +266,7 @@
     }
 
     .setup-block .article-header{
-        font-size: 50px;
+        font-size: 45px;
     }
 
     .setup-items-container{
