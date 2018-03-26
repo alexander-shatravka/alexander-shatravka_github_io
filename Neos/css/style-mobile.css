@@ -4,8 +4,8 @@
     #wrapper{
         width: 100%;
         background: 0;
-        overflow-x: hidden;
-        margin-right: -20px;
+        overflow-x: visible;
+        margin: 0 auto;
     }
 
     #header-wrapper{
