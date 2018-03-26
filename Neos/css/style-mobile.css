@@ -122,6 +122,7 @@
         width: 100%;
         padding: 0 10px;
         margin-left: 0;
+        text-align: justify;
     }
 
     .article p{
@@ -137,7 +138,7 @@
 
     .price-items-container{
         margin-top: 0;
-        min-height: 720px;
+        min-height: 820px;
         overflow: hidden;
     }
 
@@ -154,7 +155,7 @@
     }
 
     .price-item img{
-        width: 100px;
+        width: 80px;
     }
 
     .price-item:nth-child(1):after{
@@ -172,12 +173,12 @@
     .price-item:nth-child(2){
         position: absolute;
         left: 30%;
-        top: 180px;
+        top: 150px;
     }
 
     .price-item:nth-child(3){
         position: absolute;
-        top: 430px;
+        top: 320px;
         left: 0;
     }
 
@@ -200,12 +201,19 @@
         margin-right: 0;
     }
 
+    .price-item:nth-child(4) img{
+        margin-top: 10px;
+    }
+
 
     .price-item:nth-child(5){
         position: absolute;
-        left: 50%;
-        bottom: -700px;
-        margin-left: -140px;
+        width: 100%;
+        bottom: -30px;
+    }
+
+    .price-item:nth-child(5) .item-descr{
+        position: ;
     }
 
     .price-item:nth-child(5) img{
@@ -216,17 +224,19 @@
     .price-item:nth-child(6){
         position: absolute;
         right: 0;
-        top: 380px;
+        top: 280px;
         padding-right: 10px;
     }
 
     .price-item:nth-child(6) img{
-        width: 160px;
-        height: 90px;
+        width: 120px;
+        height: 70px;
     }
 
     .item-descr{
-        width: 200px;
+        width: 100%;
+        padding: 0 10px;
+        font-size: 20px;
     }
 
     .setup-block .article-header{
@@ -331,7 +341,9 @@
     .contacts-list li{
         width: 100%;
         margin-bottom: 30px;
+        font-size: 28px;
     }
+
 
     .contacts-list:last-child{
         float: left;
