@@ -137,8 +137,8 @@
 
     .price-items-container{
         margin-top: 0;
-        margin-bottom: 790px;
-        margin-right: 20px;
+        min-height: 720px;
+        overflow: hidden;
     }
 
     .price-block .article-header{
@@ -151,6 +151,10 @@
         width: 50%;
         margin-right: 0;
 
+    }
+
+    .price-item img{
+        width: 100px;
     }
 
     .price-item:nth-child(1):after{
@@ -205,13 +209,13 @@
     }
 
     .price-item:nth-child(5) img{
-        height: 160px;
-        width: 280px;
+        width: 200px;
+        margin: 0 auto;
     }
 
     .price-item:nth-child(6){
         position: absolute;
-        right: -20px;
+        right: 0;
         top: 380px;
         padding-right: 10px;
     }
