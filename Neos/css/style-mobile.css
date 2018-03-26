@@ -17,6 +17,7 @@
     }
 
     #content-wrapper{
+        width: 100%;
         position: center;
         background: url("../img/background.jpg") no-repeat top center;
         background-size: cover;
@@ -24,6 +25,7 @@
 
     .container{
         max-width: 640px;
+        margin: 0 atuo;
     }
 
     .header-nav{
@@ -244,8 +246,8 @@
     }
 
     .setup-item .item-descr{
-        max-width: 200px;
-        margin-left: -100px;
+        max-width: 150px;
+        margin-left: -75px;
     }
 
     .setup-item:first-child:after{
