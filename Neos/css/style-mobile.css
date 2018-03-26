@@ -247,8 +247,11 @@
     }
 
     .setup-items-container{
+        height: 800px;
+        width: 100%;
         top: 40px;
         position: relative;
+        overflow: hidden;
     }
 
     .setup-item{
