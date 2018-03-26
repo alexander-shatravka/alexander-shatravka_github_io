@@ -196,7 +196,7 @@
 
     .price-item:nth-child(4){
         position: absolute;
-        right: -30px;
+        right: 0;
         top: -60px;
         margin-right: 0;
     }
@@ -213,7 +213,10 @@
     }
 
     .price-item:nth-child(5) .item-descr{
-        position: ;
+        width: 100px;
+        position: absolute;
+        left: 50%;
+        margin-left: -50px;
     }
 
     .price-item:nth-child(5) img{
@@ -340,8 +343,8 @@
 
     .contacts-list li{
         width: 100%;
-        margin-bottom: 30px;
-        font-size: 28px;
+        margin-bottom: 20px;
+        font-size: 27px;
     }
 
 
