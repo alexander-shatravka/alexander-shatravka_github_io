@@ -211,13 +211,13 @@ body {
 }
 
 .price-items-container {
-    margin-top: 50px;
     position: relative;
+    margin-bottom: 50px;
 }
 
 .price-item{
-    position: relative;
     text-align: center;
+    position: relative;
     width: 28%;
     margin-right: 8%;
     height: 180px;
@@ -237,7 +237,7 @@ body {
     background-size: contain;
     z-index: 999;
     position: absolute;
-    top: 150px;
+    top: 210px;
     left: 45%;
 }
 
@@ -246,16 +246,9 @@ body {
 }
 
 .price-item img{
-    position: relative;
-    top: -100px;
+    position: center;
 }
 
-.price-item:nth-child(5) img{
-    width: 90%;
-    position: absolute;
-    left: 50%;
-    margin-left: -45%;
-}
 
 .price-item:last-child img{
     top: -45px;
@@ -267,23 +260,31 @@ body {
     line-height: 30px;
     text-align: center;
     width: 250px;
-    left: 50%;
-    margin-left: -125px;
-    position: absolute;
-    top: 20px;
+    margin: 0 auto;
 }
+
+.price-item:nth-child(5) img{
+    width: 250px;
+    margin-bottom: 15px;
+}
+
 .price-item:nth-child(5) .item-descr{
     width: 300px;
-    margin-left: -150px;
 }
 
-
-.price-item:nth-child(n+4) .item-descr{
-    top: 80px;
+.price-item:nth-child(6){
+    margin-top: 100px;
 }
+
+.price-item:nth-child(6) img{
+    width: 200px;
+    margin-bottom: 10px;
+}
+
 
 .setup-block {
     position: relative;
+    margin-top: -30px;
 }
 
 @media screen and (max-width: 900px) {
@@ -292,9 +293,6 @@ body {
     }
 }
 
-.setup-items-container{
-    padding-bottom: 15px;
-}
 
 .setup-block .article-header {
     margin-bottom: 0;
@@ -320,9 +318,15 @@ body {
 }
 
 .setup-item .item-descr{
-    top: 120px;
     width: 230px;
-    margin-left: -115px;
+}
+
+.setup-item:nth-child(5) .item-descr{
+    margin-top: 20px;
+}
+
+.setup-item:nth-child(5) img{
+    margin-top: 20px;
 }
 
 .setup-item:nth-child(-n + 2):after{
@@ -338,7 +342,7 @@ body {
     background-size: contain;
     position: absolute;
     z-index: 999;
-    top: 50px;
+    top: 20px;
     left: 120%;
 }
 
@@ -369,7 +373,7 @@ body {
     position: absolute;
     z-index: 999;
     right: -30%;
-    top: 50px;
+    top: 20px;
 }
 
 .contact-block{

@@ -4,7 +4,7 @@
     #wrapper{
         width: 100%;
         background: 0;
-        overflow-x: visible;
+        overflow-x: hidden;
         margin: 0 auto;
     }
 
@@ -136,8 +136,9 @@
     }
 
     .price-items-container{
-        margin-top: 100px;
-        margin-bottom: 380px;
+        margin-top: 0;
+        margin-bottom: 790px;
+        margin-right: 20px;
     }
 
     .price-block .article-header{
@@ -148,13 +149,15 @@
 
     .price-item{
         width: 50%;
+        margin-right: 0;
+
     }
 
     .price-item:nth-child(1):after{
         width: 30px;
         height: 50px;
-        top: -90px;
-        left: 102%;
+        top: 10px;
+        left: 110%;
         -webkit-transform: rotate(-90deg);
         -moz-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
@@ -163,9 +166,9 @@
     }
 
     .price-item:nth-child(2){
-        position: relative;
+        position: absolute;
         left: 30%;
-        top: -50px;
+        top: 180px;
     }
 
     .price-item:nth-child(3){
@@ -177,8 +180,8 @@
     .price-item:nth-child(3):after{
         width: 30px;
         height: 40px;
-        top: -60px;
-        left: 102%;
+        top: 30px;
+        left: 95%;
         -webkit-transform: rotate(-90deg);
         -moz-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
@@ -197,16 +200,13 @@
     .price-item:nth-child(5){
         position: absolute;
         left: 50%;
-        bottom: -440px;
+        bottom: -700px;
         margin-left: -140px;
     }
 
     .price-item:nth-child(5) img{
         height: 160px;
         width: 280px;
-    }
-    .price-item:nth-child(5) .item-descr{
-        margin-left: -100px;
     }
 
     .price-item:nth-child(6){
@@ -223,8 +223,6 @@
 
     .item-descr{
         width: 200px;
-        position: absolute;
-        margin-left: -100px
     }
 
     .setup-block .article-header{
@@ -238,7 +236,7 @@
 
     .setup-item{
         width: 50%;
-        margin: 0 0 150px 0;
+        margin: 0 0 100px 0;
     }
 
     .setup-item img{
@@ -246,8 +244,8 @@
     }
 
     .setup-item .item-descr{
-        max-width: 150px;
-        margin-left: -75px;
+        margin-top: 20px;
+        max-width: 200px;
     }
 
     .setup-item:first-child:after{
@@ -256,10 +254,14 @@
         height: 40px;
     }
 
+    .setup-item:nth-child(1):after{
+        top: 20%;
+    }
+
     .setup-item:nth-child(2):after{
         left: 50%;
         margin-left: -20px;
-        top: 130%;
+        top: 110%;
         -webkit-transform: rotate(0deg);
         -moz-transform: rotate(0deg);
         -ms-transform: rotate(0deg);
@@ -272,7 +274,7 @@
     .setup-item:nth-child(3):after{
         left: 50%;
         margin-left: -20px;
-        top: 130%;
+        top: 115%;
         -webkit-transform: rotate(0deg);
         -moz-transform: rotate(0deg);
         -ms-transform: rotate(0deg);
@@ -289,7 +291,7 @@
         background-size: contain;
         left: 0;
         margin-left: -20px;
-        top: 5%;
+        top: 15%;
         -webkit-transform: rotate(90deg);
         -moz-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
@@ -302,12 +304,16 @@
         width: 30px;
         height: 40px;
         left: 95%;
-        top: 5%;
+        top: 20%;
         -webkit-transform: rotate(-90deg);
         -moz-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
         -o-transform: rotate(-90deg);
         transform: rotate(-90deg);
+    }
+
+    .contact-block{
+        margin-top: 150px;
     }
 
     .contact-header{
