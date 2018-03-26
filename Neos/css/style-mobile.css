@@ -240,6 +240,7 @@
         width: 100%;
         padding: 0 10px;
         font-size: 20px;
+        text-align: center;
     }
 
     .setup-block .article-header{
@@ -264,8 +265,10 @@
     }
 
     .setup-item .item-descr{
-        margin-top: 20px;
-        max-width: 200px;
+        width: 100%;
+        padding: 0 10px;
+        font-size: 20px;
+        text-align: center;
     }
 
     .setup-item:first-child:after{
