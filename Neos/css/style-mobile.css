@@ -53,25 +53,22 @@
         font-size: 32px;
     }
 
+    .tracking-button-block{
+        position: absolute;
+        top: -210px;
+        right: 10px;
+        width: 215px;
+        height: 60px;
+    }
 
-    @media screen and (max-width: 500px){
-        .tracking-button-block{
-            position: absolute;
-            top: -210px;
-            right: 10px;
-            width: 215px;
-            height: 60px;
-        }
+    .tracking-button{
+        font-size: 25px;
+        font-weight: bold;
+    }
 
-        .tracking-button{
-            font-size: 25px;
-            font-weight: bold;
-        }
-
-        .header-center{
-            height: 180px;
-            top: 25%;
-        }
+    .header-center{
+        height: 180px;
+        top: 25%;
     }
 
 
@@ -81,13 +78,16 @@
 
     #logo{
         float: none;
-        margin: 0 auto;
         width: 100%;
+        max-width: 200px;
         text-align: center;
         top: 50%;
-        -webkit-transform: translateY(35%);
-        -ms-transform: translateY(35%);
-        transform: translateY(35%);
+        -webkit-transform: translateY(-40%);
+        -ms-transform: translateY(-40%);
+        transform: translateY(-40%);
+        position: absolute;
+        left: 50%;
+        margin-left: -150px;
     }
 
     .logo-img{
@@ -108,7 +108,7 @@
         margin-top: 15px;
         font-size: 38px;
         letter-spacing: 2px;
-        word-spacing: 0px;
+        word-spacing: 0;
     }
 
     .article-block{
@@ -120,24 +120,29 @@
     }
 
     .article {
-        margin-bottom: 80px;
+        margin-bottom: 0;
     }
 
     .article-header{
         width: 100%;
         padding: 0 10px;
         margin-left: 0;
+        margin-bottom: 0;
         text-align: left;
-        font-size: 45px;
+        font-size: 40px;
     }
 
     .article p{
-        text-align: justify ;
+        text-align: justify;
         margin-bottom: 20px;
         text-indent: 40px;
         padding: 0 5px;
         font-size: 25px;
         line-height: 30px;
+    }
+
+    .price-block{
+        margin-top: 50px;
     }
 
     .bonuses{
@@ -146,15 +151,16 @@
 
     .price-items-container{
         margin-top: 0;
-        min-height: 820px;
+        min-height: 800px;
         overflow: hidden;
+        margin-bottom: 0;
     }
 
     .price-block .article-header{
         width: 100%;
         margin-left: 0;
-        font-size: 50px;
-        margin-bottom: 10px;
+        font-size: 45px;
+        margin-bottom: 20px;
         padding: 0;
     }
 
@@ -165,7 +171,6 @@
     .price-item{
         width: 50%;
         margin-right: 0;
-
     }
 
     .price-item img{
@@ -186,8 +191,8 @@
 
     .price-item:nth-child(2){
         position: absolute;
-        left: 30%;
-        top: 150px;
+        left: 25%;
+        top: 140px;
     }
 
     .price-item:nth-child(3){
@@ -236,7 +241,7 @@
     .price-item:nth-child(5){
         position: absolute;
         width: 100%;
-        bottom: 0;
+        bottom: 70px;
     }
 
     .price-item:nth-child(5) .item-descr{
@@ -254,7 +259,7 @@
     .price-item:nth-child(6){
         position: absolute;
         right: 0;
-        top: 270px;
+        top: 280px;
         padding-right: 10px;
     }
 
@@ -270,12 +275,16 @@
         text-align: center;
     }
 
+    .setup-block{
+        margin-top: -50px;
+    }
+
     .setup-block .article-header{
-        font-size: 45px;
+        font-size: 40px;
     }
 
     .setup-items-container{
-        height: 800px;
+        height: 600px;
         width: 100%;
         top: 40px;
         position: relative;
@@ -284,11 +293,11 @@
 
     .setup-item{
         width: 50%;
-        margin: 0 0 100px 0;
+        margin: 0 0 20px 0;
     }
 
     .setup-item img{
-        max-width: 100px;
+        max-width: 80px;
     }
 
     .setup-item .item-descr{
@@ -300,47 +309,48 @@
 
     .setup-item:first-child:after{
         left: 95%;
-        width: 30px;
-        height: 40px;
+        width: 25px;
+        height: 35px;
     }
 
     .setup-item:nth-child(1):after{
         top: 20%;
+        left: 90%;
     }
 
     .setup-item:nth-child(2):after{
         left: 50%;
         margin-left: -20px;
-        top: 110%;
+        top: 85%;
         -webkit-transform: rotate(0deg);
         -moz-transform: rotate(0deg);
         -ms-transform: rotate(0deg);
         -o-transform: rotate(0deg);
         transform: rotate(  0deg);
-        width: 30px;
-        height: 40px;
+        width: 25px;
+        height: 35px;
     }
 
     .setup-item:nth-child(3):after{
         left: 50%;
         margin-left: -20px;
-        top: 115%;
+        top: 90%;
         -webkit-transform: rotate(0deg);
         -moz-transform: rotate(0deg);
         -ms-transform: rotate(0deg);
         -o-transform: rotate(0deg);
         transform: rotate(  0deg);
-        width: 30px;
-        height: 40px;
+        width: 25px;
+        height: 35px;
     }
     .setup-item:nth-child(4):after{
         content: '';
-        width: 30px;
-        height: 40px;
+        width: 25px;
+        height: 35px;
         background: url("../img/arrow.png") no-repeat;
         background-size: contain;
         left: 0;
-        margin-left: -20px;
+        margin-left: -15px;
         top: 15%;
         -webkit-transform: rotate(90deg);
         -moz-transform: rotate(90deg);
@@ -350,9 +360,20 @@
 
     }
 
+    .setup-item:nth-child(5){
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .setup-item:nth-child(5) .item-descr{
+        margin-top: -5px;
+        font-size: 19px;
+    }
+
     .setup-item:nth-child(5):after{
-        width: 30px;
-        height: 40px;
+        width: 25px;
+        height: 35px;
         left: 95%;
         top: 20%;
         -webkit-transform: rotate(-90deg);
@@ -367,7 +388,8 @@
     }
 
     .contact-header{
-        margin-bottom: 70px;
+        font-size: 45px;
+        margin-bottom: 50px;
         letter-spacing: 1px;
     }
 
@@ -378,11 +400,12 @@
     .contacts-list li{
         width: 100%;
         margin-bottom: 20px;
-        font-size: 27px;
+        font-size: 22px;
     }
 
     .contacts-list li a{
         margin-left: 5px;
+        font-size: 25px;
     }
 
 
