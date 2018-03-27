@@ -82,12 +82,12 @@
         transform: translateY(-40%);
         position: absolute;
         left: 50%;
-        margin-left: -165px;
+        margin-left: -150px;
     }
 
     .logo-img{
         width: 80%;
-        min-width: 320px;
+        min-width: 300px;
         max-height: 120px;
         margin: 0 auto;
     }
@@ -101,7 +101,7 @@
         min-width: 320px;
         float: right;
         margin-top: 15px;
-        font-size: 38px;
+        font-size: 34px;
         letter-spacing: 2px;
         word-spacing: 0;
     }
