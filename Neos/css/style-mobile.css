@@ -22,6 +22,7 @@
         position: center;
         background: url("../img/background.jpg") no-repeat top center;
         background-size: cover;
+        min-height: 2760px;
     }
 
     .container{
@@ -82,18 +83,18 @@
         transform: translateY(-40%);
         position: absolute;
         left: 50%;
-        margin-left: -150px;
+        margin-left: -145px;
     }
 
     .logo-img{
         width: 80%;
-        min-width: 300px;
+        min-width: 290px;
         max-height: 120px;
         margin: 0 auto;
     }
     .logo-img img{
         width: 100%;
-        height: 100%;
+        height: 95%;
     }
 
     .logo-descr{
