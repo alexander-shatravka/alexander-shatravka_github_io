@@ -125,3 +125,19 @@ body {
 .choosed:nth-child(8) .name{
     margin-left: -120px;
 }
+
+
+@media screen and (max-height: 600px) {
+    .choosed{
+        top: 150px;
+        max-height: 100px;
+        max-width: 100px;
+        margin-left: -50px;
+    }
+    .shake-button{
+        top: 350px;
+        height: 80px;
+        width: 80px;
+        margin-left: -40px;
+    }
+}
