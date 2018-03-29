@@ -129,15 +129,15 @@ body {
 
 @media screen and (max-height: 600px) {
     .choosed{
-        top: 150px;
+        top: 100px;
         max-height: 100px;
         max-width: 100px;
         margin-left: -50px;
     }
     .shake-button{
-        top: 350px;
-        height: 80px;
-        width: 80px;
+        top: 360px;
+        height: 100px;
+        width: 100px;
         margin-left: -40px;
     }
 }
