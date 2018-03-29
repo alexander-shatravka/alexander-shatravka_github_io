@@ -35,11 +35,12 @@ $('.shake-button').click(function(){
 
     let rand = Math.random();
     for (let i = 0; i < arr.length; i++) {
+
         if (rand < arr[i].prob) {
             $(".elements-container").children()[i].classList.add('choosed');
             setTimeout(function () {
-                $(".elements-container").children()[i].classList.add('hide');
-            },2000);
+                $(".elements-container").children()[i].classList.remove('choosed');
+            },3000);
             break;
         }
     }

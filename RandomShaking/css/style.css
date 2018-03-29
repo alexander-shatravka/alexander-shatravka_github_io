@@ -9,42 +9,71 @@ body {
     margin: 0 auto;
 }
 
-.elements-container{
-}
-
 .element{
+    position: relative;
+    display: inline-block;
     width: 10%;
     float: left;
     margin-right: 1%;
     margin-bottom: 40px;
-    height: 30px;
-    line-height: 28px;
+    line-height: 20px;
     font-size: 16px;
-    border: 2px solid #fff;
     color: #fff;
     border-radius: 20px;
     text-align: center;
     background-color: #222222;
+    cursor: pointer;
+}
+
+.element:hover .name{
+    display: block;
+    margin-top: 10px;
+}
+
+.element .prob{
+    display: inline-block;
+    position: relative;
+    top: -20px;
+}
+
+.element .name{
+    display: none;
+}
+
+.element img{
+    height: 100%;
+    width: 100%;
 }
 
 .shake-button{
-    position: relative;
-    top: 300px;
-    height: 100px;
-    width: 140px;
-    margin: 0 auto;
+    position: absolute;
+    top: 420px;
+    height: 150px;
+    width: 150px;
+    left: 50%;
+    margin-left: -75px;
     text-align: center;
-    border-radius: 20px;
-    background-color: #1DB954;
+    border-radius: 50%;
+    background: url("../img/pokeball.png") no-repeat center center;
+    background-size: cover;
     color: white;
     font-size: 18px;
     line-height: 100px;
     cursor: pointer;
+    user-select: none;
 }
 
 .shake-button:hover{
-    background-color: #23E166;
+    -webkit-box-shadow: 0px 0px 40px 15px rgba(247,0,0,0.4);
+    -moz-box-shadow: 0px 0px 40px 15px rgba(247,0,0,0.4);
+    box-shadow: 0px 0px 40px 15px rgba(247,0,0,0.4);
 }
+
+
+@keyframes falling {
+    100%{transform: translateY(40px);}
+}
+
 @keyframes shake {
     100%{transform: translateX(-30px);}
 }
@@ -67,17 +96,31 @@ body {
     position: absolute;
     top: 120px;
     left: 50%;
-    margin-left: -150px;
-    height: 150px;
-    width: 300px;
+    margin-left: -100px;
+    background-color: transparent;
+    background-size: contain;
+    height: 200px;
+    width: 200px;
     line-height: 150px;
     font-size: 40px;
+    animation: falling 0.5s ease-in alternate infinite;
 }
 
-.hide{
-    visibility: hidden;
-    animation: fadeOut 1s;
+.choosed .prob{
+    display: none;
 }
 
-
-
+.choosed .name{
+    display: inline-block;
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    width: 80px;
+    margin-left: -80px;
+}
+.choosed:last-child .name{
+    margin-left: -40px;
+}
+.choosed:nth-child(8) .name{
+    margin-left: -120px;
+}
