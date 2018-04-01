@@ -156,9 +156,9 @@ a, a:hover {
     position: relative;
     display: block;
     float: left;
-    width: 31%;
-    margin-right: 3.5%;
-    height: 300px;
+    width: 22%;
+    margin-right: 4%;
+    height: 200px;
     z-index: 9999;
     cursor: pointer;
 }
@@ -221,7 +221,7 @@ a, a:hover {
     margin-top: 10px;
 }
 
-.works-container .work-item:nth-child(3n){
+.works-container .work-item:nth-child(4n){
     margin-right: 0;
 }
 
