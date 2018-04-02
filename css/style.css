@@ -517,7 +517,7 @@ a, a:hover {
         -moz-box-shadow: -10px 0px 72px 6px rgba(0,0,0,0.6);
         box-shadow: -10px 0px 72px 6px rgba(0,0,0,0.6);
         animation: slideOut 0.5s ease-in-out;
-        visibility: hidden;
+        display: none;
     }
 
 
@@ -532,7 +532,7 @@ a, a:hover {
         border-bottom: 1px solid #AAAAAA;
     }
 
-    @media screen and (max-width: 350px) {
+    @media screen and (max-width: 450px) {
         .photo-large{
             position: absolute;
             top: 0;
@@ -559,7 +559,7 @@ a, a:hover {
         position: fixed;
         right: 0;
         animation: slideIn 0.5s ease-in-out;
-        visibility: visible;
+        display: block;
     }
 
 
