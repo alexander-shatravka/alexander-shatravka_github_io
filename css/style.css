@@ -520,8 +520,8 @@ a, a:hover {
         visibility: hidden;
     }
 
+
     .photo-large{
-        position: absolute;
         top: 0;
         max-width: 450px;
         left: 50%;
@@ -556,6 +556,7 @@ a, a:hover {
     }
 
     .show-sidebar{
+        position: fixed;
         right: 0;
         animation: slideIn 0.5s ease-in-out;
         visibility: visible;
