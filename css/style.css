@@ -293,6 +293,7 @@ a, a:hover {
     -moz-box-shadow: -10px 0px 72px 6px rgba(0,0,0,0.6);
     box-shadow: -10px 0px 72px 6px rgba(0,0,0,0.6);
     animation: slideOut 0.5s ease-in-out;
+    visibility: hidden;
 }
 
 .close {
@@ -328,6 +329,7 @@ a, a:hover {
 .show-sidebar {
     right: 0;
     animation: slideIn 0.5s ease-in-out;
+    visibility: visible;
 }
 
 .photo-large{
@@ -463,6 +465,13 @@ a, a:hover {
         margin: 0 auto;
     }
 
+    #wrapper {
+        min-height: 1400px;
+    }
+    .overlay {
+        min-height: 1400px;
+    }
+
     .works-container {
         padding-top: 100px;
     }
@@ -508,6 +517,7 @@ a, a:hover {
         -moz-box-shadow: -10px 0px 72px 6px rgba(0,0,0,0.6);
         box-shadow: -10px 0px 72px 6px rgba(0,0,0,0.6);
         animation: slideOut 0.5s ease-in-out;
+        visibility: hidden;
     }
 
     .photo-large{
@@ -533,13 +543,14 @@ a, a:hover {
         .photo-large img{
             width: 450px;
             height: 250px;
+            margin-left: -225px;
         }
     }
 
     .photo-large img{
         position: absolute;
         left: 50%;
-        margin-left: -310px;
+        margin-left: -275px;
         height: 300px;
         width: 550px;
     }
@@ -547,6 +558,7 @@ a, a:hover {
     .show-sidebar{
         right: 0;
         animation: slideIn 0.5s ease-in-out;
+        visibility: visible;
     }
 
 
