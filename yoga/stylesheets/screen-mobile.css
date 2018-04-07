@@ -26,6 +26,10 @@
         background-color: rgba(0,0,0,0.5);
     }
 
+    .scroll-off {
+        overflow-y: hidden;
+    }
+
     .hide-dark-sheet{
         display: none;
         position: fixed;

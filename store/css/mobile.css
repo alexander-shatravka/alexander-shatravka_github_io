@@ -66,9 +66,8 @@
         overflow-y: scroll;
     }
 
-    .fixed {
-        overflow: hidden;
-        max-height: 600px;
+    .scroll-off{
+        overflow-y: hidden;
     }
 
     .nav-show{
@@ -120,7 +119,7 @@
         height: 100%;
         width: 60px;
         border-left: 1px solid #E5E5E5;
-        background: url("../img/ico_menu.png") no-repeat center center;
+        background: url("../img/ico_menu.png") no-repeat 40% center;
     }
 
     .menu-icon-close{
@@ -131,7 +130,7 @@
         height: 100%;
         width: 60px;
         border-left: none;
-        background: url("../img/ico_close.png") no-repeat center center;
+        background: url("../img/ico_close.png") no-repeat 37% center;
     }
 
     .bag-header{

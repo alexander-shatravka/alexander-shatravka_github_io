@@ -41,11 +41,13 @@ searchIco.onclick = function () {
 var menu = document.querySelector('.nav');
 var showMenu = document.querySelector('.menu-icon');
 var darkSheet = document.querySelector('.hide-dark-sheet');
+var body = document.querySelector('body');
 
 showMenu.onclick = function () {
     menu.classList.toggle('nav-show');
     this.classList.toggle('menu-icon-close');
     darkSheet.classList.toggle('toggle-dark-sheet');
+    body.classList.add('scroll-off')
 }
 
 
