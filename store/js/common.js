@@ -47,7 +47,7 @@ showMenu.onclick = function () {
     menu.classList.toggle('nav-show');
     this.classList.toggle('menu-icon-close');
     darkSheet.classList.toggle('toggle-dark-sheet');
-    body.classList.add('scroll-off')
+    body.classList.toggle('scroll-off')
 }
 
 

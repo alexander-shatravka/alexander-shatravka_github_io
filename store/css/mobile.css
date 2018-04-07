@@ -624,7 +624,9 @@
     }
 
     .popup{
-        left: 25%;
+        width: 80%;
+        left: 0;
+        margin-left: 10%;
     }
 
 }
