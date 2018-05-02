@@ -285,16 +285,22 @@ a, a:hover {
     position: absolute;
     right: -410px;
     width: 406px;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.92);
     height: 100%;
     z-index: 999999;
     border-left: 1px solid #AAAAAA;
     -webkit-box-shadow: -10px 0px 72px 6px rgba(0,0,0,0.6);
     -moz-box-shadow: -10px 0px 72px 6px rgba(0,0,0,0.6);
     box-shadow: -10px 0px 72px 6px rgba(0,0,0,0.6);
-    animation: slideOut 0.5s ease-in-out;
+    animation: slideOut 0.5s ease-in;
     visibility: hidden;
 }
+
+/*.sidebar-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}*/
 
 .close {
     position: absolute;
