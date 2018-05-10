@@ -281,19 +281,37 @@ a, a:hover {
     color: rgba(255, 255, 255, .8);
 }
 
+@keyframes slideIn {
+    from {
+        right: -410px;
+    }
+    to {
+        right: 0;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        right: 0;
+    }
+    to {
+        right: -410px;
+    }
+}
+
 .sidebar {
     position: absolute;
-    right: -410px;
+    right: -4000px;
     width: 406px;
     background-color: rgba(255, 255, 255, 0.92);
     height: 100%;
     z-index: 999999;
-    border-left: 1px solid #AAAAAA;
+    /*border-left: 1px solid #AAAAAA;*/
     -webkit-box-shadow: -10px 0px 72px 6px rgba(0,0,0,0.6);
     -moz-box-shadow: -10px 0px 72px 6px rgba(0,0,0,0.6);
     box-shadow: -10px 0px 72px 6px rgba(0,0,0,0.6);
     animation: slideOut 0.5s ease-in;
-    visibility: hidden;
+    /*visibility: hidden;*/
 }
 
 /*.sidebar-overlay {
@@ -312,24 +330,6 @@ a, a:hover {
     background-size: contain;
     z-index: 99999999;
     cursor: pointer;
-}
-
-@keyframes slideIn {
-    from {
-        right: -410px;
-    }
-    to {
-        right: 0;
-    }
-}
-
-@keyframes slideOut {
-    from {
-        right: 0;
-    }
-    to {
-        right: -410px;
-    }
 }
 
 .show-sidebar {
