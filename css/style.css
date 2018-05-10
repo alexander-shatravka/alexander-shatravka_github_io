@@ -307,11 +307,14 @@ a, a:hover {
     height: 100%;
     z-index: 999999;
     /*border-left: 1px solid #AAAAAA;*/
-    -webkit-box-shadow: -10px 0px 72px 6px rgba(0,0,0,0.6);
+    /*-webkit-box-shadow: -10px 0px 72px 6px rgba(0,0,0,0.6);
     -moz-box-shadow: -10px 0px 72px 6px rgba(0,0,0,0.6);
-    box-shadow: -10px 0px 72px 6px rgba(0,0,0,0.6);
+    box-shadow: -10px 0px 72px 6px rgba(0,0,0,0.6);*/
     animation: slideOut 0.5s ease-in;
     /*visibility: hidden;*/
+    -webkit-box-shadow: inset 0px -62px 140px 16px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px -62px 140px 16px rgba(0,0,0,0.5);
+    box-shadow: inset 0px -62px 140px 16px rgba(0,0,0,0.5);
 }
 
 /*.sidebar-overlay {
@@ -357,7 +360,7 @@ a, a:hover {
 
 .about {
     position: absolute;
-    top: 200px;
+    top: 220px;
     left: 50%;
     margin-left: -40%;
     width: 80%;
@@ -374,34 +377,36 @@ a, a:hover {
     text-indent: 10px;
     margin-top: 20px;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 25px;
     font-weight: 500;
 }
 
 .skills{
     position: absolute;
-    bottom: 20px;
+    bottom: 50px;
     text-align: center;
-    width: 250px;
+    width: 210px;
     left: 50%;
     margin-left: -125px;
 }
 
 .skill-ico {
     display: inline-block;
-    height: 50px;
+    height: 40px;
     width: 50px;
     margin-bottom: 5px;
+    margin-right: -20px;
 }
 
 .js {
     background: url("../img/skill-JS.png") no-repeat center center;
     background-size: contain;
+    margin-right: -10px;
 }
 .html-css{
     background: url("../img/skill-HTML5CSS3.png") no-repeat center center;
     background-size: contain;
-    height: 50px;
+    height: 40px;
     width: 100px;
 }
 .jquery {
@@ -411,7 +416,7 @@ a, a:hover {
 .ps {
     background: url("../img/skill-Photoshop.png") no-repeat center center;
     background-size: contain;
-    height: 40px;
+    height: 30px;
     width: 40px;
 }
 
