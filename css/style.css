@@ -383,7 +383,8 @@ a, a:hover {
 
 .skills{
     position: absolute;
-    bottom: 50px;
+    bottom: 0px;
+    margin-bottom: 20px;
     text-align: center;
     width: 210px;
     left: 50%;
