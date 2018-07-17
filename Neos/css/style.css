@@ -19,7 +19,7 @@ body {
     font-weight: lighter;
     overflow-x: hidden;
     background: url("../img/background-alt2.jpg") no-repeat top center;
-    min-height: 3670px;
+    min-height: 3720px;
     height: 100%;
     background-size: 100% 4100px;
 }
@@ -237,7 +237,7 @@ body {
 .price-item img{
     position: center;
     height: 80px;
-    max-width: 160px;
+    max-width: 190px;
 }
 
 .item-descr{
@@ -285,7 +285,8 @@ body {
 
 .video-block video {
     display: block;
-    margin: 90px auto 0;
+    width: 100%;
+    margin: 70px auto 0;
     border: 1px solid #5C77E1;
     border-radius: 5px; 
 }
@@ -300,7 +301,6 @@ body {
 
 .setup-block {
     position: relative;
-    margin-top: -30px;
 }
 
 #setup-anchor{
