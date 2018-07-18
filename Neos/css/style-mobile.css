@@ -6,6 +6,7 @@
         background: 0;
         overflow-x: hidden;
         margin: 0 auto;
+        min-height: 2700px;
     }
 
     #header-wrapper{
@@ -22,7 +23,6 @@
         position: center;
         background: url("../img/background.jpg") no-repeat top center;
         background-size: cover;
-        min-height: 2760px;
     }
 
     .container{
@@ -151,7 +151,7 @@
 
     .price-items-container{
         margin-top: 0;
-        min-height: 570px;
+        min-height: 500px;
         overflow: hidden;
         margin-bottom: 0;
     }
@@ -256,7 +256,7 @@
     }
 
     .setup-items-container{
-        height: 600px;
+        height: 480px;
         width: 100%;
         top: 40px;
         position: relative;
@@ -266,16 +266,18 @@
     .setup-item{
         width: 50%;
         margin: 0 0 20px 0;
+        max-height: 130px;
     }
 
     .setup-item img{
-        max-width: 80px;
+        max-width: 60px;
     }
 
     .setup-item .item-descr{
         width: 100%;
         padding: 0 10px;
-        font-size: 20px;
+        font-size: 18px;
+        line-height: 19px;
         text-align: center;
     }
 
@@ -292,7 +294,7 @@
 
     .setup-item:nth-child(2):after{
         left: 50%;
-        margin-left: -20px;
+        margin-left: -15px;
         top: 85%;
         -webkit-transform: rotate(0deg);
         -moz-transform: rotate(0deg);
@@ -332,10 +334,9 @@
 
     }
 
-    .setup-item:nth-child(5){
-        position: absolute;
-        left: 0;
-        bottom: 0;
+
+    .setup-item:nth-child(3n){
+        margin-bottom: 0;
     }
 
     .setup-item:nth-child(5) .item-descr{
@@ -360,7 +361,7 @@
     }
 
     .contact-header{
-        font-size: 40px;
+        font-size: 35px;
         margin-bottom: 30px;
         letter-spacing: 1px;
     }
