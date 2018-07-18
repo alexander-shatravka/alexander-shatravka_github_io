@@ -271,6 +271,7 @@ body {
     color: #fff;
     font-size: 22px;
     line-height: 25px;
+    padding-left: 20px;
 }
 
 .price-block .description li {
@@ -300,10 +301,6 @@ body {
     transition: 1s box-shadow;
 }
 
-@media screen and (max-width: 1040px) {
-    
-}
-
 .setup-block {
     position: relative;
 }
@@ -328,6 +325,9 @@ body {
     height: 180px;
     float: left;
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .setup-item img{
@@ -343,7 +343,7 @@ body {
 }
 
 .setup-item .item-descr{
-    width: 230px;
+    max-width: 180px;
 }
 
 .setup-item:nth-child(5) .item-descr{
