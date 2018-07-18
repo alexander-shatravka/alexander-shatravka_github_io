@@ -151,7 +151,7 @@
 
     .price-items-container{
         margin-top: 0;
-        min-height: 590px;
+        min-height: 570px;
         overflow: hidden;
         margin-bottom: 0;
     }
@@ -173,7 +173,7 @@
 
     .price-item{
         width: 50%;
-        margin-top: -40px;
+        margin-top: -50px;
         margin-right: 0;
         margin-bottom: 0;
     }
@@ -200,13 +200,13 @@
 
     .price-item:nth-child(2){
         position: absolute;
-        right:5%;
+        right:0;
         top: 140px;
     }
 
     .price-item:nth-child(3){
         position: absolute;
-        top: 320px;
+        top: 280px;
         left: 0;
     }
     .price-item:nth-child(3) .item-descr{
