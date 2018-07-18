@@ -341,7 +341,7 @@
     }
 
     .setup-item:nth-child(5) .item-descr{
-        margin-top: -5px;
+        margin-top: 5px;
         font-size: 19px;
     }
 
