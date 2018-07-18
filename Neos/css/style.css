@@ -171,6 +171,11 @@ body {
     margin-bottom: 100px;
 }
 
+.article:nth-child(2){
+    position: relative;
+    top: 30px;
+}
+
 .article p {
     text-indent: 50px;
     font-size: 22px;
