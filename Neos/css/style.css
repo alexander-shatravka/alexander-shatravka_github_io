@@ -48,11 +48,6 @@ body {
     }
 }
 
-@media screen and (max-width: 800px) {
-    #wrapper{
-        background-size: 116% 4100px;
-    }
-}
 
 #header-wrapper {
     position: absolute;
@@ -245,7 +240,7 @@ body {
     font-size: 22px;
     line-height: 30px;
     text-align: center;
-    width: 250px;
+    width: 220px;
     margin: 0 auto;
 }
 
