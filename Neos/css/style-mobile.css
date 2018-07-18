@@ -151,7 +151,7 @@
 
     .price-items-container{
         margin-top: 0;
-        min-height: 550px;
+        min-height: 590px;
         overflow: hidden;
         margin-bottom: 0;
     }
@@ -242,7 +242,13 @@
     }
 
     .video-block {
-        height: 380px;
+        height: 350px;
+    }
+
+    @media screen and (max-width: 500px) {
+        .video-block {
+            height: 280px;
+        }
     }
 
     .setup-block{
@@ -354,8 +360,8 @@
     }
 
     .contact-header{
-        font-size: 45px;
-        margin-bottom: 50px;
+        font-size: 40px;
+        margin-bottom: 30px;
         letter-spacing: 1px;
     }
 
@@ -365,8 +371,8 @@
 
     .contacts-list li{
         width: 100%;
-        margin-bottom: 20px;
-        font-size: 22px;
+        margin-bottom: 10px;
+        font-size: 20px;
     }
 
     .contacts-list li a{
