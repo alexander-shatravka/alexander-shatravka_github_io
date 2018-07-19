@@ -459,3 +459,11 @@ no-repeat center left;
     no-repeat center left;
 }
 
+
+#mobile-setup {
+    display: none;
+}
+
+#desktop-setup{
+    display: none;
+}
