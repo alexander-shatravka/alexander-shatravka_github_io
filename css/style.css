@@ -129,7 +129,20 @@ a, a:hover {
     z-index: 9999;
     position: relative;
     float: right;
-    height: 100px;
+    height: 120px;
+    padding: 10px 20px;
+}
+
+.me:hover {
+    background-color: #999DA1;
+    transition: 1s background-color;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.me:hover .name {
+    color: #535556;
+    transition: 1s color;
 }
 
 .me .photo{
@@ -447,12 +460,11 @@ a, a:hover {
 
     .me {
         margin-top: 30px;
-        z-index: 99999;
+        z-index: 999999999;
         position: relative;
         float: right;
         height: 80px;
     }
-
 
     .work-item {
         height: 250px;
