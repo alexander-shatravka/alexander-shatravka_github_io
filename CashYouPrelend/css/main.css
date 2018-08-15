@@ -986,7 +986,7 @@ a {
   transition: background-color 0.3s, border-color 0.3s, color  0.3s;
   position: absolute;
   left: 50%;
-  margin-left: -85px;
+  margin-left: -95px;
   bottom: 100px; }
   .button:hover {
     background-color: #db5400; }
