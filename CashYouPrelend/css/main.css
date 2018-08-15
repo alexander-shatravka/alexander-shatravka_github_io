@@ -1064,7 +1064,7 @@ header {
   padding-top: 30px; }
   @media (max-width: 449px) {
     header {
-      padding-top: 0;
+      padding-top: 15px;
       -webkit-box-sizing: border-box;
               box-sizing: border-box; } }
   header #logo {
@@ -1560,6 +1560,8 @@ header {
       bottom: 10px; } }
   .prev-next button {
     padding: 0 10px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     height: 30px;
     line-height: 30px;
     width: 80px;
@@ -1635,3 +1637,15 @@ header {
       margin-left: 0;
       -webkit-box-sizing: border-box;
               box-sizing: border-box; } }
+
+#requests {
+  height: 80px;
+  width: 190px;
+  position: absolute;
+  left: 30px;
+  bottom: 0;
+  background: url("../img/requests.png"); }
+  @media (max-width: 449px) {
+    #requests {
+      left: 50%;
+      margin-left: -85px; } }
