@@ -6,6 +6,7 @@ initSlider();
 initShowMenu();
 //initShowMobileMenu();
 initPreloader();
+initRequestCounter();
 //initItemOpener();
 
 function initPreloader() {
@@ -20,6 +21,273 @@ function initShowMobileMenu() {
 	$('#menu-opener').on('click', function(){
 		$('#wrapper').toggleClass('mobile')
 	})
+}
+
+function initRequestCounter() {
+	var quantity = $('.quantity');
+	var percents = $('.prob-percent');
+	var requests = $('#requests');
+
+	quantity.html('2561');
+	percents.html('65%');
+
+	setTimeout(function() {
+		quantity.html('2380');
+		$(quantity).addClass('blink');
+		percents.html('91%');
+		$(percents).addClass('blink');
+		$(requests).addClass('shake');
+		setTimeout(function() {
+			$(quantity).removeClass('blink');
+			$(percents).removeClass('blink');
+			$(requests).removeClass('shake');
+		}, 1500);
+	}, 4000);
+
+	setTimeout(function() {
+		quantity.html('2422');
+		$(quantity).addClass('blink');
+		percents.html('87%');
+		$(percents).addClass('blink');
+		$(requests).addClass('shake');
+		setTimeout(function() {
+			$(quantity).removeClass('blink');
+			$(percents).removeClass('blink');
+			$(requests).removeClass('shake');
+		}, 1500);
+	}, 8000);
+
+	setTimeout(function() {
+		quantity.html('2468');
+		$(quantity).addClass('blink');
+		percents.html('93%');
+		$(percents).addClass('blink');
+		$(requests).addClass('shake');
+		setTimeout(function() {
+			$(quantity).removeClass('blink');
+			$(percents).removeClass('blink');
+			$(requests).removeClass('shake');
+		}, 1500);
+	}, 12000);
+
+	setTimeout(function() {
+		quantity.html('2498');
+		$(quantity).addClass('blink');
+		percents.html('94%');
+		$(percents).addClass('blink');
+		$(requests).addClass('shake');
+		setTimeout(function() {
+			$(quantity).removeClass('blink');
+			$(percents).removeClass('blink');
+			$(requests).removeClass('shake');
+		}, 1500);
+	}, 16000);
+	
+	setTimeout(function() {
+		quantity.html('2540');
+		$(quantity).addClass('blink');
+		percents.html('89%');
+		$(percents).addClass('blink');
+		$(requests).addClass('shake');
+		setTimeout(function() {
+			$(quantity).removeClass('blink');
+			$(percents).removeClass('blink');
+			$(requests).removeClass('shake');
+		}, 1500);
+	}, 20000);
+
+	setTimeout(function() {
+		quantity.html('2586');
+		$(quantity).addClass('blink');
+		percents.html('97%');
+		$(percents).addClass('blink');
+		$(requests).addClass('complete');
+		setTimeout(function() {
+			$(quantity).removeClass('blink');
+			$(percents).removeClass('blink');
+			$(requests).removeClass('shake-complete');
+		}, 1500);
+	}, 24000);
+
+	setTimeout(function() {
+		quantity.html('2646');
+		$(quantity).addClass('blink');
+		percents.html('97%');
+		$(percents).addClass('blink');
+		$(requests).addClass('shake-complete');
+		setTimeout(function() {
+			$(quantity).removeClass('blink');
+			$(percents).removeClass('blink');
+			$(requests).removeClass('shake-complete');
+		}, 1500);
+	},28000);
+
+	setTimeout(function() {
+		quantity.html('2730');
+		$(quantity).addClass('blink');
+		percents.html('96%');
+		$(percents).addClass('blink');
+		$(requests).addClass('shake-complete');
+		setTimeout(function() {
+			$(quantity).removeClass('blink');
+			$(percents).removeClass('blink');
+			$(requests).removeClass('shake-complete');
+		}, 1500);
+	},32000);
+
+	setTimeout(function() {
+		quantity.html('2898');
+		$(quantity).addClass('blink');
+		percents.html('98%');
+		$(percents).addClass('blink');
+		$(requests).addClass('shake-complete');
+		setTimeout(function() {
+			$(quantity).removeClass('blink');
+			$(percents).removeClass('blink');
+			$(requests).removeClass('shake-complete');
+		}, 1500);
+	},36000);
+
+	setTimeout(function() {
+		quantity.html('2422');
+		$(quantity).addClass('blink');
+		percents.html('87%');
+		$(percents).addClass('blink');
+		$(requests).removeClass('complete');
+		setTimeout(function() {
+			$(quantity).removeClass('blink');
+			$(percents).removeClass('blink');
+		}, 1500);
+	}, 40000);
+
+	setTimeout(function() {
+		quantity.html('2380');
+		$(quantity).addClass('blink');
+		percents.html('91%');
+		$(percents).addClass('blink');
+		$(requests).addClass('shake');
+		setTimeout(function() {
+			$(quantity).removeClass('blink');
+			$(percents).removeClass('blink');
+			$(requests).removeClass('shake');
+		}, 1500);
+	}, 44000);
+
+	setTimeout(function() {
+		quantity.html('2422');
+		$(quantity).addClass('blink');
+		percents.html('87%');
+		$(percents).addClass('blink');
+		$(requests).addClass('shake');
+		setTimeout(function() {
+			$(quantity).removeClass('blink');
+			$(percents).removeClass('blink');
+			$(requests).removeClass('shake');
+		}, 1500);
+	}, 48000);
+
+	setTimeout(function() {
+		quantity.html('2468');
+		$(quantity).addClass('blink');
+		percents.html('93%');
+		$(percents).addClass('blink');
+		$(requests).addClass('shake');
+		setTimeout(function() {
+			$(quantity).removeClass('blink');
+			$(percents).removeClass('blink');
+			$(requests).removeClass('shake');
+		}, 1500);
+	}, 52000);
+
+	setTimeout(function() {
+		quantity.html('2498');
+		$(quantity).addClass('blink');
+		percents.html('94%');
+		$(percents).addClass('blink');
+		$(requests).addClass('shake');
+		setTimeout(function() {
+			$(quantity).removeClass('blink');
+			$(percents).removeClass('blink');
+			$(requests).removeClass('shake');
+		}, 1500);
+	}, 58000);
+	
+	setTimeout(function() {
+		quantity.html('2540');
+		$(quantity).addClass('blink');
+		percents.html('89%');
+		$(percents).addClass('blink');
+		$(requests).addClass('shake');
+		setTimeout(function() {
+			$(quantity).removeClass('blink');
+			$(percents).removeClass('blink');
+			$(requests).removeClass('shake');
+		}, 1500);
+	}, 62000);
+
+	setTimeout(function() {
+		quantity.html('2586');
+		$(quantity).addClass('blink');
+		percents.html('97%');
+		$(percents).addClass('blink');
+		$(requests).addClass('complete');
+		setTimeout(function() {
+			$(quantity).removeClass('blink');
+			$(percents).removeClass('blink');
+			$(requests).removeClass('shake-complete');
+		}, 1500);
+	}, 66000);
+
+	setTimeout(function() {
+		quantity.html('2646');
+		$(quantity).addClass('blink');
+		percents.html('97%');
+		$(percents).addClass('blink');
+		$(requests).addClass('shake-complete');
+		setTimeout(function() {
+			$(quantity).removeClass('blink');
+			$(percents).removeClass('blink');
+			$(requests).removeClass('shake-complete');
+		}, 1500);
+	},70000);
+
+	setTimeout(function() {
+		quantity.html('2730');
+		$(quantity).addClass('blink');
+		percents.html('96%');
+		$(percents).addClass('blink');
+		$(requests).addClass('shake-complete');
+		setTimeout(function() {
+			$(quantity).removeClass('blink');
+			$(percents).removeClass('blink');
+			$(requests).removeClass('shake-complete');
+		}, 1500);
+	},74000);
+
+	setTimeout(function() {
+		quantity.html('2898');
+		$(quantity).addClass('blink');
+		percents.html('98%');
+		$(percents).addClass('blink');
+		$(requests).addClass('shake-complete');
+		setTimeout(function() {
+			$(quantity).removeClass('blink');
+			$(percents).removeClass('blink');
+			$(requests).removeClass('shake-complete');
+		}, 1500);
+	},80000);
+
+	setTimeout(function() {
+		quantity.html('2422');
+		$(quantity).addClass('blink');
+		percents.html('87%');
+		$(percents).addClass('blink');
+		$(requests).removeClass('complete');
+		setTimeout(function() {
+			$(quantity).removeClass('blink');
+			$(percents).removeClass('blink');
+		}, 1500);
+	}, 84000);
 }
 
 function initSlick(){
@@ -38,19 +306,36 @@ function initSlick(){
 		pauseOnClick: false,
 		prevArrow: $('.slick-prev'),
 		nextArrow: $('.slick-next'),
+		swipe: false,
 	});
 
 
 	//scroll slide with wheel
 	window.addEventListener('wheel', function(e) {
-		if (e.deltaY < -100) {
+		if (e.target.classList.contains('text-block')){
+			e.stopPropagation;
+			return false;
+		}
+		if (e.deltaY < 0) {
 			$('.slick-slider').slick('slickPrev');
 		}
-		if (e.deltaY > 100) {
+		if (e.deltaY > 0) {
 			$('.slick-slider').slick('slickNext');
 		}
 	  });
 }
+
+function initPreventScrollForSlider(){
+	$('.slick-slider').on('click', function(event){
+		var target = event.target;
+		if(target.classList.contains('line-slider')){
+			alert('swipe');
+			
+		}
+	});
+}
+
+//initPreventScrollForSlider();
 
 function initParallax() {
 	var scene = document.getElementById('background-parallax');
