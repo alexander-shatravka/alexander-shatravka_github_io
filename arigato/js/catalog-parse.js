@@ -64,13 +64,6 @@ function setSortCatalog() {
 setSortCatalog(); 
 
 
-function isMatch(element) {
-    for(var k = 0; k < checkedFilters.length; k++){
-        for (var j = 0; j < category.length; j ++)
-        return element == checkedFilters[i];
-    }
-}
-
 function setItemsHTML(displayCatalog) {
             ItemsHTML = '';
             window.arrOfItemsHTML = [];
@@ -78,7 +71,7 @@ function setItemsHTML(displayCatalog) {
 
     for (var i = 0; i < displayCatalog.length; i++) {
         
-        if(displayCatalog[i].category.some(isMatch)) {
+        if(displayCatalog[i].category.some(function(val){return val === checkedFilters[0]})) {
             
             if (displayCatalog[i].discountedPrice < displayCatalog.price) {
                 discount = '- ' + Math.ceil((1 - (displayCatalog[i].discountedPrice / displayCatalog[i].price)) * 100) + '%';
@@ -159,71 +152,3 @@ document.getElementById('sort-by').addEventListener('change', function (){
     }
 })
 
-
-function setItemsHTML(displayCatalog) {
-            ItemsHTML = '';
-            window.arrOfItemsHTML = [];
-            
-
-    for (var i = 0; i < displayCatalog.length; i++) {
-        
-        if(displayCatalog[i].category.some(isMatch)) {
-            
-            if (displayCatalog[i].discountedPrice < displayCatalog.price) {
-                discount = '- ' + Math.ceil((1 - (displayCatalog[i].discountedPrice / displayCatalog[i].price)) * 100) + '%';
-                oldPrice = '' + (displayCatalog[i].price).toFixed(2);
-            }
-            else {
-                discount = '';
-                oldPrice = '';
-            }
-    
-            if (displayCatalog[i].hasNew) {
-                isNew = 'New'
-            }
-            else {
-                isNew = ''      
-            }
-    
-            if (displayCatalog[i].discountedPrice) {
-                currentPrice = (displayCatalog[i].discountedPrice).toFixed(2) + ' грн';
-            }
-            else {
-                currentPrice = ''
-            }
-    
-            if (displayCatalog[i].placeholder) {
-                placeholder = (displayCatalog[i].placeholder);
-            }
-            else {
-                placeholder = ''
-            }
-    
-            ItemsHTML += 
-                '<div id="'+ displayCatalog[i].id  +'" class="item lightbox">\n' +
-                    '<div class = "item-content">\n'+ 
-                        '<a href="#'+ displayCatalog[i].id  +'" data-fancybox="'+ displayCatalog[i].id  +'" class="open-item lightbox-opener">\n'+
-                            '<div class="item-img">\n'+'<img src='+ displayCatalog[i].thumbnail +' alt=""></div>\n' +
-                            '<h6 class="title">' + displayCatalog[i].title + '</h6>\n' +
-                            //'<span class="view-item">Подробнее</span>\n'+
-                        '</a>\n' +
-                        '<span class="description">' + displayCatalog[i].description + '</span>\n' + 
-                        '<div class="item-price"><span class="current-price">' + currentPrice + '</span>\n' +
-                            '<span class="old-price">' + oldPrice + '</span>\n' +
-                            '<span class="discount">' + discount + '</span>\n' +
-                        '</div>\n' +
-                        '<span class="new">' + isNew + '</span>\n' +
-                        /*'<span class="placeholder">' + placeholder + '</span>\n' +*/
-                        '<a href="" class="button btn-cart"><i class="fas fa-shopping-cart"></i></a>\n' +
-                    '</div>\n'+
-                '</div>'
-        }
-        document.querySelector('.items-container').innerHTML = ItemsHTML;
-        var collectionOfItems = document.getElementsByClassName('item');
-        var arrOfItems = Array.from(collectionOfItems);
-        window.arrOfItemsHTML = Array.from(arrOfItems).map(function(i){return i.outerHTML});
-        /*for(var k = 0; k < arrOfItems.length; k++){
-            window.arrOfItemsHTML.push(arrOfItems[i].outerHTML)
-        } */   
-    } 
-}
