@@ -42,7 +42,7 @@ function initHeaderSlideLine() {
 function initSlick(){
 	$('.slick-slider').slick({
 		autoplay: true,
-		autoplaySpeed: 7000,
+		autoplaySpeed: 10000,
 		speed	: 1000,
 		vertical: true,
 		infinite: true,
