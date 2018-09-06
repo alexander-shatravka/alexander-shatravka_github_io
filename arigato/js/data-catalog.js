@@ -8,11 +8,11 @@ window.catalog = [{
     price: 24.75,
     popularity: 1,
     hasNew: false,
-    category: ['sushi', 'presentation'],
+    category: ['pizza', 'presentation'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'img/item-common.jpg', // replace with path to image extracted from catalog layout
+    thumbnail: 'img/item-pizza.jpg', // replace with path to image extracted from catalog layout
     preview: ['img/item-1.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 }, {
     id: '2',
@@ -72,11 +72,11 @@ window.catalog = [{
     price: 85.75,
     popularity: 1,
     hasNew: false,
-    category: ['pizza' , 'presentation'],
+    category: ['rolls' , 'presentation'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'img/item-pizza.jpg', // replace with image extracted from item layout
+    thumbnail: 'img/item-roll.jpg', // replace with image extracted from item layout
     preview: ['img/item-3.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 }, {
     id: '6',
@@ -371,11 +371,3 @@ window.catalog = [{
     thumbnail: 'img/item-common.jpg', // replace with path to image extracted from catalog layout
     preview: ['img/item-3.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 },];
-
-
-
-
-
-   
-
-webkitCancelAnimationFrame
