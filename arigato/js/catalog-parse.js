@@ -68,7 +68,6 @@ function setItemsHTML(displayCatalog) {
             ItemsHTML = '';
             window.arrOfItemsHTML = [];
             
-
     for (var i = 0; i < displayCatalog.length; i++) {
         
         if(displayCatalog[i].category.some(function(val){return val === checkedFilters[0]})) {
@@ -106,7 +105,7 @@ function setItemsHTML(displayCatalog) {
             ItemsHTML += 
                 '<div id="'+ displayCatalog[i].id  +'" class="item lightbox">\n' +
                     '<div class = "item-content">\n'+ 
-                        '<a href="#'+ displayCatalog[i].id  +'" data-fancybox="'+ displayCatalog[i].id  +'" class="open-item lightbox-opener">\n'+
+                        '<a href="item.html" class="open-item lightbox-opener">\n'+
                             '<div class="item-img">\n'+'<img src='+ displayCatalog[i].thumbnail +' alt=""></div>\n' +
                             '<h6 class="title">' + displayCatalog[i].title + '</h6>\n' +
                             //'<span class="view-item">Подробнее</span>\n'+
