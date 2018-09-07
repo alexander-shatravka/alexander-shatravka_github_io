@@ -42,7 +42,7 @@ function initHeaderSlideLine() {
 function initSlick(){
 	$('.slick-slider').slick({
 		autoplay: true,
-		autoplaySpeed: 10000,
+		autoplaySpeed: 2000,
 		speed	: 1000,
 		vertical: true,
 		infinite: true,
@@ -52,7 +52,12 @@ function initSlick(){
 		arrows: false,
 		pauseOnFocus: false,
 		pauseOnHover: false,
-		pauseOnClick: false,
+        pauseOnClick: false,
+        afterChange: function() {
+            setTimeout(function(){
+                alert(1);
+            }, 1000)
+        } 
 	});
 }
 
