@@ -7,6 +7,19 @@ initPlayVideo();
 initPriceSlider();
 //initPagination();
 //initItemOpener();
+initFixedHeader();
+
+function initFixedHeader(){
+    var headerMain = $('#wrapper>header');
+    headerMain.removeClass("fixed");
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > $(window).height()) {
+            headerMain.addClass("fixed").fadeIn('slow');
+        } else {
+            headerMain.removeClass("fixed").fadeIn('slow');
+        };
+    });
+}
 
 function initPlayVideo() {
 	$('.play-button').click(function(){
@@ -42,7 +55,7 @@ function initHeaderSlideLine() {
 function initSlick(){
 	$('.slick-slider').slick({
 		autoplay: true,
-		autoplaySpeed: 6000,
+		autoplaySpeed: 2000,
 		speed	: 1000,
 		vertical: true,
 		infinite: true,

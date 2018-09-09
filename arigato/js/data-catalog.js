@@ -185,11 +185,11 @@ window.catalog = [{
     price: 85.75,
     popularity: 1,
     hasNew: false,
-    category: ['women'],
+    category: ['desserts'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'img/item-common.jpg', // replace with path to image extracted from catalog layout
+    thumbnail: 'img/item-dessert.jpg', // replace with path to image extracted from catalog layout
     preview: ['img/item-3.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 }, {
     id: '13',
@@ -201,11 +201,11 @@ window.catalog = [{
     price: 120,
     popularity: 1,
     hasNew: false,
-    category: ['men'],
+    category: ['desserts'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'img/item-common.jpg', // replace with path to image extracted from catalog layout
+    thumbnail: 'img/item-dessert.jpg', // replace with path to image extracted from catalog layout
     preview: ['img/item-2.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 }, {
     id: '14',
@@ -250,11 +250,11 @@ window.catalog = [{
     price: 120,
     popularity: 1,
     hasNew: false,
-    category: ['rolls'],
+    category: ['desserts'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'img/item-roll.jpg', // replace with path to image extracted from catalog layout
+    thumbnail: 'img/item-dessert.jpg', // replace with path to image extracted from catalog layout
     thumbnailFull: 'img/item-full.jpg'
 }, {
     id: '17',

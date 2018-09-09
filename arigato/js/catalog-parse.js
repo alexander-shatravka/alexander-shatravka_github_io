@@ -24,9 +24,16 @@ var checkedFilters = [];
 var allFilters = Array.from($("input:checkbox"));
 
 
+if(checkedFilters.length == 0) {
+    for(var i = 0; i < allFilters.length; i++){
+        checkedFilters.push(allFilters[i].value);
+    }
+}
 
 $("input:checkbox").on('change', function(){
-    
+    if(checkedFilters.length === allFilters.length){
+        checkedFilters.length = 0;
+    }
     if(($(this).prop('checked'))){
         checkedFilters.push($(this).val());
     }
@@ -70,7 +77,7 @@ function setItemsHTML(displayCatalog) {
             
     for (var i = 0; i < displayCatalog.length; i++) {
         
-        if(displayCatalog[i].category.some(function(val){return val === checkedFilters[0]})) {
+        if(displayCatalog[i].category.some(function(val){if (checkedFilters.includes(val)){return true}})) {
             
             if (displayCatalog[i].discountedPrice < displayCatalog.price) {
                 discount = '- ' + Math.ceil((1 - (displayCatalog[i].discountedPrice / displayCatalog[i].price)) * 100) + '%';
@@ -105,7 +112,7 @@ function setItemsHTML(displayCatalog) {
             ItemsHTML += 
                 '<div id="'+ displayCatalog[i].id  +'" class="item lightbox">\n' +
                     '<div class = "item-content">\n'+ 
-                        '<a href="item.html" class="open-item lightbox-opener">\n'+
+                        '<a href="item.html" class="open-item">\n'+
                             '<div class="item-img">\n'+'<img src='+ displayCatalog[i].thumbnail +' alt=""></div>\n' +
                             '<h6 class="title">' + displayCatalog[i].title + '</h6>\n' +
                             //'<span class="view-item">Подробнее</span>\n'+
