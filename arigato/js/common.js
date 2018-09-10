@@ -14,9 +14,9 @@ function initFixedHeader(){
     headerMain.removeClass("fixed");
     $(window).scroll(function(){
         if ($(this).scrollTop() > $(window).height()) {
-            headerMain.addClass("fixed").fadeIn('slow');
+            headerMain.addClass("fixed");
         } else {
-            headerMain.removeClass("fixed").fadeIn('slow');
+            headerMain.removeClass("fixed");
         };
     });
 }
