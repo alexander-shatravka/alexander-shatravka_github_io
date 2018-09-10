@@ -14,7 +14,7 @@ function initFixedHeader(){
     headerMain.removeClass("fixed");
     $(window).scroll(function(){
         if ($(this).scrollTop() > $(window).height()) {
-            headerMain.addClass("fixed");
+            headerMain.addClass("fixed").animate;
         } else {
             headerMain.removeClass("fixed");
         };
@@ -66,13 +66,14 @@ function initSlick(){
 		pauseOnFocus: false,
 		pauseOnHover: false,
         pauseOnClick: false,
-        afterChange: function() {
-            setTimeout(function(){
-                alert(1);
-            }, 1000)
-        } 
 	});
 }
+
+$('.slick-slider').on('afterChange', function(){
+    setTimeout(function(){
+        $()
+    }, 1000)
+})
 
 // lightbox init
 function initFancybox() {
