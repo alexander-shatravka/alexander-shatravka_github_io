@@ -13,10 +13,15 @@ function initFixedHeader(){
     var headerMain = $('#wrapper>header');
     headerMain.removeClass("fixed");
     $(window).scroll(function(){
-        if ($(this).scrollTop() > $(window).height()) {
-            headerMain.addClass("fixed").animate;
-        } else {
+        if ($(this).scrollTop() > 100) {
+            headerMain.addClass("fixed");
+        }
+        if ($(this).scrollTop() > $(window).height()-150) {
+            headerMain.addClass('slideDown');
+        }
+         else {
             headerMain.removeClass("fixed");
+            headerMain.removeClass("slideDown");
         };
     });
 }
@@ -71,7 +76,7 @@ function initSlick(){
 
 $('.slick-slider').on('afterChange', function(){
     setTimeout(function(){
-        $()
+        $('')
     }, 1000)
 })
 

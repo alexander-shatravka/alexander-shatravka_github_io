@@ -222,7 +222,7 @@ a {
   outline: 0 !important; }
 
 .container {
-  max-width: 1140px;
+  max-width: 1200px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
@@ -249,32 +249,33 @@ header {
   top: 0;
   left: 0;
   background: transparent;
-  z-index: 99999999;
-  -webkit-transition: 1s top, 1s position;
-  -o-transition: 1s top, 1s position;
-  transition: 1s top, 1s position; }
+  z-index: 99999999; }
   header.fixed {
     position: fixed;
-    top: 0;
+    top: -200px;
     background: #fff;
     -webkit-box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
-            box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
-    -webkit-transition: 1s top, 1s position;
-    -o-transition: 1s top, 1s position;
-    transition: 1s top, 1s position; }
+            box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1); }
     header.fixed .container {
       position: relative; }
-    header.fixed ul li a {
-      color: #343538 !important; }
-    header.fixed .cart-icon i {
-      color: #4a4a4a; }
+      header.fixed .container ul li a {
+        color: #4a4a4a !important; }
+      header.fixed .container .phone a {
+        color: #4a4a4a; }
+      header.fixed .container .cart-icon i {
+        color: #4a4a4a; }
+  header.slideDown {
+    top: 0;
+    -webkit-transition: top 0.5s;
+    -o-transition: top 0.5s;
+    transition: top 0.5s; }
   header .container {
     height: 50px;
     padding-top: 15px;
     position: relative; }
     header .container #logo {
       position: absolute;
-      left: 0;
+      left: 15px;
       top: 25px;
       height: 40px;
       display: inline-block;
@@ -374,7 +375,7 @@ header {
       position: absolute;
       height: 30px;
       width: 30px;
-      right: 20px;
+      right: 15px;
       top: 50%;
       -webkit-transform: translateY(0%);
           -ms-transform: translateY(0%);
@@ -655,6 +656,8 @@ header {
 
 .live-section {
   padding: 0;
+  position: relative;
+  height: 720px;
   /*.live-wrapper{
 		margin: 0 auto;
 		position: relative;
@@ -747,9 +750,15 @@ header {
 	}*/ }
   .live-section .live-video {
     width: 100%;
-    height: 100%;
-    max-width: 1110px;
-    margin: 0 auto;
+    height: auto;
+    max-width: 750px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -30%);
+        -ms-transform: translate(-50%, -30%);
+            transform: translate(-50%, -30%);
     overflow: hidden;
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
             box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); }
@@ -758,7 +767,8 @@ header {
   padding: 0; }
   .catalog-presentation .catalog-presentation-wrapper {
     width: 100%;
-    height: 520px;
+    padding: 0;
+    height: 550px;
     overflow: hidden;
     position: absolute;
     left: 50%;
@@ -768,7 +778,7 @@ header {
             transform: translate(-50%, -50%); }
     .catalog-presentation .catalog-presentation-wrapper .item {
       display: block;
-      float: left;
+      float: right;
       width: 22%;
       margin: 1%;
       height: 47%;
@@ -799,13 +809,18 @@ header {
           display: none; }
         .catalog-presentation .catalog-presentation-wrapper .item .descr-content .title {
           font-size: 20px;
-          margin-bottom: 20px;
+          margin-bottom: 40px;
           font-weight: bold;
           color: #fff; }
       .catalog-presentation .catalog-presentation-wrapper .item .current-price {
-        font-size: 16px;
+        font-size: 24px;
         font-weight: bold;
-        color: #fff; }
+        color: #fff;
+        position: absolute;
+        bottom: 10px;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%); }
       .catalog-presentation .catalog-presentation-wrapper .item .item-img {
         height: 100%;
         width: 100px; }
@@ -819,14 +834,14 @@ header {
               -ms-transform: translate(-50%, -50%);
                   transform: translate(-50%, -50%); }
       .catalog-presentation .catalog-presentation-wrapper .item:first-child {
-        float: right;
+        float: left;
         width: 50%;
         height: 98%;
         clear: right; }
       .catalog-presentation .catalog-presentation-wrapper .item .btn-cart {
         position: absolute;
         bottom: 10px;
-        right: 10px;
+        right: 20px;
         height: 45px;
         width: 45px;
         background: #D0011B;
