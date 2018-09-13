@@ -1157,6 +1157,60 @@ header {
         -webkit-transition: 0.5s height;
         -o-transition: 0.5s height;
         transition: 0.5s height; }
+  .catalog-presentation .bottom-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
+    .catalog-presentation .bottom-container .tags {
+      width: 75%;
+      float: left;
+      text-align: left; }
+      .catalog-presentation .bottom-container .tags li {
+        display: inline-block;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        height: 25px;
+        -webkit-border-radius: 15px;
+                border-radius: 15px;
+        background: #C5C5C5;
+        -webkit-transition: background-color 0.3s;
+        -o-transition: background-color 0.3s;
+        transition: background-color 0.3s; }
+        .catalog-presentation .bottom-container .tags li a {
+          padding: 0 10px;
+          font-size: 14px;
+          color: #fff;
+          line-height: 25px;
+          text-align: center; }
+        .catalog-presentation .bottom-container .tags li:hover {
+          background: #D0011B;
+          -webkit-transition: background-color 0.3s;
+          -o-transition: background-color 0.3s;
+          transition: background-color 0.3s; }
+    .catalog-presentation .bottom-container .btn-catalog {
+      height: 60px;
+      line-height: 60px;
+      -webkit-border-radius: 30px;
+              border-radius: 30px;
+      width: 22%;
+      float: right;
+      color: #fff;
+      font-size: 24px;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+      background: #D0011B;
+      -webkit-transition: background-color 0.3s;
+      -o-transition: background-color 0.3s;
+      transition: background-color 0.3s; }
+      .catalog-presentation .bottom-container .btn-catalog:hover {
+        background: #840111;
+        -webkit-transition: background-color 0.3s;
+        -o-transition: background-color 0.3s;
+        transition: background-color 0.3s; }
 
 .link-section {
   position: relative;
