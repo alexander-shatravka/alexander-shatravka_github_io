@@ -8,6 +8,17 @@ initPriceSlider();
 //initPagination();
 //initItemOpener();
 initFixedHeader();
+initAnchorsScrolling();
+
+function initAnchorsScrolling() {
+    $(".main-nav").on("click","a", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1000);
+            showMenu.classList.remove('menu-icon-close');
+    });
+}
 
 function initFixedHeader(){
     var headerMain = $('#wrapper>header');
@@ -61,7 +72,7 @@ function initSlick(){
 	$('.slick-slider').slick({
         autoplay: true,
         vertical: false,
-		autoplaySpeed: 8000,
+		autoplaySpeed: 4000,
 		speed	: 1000,
 		infinite: true,
 		slidesToShow: 1,
