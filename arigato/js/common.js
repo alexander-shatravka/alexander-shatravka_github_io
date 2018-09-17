@@ -9,6 +9,7 @@ initPriceSlider();
 //initItemOpener();
 initFixedHeader();
 initAnchorsScrolling();
+initSelectFilters();
 
 function initAnchorsScrolling() {
     $(".main-nav").on("click","a", function (event) {
@@ -156,6 +157,25 @@ function initPagination() {
     return items;
 }
 
+function initSelectFilters(){
+    $('.category').on('click','a', function(){
+        $(this).toggleClass('active');
+    })
+
+    $('.features').on('click','a', function(){
+        $(this).toggleClass('active');
+    })
+}
+
+function initActiveOption(){
+    $('.dropdown').on('click','a', function(){
+        $('.dropdown a').removeClass('active');
+        $(this).addClass('active');
+        $('.select-block .selected').html($(this).html());
+    })
+}
+
+initActiveOption()
 
 
 

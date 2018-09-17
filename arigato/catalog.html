@@ -11,6 +11,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900&amp;subset=latin-ext,vietnamese" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:100,300,400,500,700,800,900&amp;subset=cyrillic-ext" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body>
 	
@@ -99,90 +100,85 @@
 	<section class="catalog-section">
 		<div class="container">
 			<div class="filter-top">
-				<div class="select-block">
-					<label for="sort-by">Сортировать по:</label>
-					<select name="sort-by" id="sort-by" class="sort-by">
-						<option value="popular">По популярности</option>
-						<option value="cheap-expensive">От дешевых к дорогим</option>
-						<option value="expensive-cheap">От дорогих к дешевым</option>
-					</select>
-					<i class="fa fa-angle-down"></i>
-				</div>
+				<ul class="category">
+					<li><a class="active" id="all">Все категории</a></li>
+					<li><a>Суши</a></li>
+					<li><a>Пицца</a></li>
+					<li><a>Напитки</a></li>
+					<li><a>Прочее</a></li>
+				</ul>
+				<ul class="features">
+					<li><a class="active">Все</a></li>
+					<li><a>с лососем</a></li>
+					<li><a>без лука</a></li>
+					<li><a>маки роллы</a></li>
+				</ul>
 			</div>
-			<aside class="filter-side">
-				<div class="category filter-block">
-					<h6>Категория</h6>
-					<ul>
-						<li>
-							<input class= "styled-checkbox" type="checkbox" id="all" name="all" value="all" checked/>
-							<label for="all">Все товары</label>
-						</li>
-					    <li>
-							<input class= "styled-checkbox" type="checkbox" id="sushi" name="sushi" value="sushi"/>
-							<label for="sushi">Суши</label>
-						</li>
-						<li>
-							<input class= "styled-checkbox" type="checkbox" id="rolls" name="rolls" value="rolls" />
-							<label for="rolls">Роллы</label>
-						</li>
-						<li>
-							<input class= "styled-checkbox" type="checkbox" id="pizza" name="pizza" value="pizza" />
-							<label for="pizza">Пицца</label>
-						</li>
-						<li>
-							<input class= "styled-checkbox" type="checkbox" id="desserts" name="desserts" value="desserts" />
-							<label for="desserts">Дессерты</label>
-						</li>
-					</ul>
+			<div class="select-block" id="sort-by">
+				<span class="selected">Популярые</span>
+				<div class="dropdown">
+					<div class="option"><a>Популярые</a></div>
+					<div class="option"><a>Дешевле</a></div>
+					<div class="option"><a>Дороже</a></div>
 				</div>
-				<div class="category filter-block">
-					<h6>Особое</h6>
-					<ul>
-					    <li>
-							<input class= "styled-checkbox" type="checkbox" id="new" name="new" value="new"/>
-							<label for="new">Новинки</label>
-						</li>
-						<li>
-							<input class= "styled-checkbox" type="checkbox" id="best-sellers" name="best-sellers" value="best-sellers" />
-							<label for="best-sellers">Топ продаж</label>
-						</li>
-						<li>
-							<input class= "styled-checkbox" type="checkbox" id="sale" name="sale" value="sale" />
-							<label for="sale">Товары со скидкой</label>
-						</li>
-					</ul>
-				</div>
-				<div class="range-price">
-					  <label for="amount">Цена:</label>
-					  <div id="slider-range"></div>
-					  <input type="text" id="amount" readonly style="border:0">
-				</div>
-			</aside>
+				<i class="fa fa-angle-down"></i>
+			</div>
+
+			<div class="items-container"></div>
+		</div>
 			
-			<div class="catalog-container">
-				<div class="items-container"></div>
-				<div class="hidden-container" style="display: none"></div>
-				<div class="pagination"></div>
-			</div>
 		</div> 
 	</section>
-	<footer>
-		<a href="" class="logo-footer">Arigato</a>
-		<nav class="footer-nav">
-			<ul>
-				<span id="slide-line"></span>
-				<li><a href="catalog.html">Каталог</a></li>
-				<li><a href="catalog.html">О нас</a></li>
-				<li><a href="catalog.html">Контакты</a></li>
-				<li><a href="catalog.html">Доставка</a></li>
-				<li><a href="catalog.html">Скидки</a></li>
-			</ul>
-		</nav>
-		<ul class="social">
-			<li><a href="" class="facebook"><i class="fab fa-facebook-square"></i></a></li>
-			<li><a href="" class="instagram"><i class="fab fa-instagram"></i></a></li>
-			<li><a tel="+38686868686" class="phone">+38686868686</a></li>
-		</ul>
+	<footer id="footer">
+		<div class="container">
+			<div class="col">
+				<p>Lorem ipsum dolor sit amet, 
+				consectetur adipisicing elit, sed
+				do eiusmod tempor  ncididunt ut
+				labore et dolore magna aliqua</p>
+				<p>
+					<img src="img/cards.png" alt="">
+				</p>
+			</div>
+			<div class="col">
+				<span>Телефоны для заказов:</span>
+				<ul class="phones">
+					<li><a href="tel:057 758 99 47"><b>(057) 758 99 47</b></a></li>
+					<li><a href="tel:099 367 47 47"><b>(099) 367 47 47</b></a></li>
+					<li><a href="tel:096 367 47 47"><b>(096) 336 47 47</b></a></li>
+				</ul>
+				<p></p>
+				<p>
+					<span>Электронная почта:</span>
+					<span><a href="mailto:mail@arigato.com.ua"><b>mail@arigato.com.ua</b></a></span>
+				</p>
+			</div>
+			<div class="col">
+				<ul class="footer-nav">
+					<li><a href="">Новости</a></li>
+					<li><a href="">Акции</a></li>
+					<li><a href="">Доставка и оплата</a></li>
+					<li><a href="">О нас</a></li>
+					<li><a href="">Бонусы</a></li>
+					<li><a href="">Вакансии</a></li>
+					<li><a href="">Информация для партнеров</a></li>
+				</ul>
+			</div>
+			<div class="col">
+				<p>Подписывайся и первый  узнавай о всех новостях</p>
+				<ul class="social-footer">
+					<li><a href=""><i class="fab fa-instagram"></i></a></li>
+					<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+					<li><a href=""><i class="fab fa-youtube"></i></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="container">
+				<span class="left">© Arigato 2018</span>
+				<span class="right">Created by <a href=""><b>VIRAL</b></a></span>
+			</div>
+		</div>	
 	</footer>
 </div>
 <script src="js/libs.min.js"></script>

@@ -21,24 +21,32 @@ var cheapExpensive = catalogCopy.slice();
 var expensiveCheap = catalogCopy.slice(); 
 var popular = catalogCopy.slice();
 var checkedFilters = [];    
-var allFilters = Array.from($("input:checkbox"));
+var allFilters = Array.from($(".filter-top a"));
 
 
-if(checkedFilters.length == 0) {
-    for(var i = 0; i < allFilters.length; i++){
-        checkedFilters.push(allFilters[i].value);
+function pushActiveCategories(){
+    if(checkedFilters.length == 0) {
+        if($('#all').hasClass('active')){
+            for(var i = 0; i < allFilters.length; i++){
+                checkedFilters.push(allFilters[i].text.toLowerCase());
+            }
+        }
     }
-}
+} 
+pushActiveCategories();
 
-$("input:checkbox").on('change', function(){
+$(".filter-top").on('click','a', function(e){
+    if(e.target.id != 'all'){
+        $('#all').removeClass('active');
+    }
     if(checkedFilters.length === allFilters.length){
         checkedFilters.length = 0;
     }
-    if(($(this).prop('checked'))){
-        checkedFilters.push($(this).val());
+    if(($(this).hasClass('active'))){
+        checkedFilters.push($(this).text().toLowerCase());
     }
     else {
-        checkedFilters.splice( checkedFilters.indexOf(($(this).val(), 1 )));
+        checkedFilters.splice( checkedFilters.indexOf(($(this).text(), 1 )));
     }
 
     checkedFilters.sort(function(a, b){
@@ -52,7 +60,8 @@ $("input:checkbox").on('change', function(){
             checkedFilters.splice( checkedFilters.indexOf(checkedFilters[i]), 1 );
         }
     }
-    setItemsHTML(popular)
+    setItemsHTML(popular);
+    pushActiveCategories();
 })
 
 
@@ -96,7 +105,7 @@ function setItemsHTML(displayCatalog) {
             }
     
             if (displayCatalog[i].discountedPrice) {
-                currentPrice = (displayCatalog[i].discountedPrice).toFixed(2) + ' грн';
+                currentPrice = (displayCatalog[i].discountedPrice).toFixed(2);
             }
             else {
                 currentPrice = ''
@@ -110,23 +119,22 @@ function setItemsHTML(displayCatalog) {
             }
     
             ItemsHTML += 
-                '<div id="'+ displayCatalog[i].id  +'" class="item lightbox">\n' +
-                    '<div class = "item-content">\n'+ 
-                        '<a href="item.html" class="open-item">\n'+
-                            '<div class="item-img">\n'+'<img src='+ displayCatalog[i].thumbnail +' alt=""></div>\n' +
-                            '<h6 class="title">' + displayCatalog[i].title + '</h6>\n' +
-                            //'<span class="view-item">Подробнее</span>\n'+
-                        '</a>\n' +
+            '<div id="'+ displayCatalog[i].id  +'" class="item">\n'+
+                '<a href="item.html">\n' +
+                    '<div class="item-img">\n'+'<img src='+ displayCatalog[i].thumbnail +' alt=""></div>\n' +
+                    '<div class="descr-content">\n'+
+                        '<h6 class="title">' + displayCatalog[i].title + '</h6>\n' +
                         '<span class="description">' + displayCatalog[i].description + '</span>\n' + 
-                        '<div class="item-price"><span class="current-price">' + currentPrice + '</span>\n' +
+                        '<div class="item-price"><span class="current-price">' + currentPrice + '<span class="grn">грн.</span></span>\n' +
                             '<span class="old-price">' + oldPrice + '</span>\n' +
                             '<span class="discount">' + discount + '</span>\n' +
                         '</div>\n' +
                         '<span class="new">' + isNew + '</span>\n' +
                         /*'<span class="placeholder">' + placeholder + '</span>\n' +*/
-                        '<a href="" class="button btn-cart"><i class="fas fa-shopping-cart"></i></a>\n' +
+                        '<a href="" class="button btn-cart"><i class="fi flaticon-shopping-cart"></i>   </a>\n'+
                     '</div>\n'+
-                '</div>'
+                '</a>\n' +
+            '</div>'
         }
         document.querySelector('.items-container').innerHTML = ItemsHTML;
         var collectionOfItems = document.getElementsByClassName('item');
@@ -140,9 +148,9 @@ function setItemsHTML(displayCatalog) {
 
 setItemsHTML(popular);
 
-document.getElementById('sort-by').addEventListener('change', function (){
+document.getElementById('sort-by').addEventListener('click', function (){
     setItemsHTML(expensiveCheap);
-    switch(this.value){
+    switch(this.text){
         case "cheap-expensive":
             setItemsHTML(cheapExpensive);
             //initPagination();

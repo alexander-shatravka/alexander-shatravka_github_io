@@ -8,11 +8,11 @@ window.catalog = [{
     price: 24.75,
     popularity: 1,
     hasNew: false,
-    category: ['pizza', 'presentation'],
+    category: ['пицца', 'presentation'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'img/item-pizza.jpg', // replace with path to image extracted from catalog layout
+    thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
     preview: ['img/item-1.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 }, {
     id: '2',
@@ -24,23 +24,23 @@ window.catalog = [{
     price: 30,
     popularity: 2,
     hasNew: false,
-    category: ['rolls', 'presentation'],
+    category: ['суши-2', 'presentation'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'img/item-roll.jpg', // replace with image extracted from item layout
+    thumbnail: 'img/item-суши-2.jpg', // replace with image extracted from item layout
     preview: ['img/item-2.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 }, {
     id: '3',
     dateAdded: '2017-02-12T11:14:29.000Z',
-    title: 'Sushi set Philadelphia',
+    title: 'суши set Philadelphia',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 35.75,
     price: 35.75,
     popularity: 1,
     hasNew: false,
-    category: ['sushi' , 'presentation'],
+    category: ['суши' , 'presentation'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
@@ -56,7 +56,7 @@ window.catalog = [{
     price: 120,
     popularity: 1,
     hasNew: false,
-    category: ['sushi' , 'presentation'],
+    category: ['суши' , 'presentation'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
@@ -65,18 +65,18 @@ window.catalog = [{
 }, {
     id: '5',
     dateAdded: '2017-02-12T11:14:29.000Z',
-    title: 'Sushi set Philadelphia',
+    title: 'суши set Philadelphia',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 85.75,
     price: 85.75,
     popularity: 1,
     hasNew: false,
-    category: ['rolls' , 'presentation'],
+    category: ['суши-2' , 'presentation'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'img/item-roll.jpg', // replace with image extracted from item layout
+    thumbnail: 'img/item-суши-2.jpg', // replace with image extracted from item layout
     preview: ['img/item-3.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 }, {
     id: '6',
@@ -88,27 +88,27 @@ window.catalog = [{
     price: 120,
     popularity: 1,
     hasNew: false,
-    category: ['pizza', 'best-sellers'],
+    category: ['пицца', 'best-sellers'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'img/item-pizza.jpg', // replace with path to image extracted from catalog layout
+    thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
     preview: ['img/item-2.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 }, {
     id: '7',
     dateAdded: '2017-02-12T11:14:29.000Z',
-    title: 'Sushi set Philadelphia',
+    title: 'суши set Philadelphia',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 85.75,
     price: 85.75,
     popularity: 1,
     hasNew: false,
-    category: ['pizza'],
+    category: ['пицца'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'img/item-pizza.jpg', // replace with path to image extracted from catalog layout
+    thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
     preview: ['img/item-3.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 }, {
     id: '8',
@@ -120,27 +120,27 @@ window.catalog = [{
     price: 120,
     popularity: 1,
     hasNew: false,
-    category: ['pizza'],
+    category: ['пицца'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'img/item-pizza.jpg', // replace with path to image extracted from catalog layout
+    thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
     preview: ['img/item-2.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 }, {
     id: '9',
     dateAdded: '2017-02-12T11:14:29.000Z',
-    title: 'Sushi set Philadelphia',
+    title: 'суши set Philadelphia',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 85.75,
     price: 85.75,
     popularity: 1,
     hasNew: false,
-    category: ['best-sellers', 'pizza'],
+    category: ['best-sellers', 'пицца'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'img/item-pizza.jpg', // replace with path to image extracted from catalog layout
+    thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
     preview: ['img/item-3.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 }, {
     id: '10',
@@ -152,44 +152,44 @@ window.catalog = [{
     price: 120,
     popularity: 1,
     hasNew: false,
-    category: ['rolls'],
+    category: ['суши-2'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'img/item-roll.jpg', // replace with path to image extracted from catalog layout
+    thumbnail: 'img/item-суши-2.jpg', // replace with path to image extracted from catalog layout
     preview: ['img/item-2.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 }, {
     id: '11',
     dateAdded: '2017-02-12T11:14:29.000Z',
-    title: 'Sushi set Philadelphia',
+    title: 'суши set Philadelphia',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 85.75,
     price: 85.75,
     popularity: 1,
     hasNew: false,
-    category: ['rolls'],
+    category: ['суши-2'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'img/item-roll.jpg', // replace with path to image extracted from catalog layout
+    thumbnail: 'img/item-суши-2.jpg', // replace with path to image extracted from catalog layout
     preview: ['img/item-3.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 },
 {
     id: '12',
     dateAdded: '2017-02-12T11:14:29.000Z',
-    title: 'Sushi set Philadelphia',
+    title: 'суши set Philadelphia',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 85.75,
     price: 85.75,
     popularity: 1,
     hasNew: false,
-    category: ['desserts'],
+    category: ['напитки'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'img/item-dessert.jpg', // replace with path to image extracted from catalog layout
+    thumbnail: 'img/item-напитки.jpg', // replace with path to image extracted from catalog layout
     preview: ['img/item-3.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 }, {
     id: '13',
@@ -201,44 +201,44 @@ window.catalog = [{
     price: 120,
     popularity: 1,
     hasNew: false,
-    category: ['desserts'],
+    category: ['напитки'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'img/item-dessert.jpg', // replace with path to image extracted from catalog layout
+    thumbnail: 'img/item-напитки.jpg', // replace with path to image extracted from catalog layout
     preview: ['img/item-2.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
 }, {
     id: '14',
     dateAdded: '2017-02-12T11:14:29.000Z',
-    title: 'Sushi set Philadelphia',
+    title: 'суши set Philadelphia',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 85.75,
     price: 85.75,
     popularity: 1,
     hasNew: false,
-    category: ['pizza'],
+    category: ['пицца'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'img/item-pizza.jpg', // replace with path to image extracted from catalog layout
+    thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
     thumbnailFull: 'img/item-full.jpg', // replace with paths to images extracted from item layout
 },
 {
     id: '15',
     dateAdded: '2017-02-12T11:14:29.000Z',
-    title: 'Sushi set Philadelphia',
+    title: 'суши set Philadelphia',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 85.75,
     price: 85.75,
     popularity: 1,
     hasNew: false,
-    category: ['rolls'],
+    category: ['суши-2'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'img/item-roll.jpg', // replace with path to image extracted from catalog layout
+    thumbnail: 'img/item-суши-2.jpg', // replace with path to image extracted from catalog layout
     thumbnailFull: 'img/item-full.jpg'
 }, {
     id: '16',
@@ -250,40 +250,40 @@ window.catalog = [{
     price: 120,
     popularity: 1,
     hasNew: false,
-    category: ['desserts'],
+    category: ['напитки'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'img/item-dessert.jpg', // replace with path to image extracted from catalog layout
+    thumbnail: 'img/item-напитки.jpg', // replace with path to image extracted from catalog layout
     thumbnailFull: 'img/item-full.jpg'
 }, {
     id: '17',
     dateAdded: '2017-02-12T11:14:29.000Z',
-    title: 'Sushi set Philadelphia',
+    title: 'суши set Philadelphia',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 85.75,
     price: 85.75,
     popularity: 1,
     hasNew: false,
-    category: ['rolls'],
+    category: ['суши-2'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'img/item-roll.jpg', // replace with path to image extracted from catalog layout
+    thumbnail: 'img/item-суши-2.jpg', // replace with path to image extracted from catalog layout
     thumbnailFull: 'img/item-full.jpg'
 }, 
 {
     id: '18',
     dateAdded: '2017-02-12T11:14:29.000Z',
-    title: 'Sushi set Philadelphia',
+    title: 'суши set Philadelphia',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 85.75,
     price: 85.75,
     popularity: 1,
     hasNew: false,
-    category: ['sushi'],
+    category: ['суши'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
@@ -299,40 +299,40 @@ window.catalog = [{
     price: 120,
     popularity: 1,
     hasNew: true,
-    category: ['pizza', 'best-sellers'],
+    category: ['пицца', 'best-sellers'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'img/item-pizza.jpg', // replace with path to image extracted from catalog layout
+    thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
     thumbnailFull: 'img/item-full.jpg'
 }, {
     id: '20',
     dateAdded: '2017-02-12T11:14:29.000Z',
-    title: 'Sushi set Philadelphia',
+    title: 'суши set Philadelphia',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 85.75,
     price: 85.75,
     popularity: 1,
     hasNew: true,
-    category: ['rolls', 'best-sellers'],
+    category: ['суши-2', 'best-sellers'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
-    thumbnail: 'img/item-roll.jpg', // replace with path to image extracted from catalog layout
+    thumbnail: 'img/item-суши-2.jpg', // replace with path to image extracted from catalog layout
     thumbnailFull: 'img/item-full.jpg'
 },
 {
     id: '21',
     dateAdded: '2017-02-12T11:14:29.000Z',
-    title: 'Sushi set Philadelphia',
+    title: 'суши set Philadelphia',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 85.75,
     price: 85.75,
     popularity: 1,
     hasNew: false,
-    category: ['sushi', 'best-sellers'],
+    category: ['суши', 'best-sellers'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
@@ -348,7 +348,7 @@ window.catalog = [{
     price: 120,
     popularity: 1,
     hasNew: true,
-    category: ['sushi', 'best-sellers'],
+    category: ['суши', 'best-sellers'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
@@ -357,14 +357,14 @@ window.catalog = [{
 }, {
     id: '23',
     dateAdded: '2017-02-12T11:14:29.000Z',
-    title: 'Sushi set Philadelphia',
+    title: 'суши set Philadelphia',
     description: 'The best food for you and your friends',
     placeholder: null,
     discountedPrice: 85.75,
     price: 85.75,
     popularity: 1,
     hasNew: false,
-    category: ['sushi', 'best-sellers'],
+    category: ['суши', 'best-sellers'],
     fashion: 'Casual style',
     colors: [],
     sizes: [],
