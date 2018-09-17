@@ -46,7 +46,7 @@ $(".filter-top").on('click','a', function(e){
         checkedFilters.push($(this).text().toLowerCase());
     }
     else {
-        checkedFilters.splice( checkedFilters.indexOf(($(this).text(), 1 )));
+        checkedFilters.splice(checkedFilters.indexOf(($(this).text(), 1 )));
     }
 
     checkedFilters.sort(function(a, b){
@@ -55,26 +55,31 @@ $(".filter-top").on('click','a', function(e){
         return 0;
     })
 
-    for (var i = 0; i < checkedFilters.length; i++){
+    /*for (var i = 0; i < checkedFilters.length; i++){
         if(checkedFilters[i] === checkedFilters[i+1]){
             checkedFilters.splice( checkedFilters.indexOf(checkedFilters[i]), 1 );
         }
-    }
+    }*/
     setItemsHTML(popular);
+})
+
+$("#all").on('click', function(){
+    $('.category li a').each(function(){
+        $(this).removeClass('active')
+    });
     pushActiveCategories();
 })
 
 
-
 function setSortCatalog() {
+    popular.sort(function(a, b){
+        return a.popularity - b.popularity;
+    }) 
     cheapExpensive.sort(function(a, b){
         return a.discountedPrice - b.discountedPrice;
     })
     expensiveCheap.sort(function(a, b){
         return b.discountedPrice - a.discountedPrice;
-    }) 
-    popular.sort(function(a, b){
-       return a.popularity - b.popularity;
     }) 
 }
 setSortCatalog(); 
@@ -148,18 +153,18 @@ function setItemsHTML(displayCatalog) {
 
 setItemsHTML(popular);
 
-document.getElementById('sort-by').addEventListener('click', function (){
+$('#sort-by').on('click','a', function (){
     setItemsHTML(expensiveCheap);
-    switch(this.text){
-        case "cheap-expensive":
+    switch($(this).text().toLocaleLowerCase()){
+        case "дешевле":
             setItemsHTML(cheapExpensive);
             //initPagination();
             break;
-        case "expensive-cheap":
+        case "дороже":
             setItemsHTML(expensiveCheap);
             //initPagination();
             break;
-        case "popular":
+        case "популярные":
             setItemsHTML(popular);
             //initPagination();
             break;        
