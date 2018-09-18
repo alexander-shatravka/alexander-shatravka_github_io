@@ -1,19 +1,19 @@
 window.catalog = [{
     id: '1',
     dateAdded: '2017-05-15T16:58:40.000Z',
-    title: 'Monki Festival Knitted Monki Festival Knitted',
-    description: 'The best food for you and your friends.Monki Festival Knitted Monki Festival Knitted',
+    title: 'Филадельфия',
+    description: 'The best food for you and your friends.Филадельфия',
     placeholder: null,
     discountedPrice: 24.75,
     price: 24.75,
     popularity: 1,
     hasNew: false,
     category: ['пицца', 'presentation'],
-    fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    size: 8,
     thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
-    preview: ['img/item-1.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    imgFull: 'img/item-big-pizza.jpg' // replace with paths to images extracted from item layout
 }, {
     id: '2',
     dateAdded: '2017-06-12T15:35:13.000Z',
@@ -25,11 +25,12 @@ window.catalog = [{
     popularity: 2,
     hasNew: false,
     category: ['суши-2', 'presentation'],
-    fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    info: {},
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    size: 8,
     thumbnail: 'img/item-суши-2.jpg', // replace with image extracted from item layout
-    preview: ['img/item-2.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    imgFull: 'img/item-big.jpg' // replace with paths to images extracted from item layout
 }, {
     id: '3',
     dateAdded: '2017-02-12T11:14:29.000Z',
@@ -41,11 +42,12 @@ window.catalog = [{
     popularity: 3,
     hasNew: false,
     category: ['суши' , 'presentation'],
-    fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    info: {},
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    size: 8,
     thumbnail: 'img/item-common.jpg', // replace with image extracted from item layout
-    preview: ['img/item-3.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    imgFull: 'img/item-big.jpg' // replace with paths to images extracted from item layout
 }, {
     id: '4',
     dateAdded: '2017-06-12T15:35:13.000Z',
@@ -57,11 +59,12 @@ window.catalog = [{
     popularity: 4,
     hasNew: false,
     category: ['суши' , 'presentation'],
-    fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    info: {},
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    size: 8,
     thumbnail: 'img/item-common.jpg', // replace with image extracted from item layout
-    preview: ['img/item-2.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    imgFull: 'img/item-big.jpg' // replace with paths to images extracted from item layout
 }, {
     id: '5',
     dateAdded: '2017-02-12T11:14:29.000Z',
@@ -73,11 +76,12 @@ window.catalog = [{
     popularity: 5,
     hasNew: false,
     category: ['суши-2' , 'presentation'],
-    fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    info: {},
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    size: 8,
     thumbnail: 'img/item-суши-2.jpg', // replace with image extracted from item layout
-    preview: ['img/item-3.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    imgFull: 'img/item-big.jpg' // replace with paths to images extracted from item layout
 }, {
     id: '6',
     dateAdded: '2017-06-12T15:35:13.000Z',
@@ -87,13 +91,14 @@ window.catalog = [{
     discountedPrice: 90,
     price: 120,
     popularity: 6,
-    hasNew: false,
-    category: ['пицца', 'best-sellers'],
-    fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    hasNew: false, //новинка false - нет, true - да
+    category: ['пицца', 'best-sellers'], //категории и подкатегории
+    info: {},
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'}, // вес сэта
+    size: 8, //сколько штук в сэте
     thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
-    preview: ['img/item-2.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    imgFull: 'img/item-big-pizza.jpg' // replace with paths to images extracted from item layout
 }, {
     id: '7',
     dateAdded: '2017-02-12T11:14:29.000Z',
@@ -105,11 +110,12 @@ window.catalog = [{
     popularity: 7,
     hasNew: false,
     category: ['пицца'],
-    fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    info: {},
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    size: 8,
     thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
-    preview: ['img/item-3.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    imgFull: 'img/item-big-pizza.jpg' // replace with paths to images extracted from item layout
 }, {
     id: '8',
     dateAdded: '2017-06-12T15:35:13.000Z',
@@ -121,11 +127,12 @@ window.catalog = [{
     popularity: 8,
     hasNew: false,
     category: ['пицца'],
-    fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    info: {},
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    size: 8,
     thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
-    preview: ['img/item-2.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    imgFull: 'img/item-big-pizza.jpg' // replace with paths to images extracted from item layout
 }, {
     id: '9',
     dateAdded: '2017-02-12T11:14:29.000Z',
@@ -137,11 +144,12 @@ window.catalog = [{
     popularity: 9,
     hasNew: false,
     category: ['best-sellers', 'пицца'],
-    fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    info: {},
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    size: 8,
     thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
-    preview: ['img/item-3.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    imgFull: 'img/item-big-pizza.jpg' // replace with paths to images extracted from item layout
 }, {
     id: '10',
     dateAdded: '2017-06-12T15:35:13.000Z',
@@ -153,11 +161,12 @@ window.catalog = [{
     popularity: 1,
     hasNew: false,
     category: ['суши-2'],
-    fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    info: {},
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    size: 8,
     thumbnail: 'img/item-суши-2.jpg', // replace with path to image extracted from catalog layout
-    preview: ['img/item-2.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    imgFull: 'img/item-big.jpg' // replace with paths to images extracted from item layout
 }, {
     id: '11',
     dateAdded: '2017-02-12T11:14:29.000Z',
@@ -169,11 +178,12 @@ window.catalog = [{
     popularity: 1,
     hasNew: false,
     category: ['суши-2'],
-    fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    info: {},
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    size: 8,
     thumbnail: 'img/item-суши-2.jpg', // replace with path to image extracted from catalog layout
-    preview: ['img/item-3.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    imgFull: 'img/item-big.jpg' // replace with paths to images extracted from item layout
 },
 {
     id: '12',
@@ -186,11 +196,12 @@ window.catalog = [{
     popularity: 1,
     hasNew: false,
     category: ['напитки'],
-    fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    info: {},
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    size: 8,
     thumbnail: 'img/item-напитки.jpg', // replace with path to image extracted from catalog layout
-    preview: ['img/item-3.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    imgFull: 'img/item-big-drink.jpg', // replace with paths to images extracted from item layout
 }, {
     id: '13',
     dateAdded: '2017-06-12T15:35:13.000Z',
@@ -202,11 +213,12 @@ window.catalog = [{
     popularity: 1,
     hasNew: false,
     category: ['напитки'],
-    fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    info: {},
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    size: 8,
     thumbnail: 'img/item-напитки.jpg', // replace with path to image extracted from catalog layout
-    preview: ['img/item-2.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    imgFull: 'img/item-big-drink.jpg' // replace with paths to images extracted from item layout
 }, {
     id: '14',
     dateAdded: '2017-02-12T11:14:29.000Z',
@@ -218,11 +230,12 @@ window.catalog = [{
     popularity: 1,
     hasNew: false,
     category: ['пицца'],
-    fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    info: {},
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    size: 8,
     thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
-    thumbnailFull: 'img/item-full.jpg', // replace with paths to images extracted from item layout
+    imgFull: 'img/item-big-pizza.jpg', // replace with paths to images extracted from item layout
 },
 {
     id: '15',
@@ -235,11 +248,12 @@ window.catalog = [{
     popularity: 1,
     hasNew: false,
     category: ['суши-2'],
-    fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    info: {},
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    size: 8,
     thumbnail: 'img/item-суши-2.jpg', // replace with path to image extracted from catalog layout
-    thumbnailFull: 'img/item-full.jpg'
+    imgFull: 'img/item-big.jpg',
 }, {
     id: '16',
     dateAdded: '2017-06-12T15:35:13.000Z',
@@ -251,11 +265,12 @@ window.catalog = [{
     popularity: 1,
     hasNew: false,
     category: ['напитки'],
-    fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    info: {},
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    size: 8,
     thumbnail: 'img/item-напитки.jpg', // replace with path to image extracted from catalog layout
-    thumbnailFull: 'img/item-full.jpg'
+    imgFull: 'img/item-big-drink.jpg',
 }, {
     id: '17',
     dateAdded: '2017-02-12T11:14:29.000Z',
@@ -267,11 +282,12 @@ window.catalog = [{
     popularity: 1,
     hasNew: false,
     category: ['суши-2'],
-    fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    info: {},
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    size: 8,
     thumbnail: 'img/item-суши-2.jpg', // replace with path to image extracted from catalog layout
-    thumbnailFull: 'img/item-full.jpg'
+    imgFull: 'img/item-big.jpg',
 }, 
 {
     id: '18',
@@ -284,11 +300,12 @@ window.catalog = [{
     popularity: 1,
     hasNew: false,
     category: ['суши'],
-    fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    info: {},
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    size: 8,
     thumbnail: 'img/item-common.jpg', // replace with path to image extracted from catalog layout
-    thumbnailFull: 'img/item-full.jpg'
+    imgFull: 'img/item-big.jpg',
 }, {
     id: '19',
     dateAdded: '2017-06-12T15:35:13.000Z',
@@ -300,11 +317,12 @@ window.catalog = [{
     popularity: 1,
     hasNew: true,
     category: ['пицца', 'best-sellers'],
-    fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    info: {},
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    size: 8,
     thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
-    thumbnailFull: 'img/item-full.jpg'
+    imgFull: 'img/item-big-pizza.jpg',
 }, {
     id: '20',
     dateAdded: '2017-02-12T11:14:29.000Z',
@@ -316,11 +334,12 @@ window.catalog = [{
     popularity: 1,
     hasNew: true,
     category: ['суши-2', 'best-sellers'],
-    fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    info: {},
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    size: 8,
     thumbnail: 'img/item-суши-2.jpg', // replace with path to image extracted from catalog layout
-    thumbnailFull: 'img/item-full.jpg'
+    imgFull: 'img/item-big.jpg',
 },
 {
     id: '21',
@@ -333,11 +352,12 @@ window.catalog = [{
     popularity: 1,
     hasNew: false,
     category: ['суши', 'best-sellers'],
-    fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    info: {},
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    size: 8,
     thumbnail: 'img/item-common.jpg', // replace with path to image extracted from catalog layout
-    thumbnailFull: 'img/item-full.jpg'
+    imgFull: 'img/item-big.jpg',
 }, {
     id: '22',
     dateAdded: '2017-06-12T15:35:13.000Z',
@@ -349,11 +369,12 @@ window.catalog = [{
     popularity: 1,
     hasNew: true,
     category: ['суши', 'best-sellers'],
-    fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    info: {},
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    size: 8,
     thumbnail: 'img/item-common.jpg', // replace with path to image extracted from catalog layout
-    preview: ['img/item-2.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    imgFull: 'img/item-big.jpg' // replace with paths to images extracted from item layout
 }, {
     id: '23',
     dateAdded: '2017-02-12T11:14:29.000Z',
@@ -365,9 +386,10 @@ window.catalog = [{
     popularity: 1,
     hasNew: false,
     category: ['суши', 'best-sellers'],
-    fashion: 'Casual style',
-    colors: [],
-    sizes: [],
+    info: {},
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    size: 8,
     thumbnail: 'img/item-common.jpg', // replace with path to image extracted from catalog layout
-    preview: ['img/item-3.jpg', 'full image path 2', 'full image path 3'] // replace with paths to images extracted from item layout
+    imgFull: 'img/item-big.jpg' // replace with paths to images extracted from item layout
 },];

@@ -10,6 +10,9 @@ initPriceSlider();
 initFixedHeader();
 initAnchorsScrolling();
 initSelectFilters();
+initActiveOption();
+initItemCounter();
+initCartOpener();
 
 function initAnchorsScrolling() {
     $(".main-nav").on("click","a", function (event) {
@@ -159,7 +162,7 @@ function initPagination() {
 
 function initSelectFilters(){
     $('.category').on('click','a', function(){
-        $(this).toggleClass('active');
+        $(this).addClass('active');
     })
 
     $('.features').on('click','a', function(){
@@ -175,8 +178,51 @@ function initActiveOption(){
     })
 }
 
-initActiveOption()
 
+var sizeOfSet = Number($('.size').text().split(' ')[0]);
+var weightOfSet = Number($('.weight').text().split(' ')[0]);
+var priceOfSet = Number($('.current-price b').text());
+function initItemCounter(){
+    $('.counter').on('click', 'span', function(e){
+        var quantity = $('.quantity');
+        var quantityValue = Number($('.quantity').text());
+        
+        if($(this).hasClass('plus')){
+            quantity.text(quantityValue + 1);
+            quantityValue ++;
+            initUpdateItemMenu();
+        }
+        if($(this).hasClass('minus') && ($(this).hasClass('disabled')) === false){
+            quantity.text(quantityValue - 1);
+            quantityValue --;
+            initUpdateItemMenu()
+        }
+        if(quantityValue === 1){
+            $('.minus').addClass('disabled');
+        }
+        else{
+            $('.minus').removeClass('disabled');
+        }
+
+        function initUpdateItemMenu() {
+            $('.size').text((sizeOfSet * quantityValue) + ' шт');
+            $('.weight').text((weightOfSet * quantityValue) + ' гр'); 
+            $('.current-price b').text((priceOfSet * quantityValue)); 
+        }
+    })
+}
+
+
+function initCartOpener(){
+    $('.cart-icon').on('click', function(e){
+        e.preventDefault();
+        $('.cart-container').toggleClass('open');
+    })
+
+    $('.icon-close').on('click', function(){
+        $('.cart-container').removeClass('open');
+    })
+}
 
 
 

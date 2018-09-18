@@ -20,34 +20,37 @@ var hiddenContainer = document.querySelector('.hidden-container');
 var cheapExpensive = catalogCopy.slice(); 
 var expensiveCheap = catalogCopy.slice(); 
 var popular = catalogCopy.slice();
-var checkedFilters = [];    
-var allFilters = Array.from($(".filter-top a"));
+var checkedFilters = [];
+var activeFeatures = [];    
+var allCategories = Array.from($(".category a"));
+var allFeatures = Array.from($(".features a"));
 
 
-function pushActiveCategories(){
-    if(checkedFilters.length == 0) {
-        if($('#all').hasClass('active')){
-            for(var i = 0; i < allFilters.length; i++){
-                checkedFilters.push(allFilters[i].text.toLowerCase());
-            }
-        }
+function pushAllCategories(){
+    for(var i = 1; i < allCategories.length; i++){
+        checkedFilters.push(allCategories[i].text.toLowerCase());// for starts with 1  cause all exept 1st filter - 'all categories'
     }
 } 
-pushActiveCategories();
+pushAllCategories();
 
-$(".filter-top").on('click','a', function(e){
-    if(e.target.id != 'all'){
-        $('#all').removeClass('active');
+function pushAllFeatures(){
+    for(var i = 1; i < allFeatures.length; i++){
+        activeFeatures.push(allFeatures[i].text.toLowerCase());
     }
-    if(checkedFilters.length === allFilters.length){
-        checkedFilters.length = 0;
-    }
-    if(($(this).hasClass('active'))){
-        checkedFilters.push($(this).text().toLowerCase());
+} 
+pushAllFeatures();
+
+$(".category").on('click','a', function(e){
+    checkedFilters.length = 0;
+    if(e.target.id === 'all-categories'){
+        for(var i = 1; i < allCategories.length; i++){
+            checkedFilters.push(allCategories[i].text.toLowerCase());
+        }
     }
     else {
-        checkedFilters.splice(checkedFilters.indexOf(($(this).text(), 1 )));
+        checkedFilters.push($(this).text().toLowerCase());
     }
+    $('.category a').removeClass('active');
 
     checkedFilters.sort(function(a, b){
         if(a < b) return -1;
@@ -63,13 +66,19 @@ $(".filter-top").on('click','a', function(e){
     setItemsHTML(popular);
 })
 
-$("#all").on('click', function(){
-    $('.category li a').each(function(){
-        $(this).removeClass('active')
-    });
-    pushActiveCategories();
+$('.features').on('click', 'a', function(e){
+    if(e.target.id === 'all-features'){
+        $('.features a').removeClass('active');
+        activeFeatures.push($(this).text());
+    }
+    else{
+        if($('#all-features').hasClass('active')){ //before class active removed
+            activeFeatures.length = 0;
+        }
+        $('#all-features').removeClass('active');
+        activeFeatures.push($(this).text());
+    }
 })
-
 
 function setSortCatalog() {
     popular.sort(function(a, b){
@@ -91,7 +100,7 @@ function setItemsHTML(displayCatalog) {
             
     for (var i = 0; i < displayCatalog.length; i++) {
         
-        if(displayCatalog[i].category.some(function(val){if (checkedFilters.includes(val)){return true}})) {
+        if(displayCatalog[i].category.some(function(val){if (checkedFilters.includes(val) || activeFeatures.includes(val)){return true}})) {
             
             if (displayCatalog[i].discountedPrice < displayCatalog.price) {
                 discount = '- ' + Math.ceil((1 - (displayCatalog[i].discountedPrice / displayCatalog[i].price)) * 100) + '%';
@@ -125,7 +134,7 @@ function setItemsHTML(displayCatalog) {
     
             ItemsHTML += 
             '<div id="'+ displayCatalog[i].id  +'" class="item">\n'+
-                '<a href="item.html">\n' +
+                '<a class= "open-item" href="item.html">\n' +
                     '<div class="item-img">\n'+'<img src='+ displayCatalog[i].thumbnail +' alt=""></div>\n' +
                     '<div class="descr-content">\n'+
                         '<h6 class="title">' + displayCatalog[i].title + '</h6>\n' +
