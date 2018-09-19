@@ -1,7 +1,7 @@
 $(document).ready(function(){
     
-initPreloader()
-initSlick();
+initPreloader();
+initSlickAutoplay();
 initFancybox();
 initHeaderSlideLine();
 initPlayVideo();
@@ -80,6 +80,14 @@ function initHeaderSlideLine() {
         );
     });
 }
+
+function initSlickAutoplay(){
+    setTimeout(function() {
+        initSlick();
+    }, 3000);
+    
+}
+
 
 function initSlick(){
 	$('.slick-slider').slick({
