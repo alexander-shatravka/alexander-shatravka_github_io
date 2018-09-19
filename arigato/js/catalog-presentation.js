@@ -54,7 +54,7 @@ function setItemsHTMLPresentation(displayCatalog) {
         
         htmlForCatalogPresentation += 
             '<div id="'+ displayCatalog[i].id  +'" class="item">\n'+
-                '<a href="item.html">\n' +
+                '<a class="open-item" href="item.html">\n' +
                     '<div class="item-img">\n'+'<img src='+ displayCatalog[i].thumbnail +' alt=""></div>\n' +
                     '<div class="descr-content">\n'+
                         '<h6 class="title">' + displayCatalog[i].title + '</h6>\n' +
