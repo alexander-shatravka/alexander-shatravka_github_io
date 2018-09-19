@@ -1,6 +1,14 @@
-$(document).ready(function(){
-    
+function initPreloader() {
+	$(window).load(function() {
+		setTimeout(function() {
+			$('#preloader').fadeOut('slow', function() {});
+		}, 2000);
+	});
+} 
+
 initPreloader();
+
+$(document).ready(function(){
 initSlick();
 //initSlickAutoplay();
 initFancybox();
@@ -16,13 +24,6 @@ initActiveOption();
 initItemCounter();
 initCartOpener();
 
-function initPreloader() {
-	$(window).load(function() {
-		setTimeout(function() {
-			$('#preloader').fadeOut('slow', function() {});
-		}, 2000);
-	});
-} 
 
 function initAnchorsScrolling() {
     $(".main-nav").on("click","a", function (event) {
