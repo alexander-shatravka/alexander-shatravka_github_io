@@ -1,5 +1,6 @@
 $(document).ready(function(){
-
+    
+initPreloader()
 initSlick();
 initFancybox();
 initHeaderSlideLine();
@@ -13,6 +14,14 @@ initSelectFilters();
 initActiveOption();
 initItemCounter();
 initCartOpener();
+
+function initPreloader() {
+	$(window).load(function() {
+		setTimeout(function() {
+			$('#preloader').fadeOut('slow', function() {});
+		}, 2000);
+	});
+} 
 
 function initAnchorsScrolling() {
     $(".main-nav").on("click","a", function (event) {
@@ -205,8 +214,8 @@ function initItemCounter(){
         }
 
         function initUpdateItemMenu() {
-            $('.size').text((sizeOfSet * quantityValue) + ' шт');
-            $('.weight').text((weightOfSet * quantityValue) + ' гр'); 
+            //$('.size').text((sizeOfSet * quantityValue) + ' шт');
+            //$('.weight').text((weightOfSet * quantityValue) + ' гр'); 
             $('.current-price b').text((priceOfSet * quantityValue)); 
         }
     })
@@ -222,6 +231,13 @@ function initCartOpener(){
     $('.icon-close').on('click', function(){
         $('.cart-container').removeClass('open');
     })
+
+    $(document).mouseup(function (e) {
+        var container = $(".cart-container");
+        if (container.has(e.target).length === 0 && e.target.className !== 'cart-container open'){
+            $('.cart-container').removeClass('open');
+        }
+    });
 }
 
 

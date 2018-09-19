@@ -7,15 +7,18 @@ var currentItemHTML =
         '<div class="item-menu">\n'+
             '<div class="row">\n'+
                 '<h6 class="title">'+ window.catalog[id].title +'</h6>\n'+
-                '<span class="details size">'+ window.catalog[id].size +' шт</span><span class="details weight">'+ window.catalog[id].weight +' гр</span>\n'+
+                '<span><b class="heading">Выход</b></span><span class="details weight">'+ window.catalog[id].weight +'      гр</span>\n'+
+            '</div>\n'+
+            '<div class="row">\n'+
+                '<span><b class="heading">Количество</b></span>\n'+
                 '<div class="counter"><span class="plus">+</span><span class="quantity">1</span><span class="minus disabled">-</span></div>\n'+
             '</div>\n'+
             '<div class="row">\n'+
-                '<span><b>К оплате</b></span>\n'+
+                '<span><b class="heading">К оплате</b></span>\n'+
                 '<span class="price"><span class="current-price"><b>'+ window.catalog[id].discountedPrice +'</b> грн</span></span>\n'+
             '</div>\n'+
             '<div class="row">	\n'+
-                '<a href="" class="button btn-cart"><i class="fi flaticon-shopping-cart"></i></a>\n'+
+                '<a href="" class="button btn-cart">В корзину <i class="fi flaticon-shopping-cart"></i></a>\n'+
             '</div>\n'+
             '<a class="back-catalog" href="catalog.html">Продолжить покупки <span class="icon-tripple-arrow">›››</span></a>\n'+
         '</div>\n'+
