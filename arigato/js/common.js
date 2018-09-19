@@ -1,7 +1,8 @@
 $(document).ready(function(){
     
 initPreloader();
-initSlickAutoplay();
+initSlick();
+//initSlickAutoplay();
 initFancybox();
 initHeaderSlideLine();
 initPlayVideo();
@@ -93,7 +94,7 @@ function initSlick(){
 	$('.slick-slider').slick({
         autoplay: true,
         vertical: false,
-		autoplaySpeed: 4000,
+		autoplaySpeed: 6000,
 		speed	: 1000,
 		infinite: true,
 		slidesToShow: 1,
