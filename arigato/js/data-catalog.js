@@ -1,4 +1,20 @@
 window.catalog = [{
+    id: '0',
+    dateAdded: '2017-05-15T16:58:40.000Z',
+    title: 'Филадельфия',
+    description: 'The best food for you and your friends.Филадельфия',
+    placeholder: null,
+    discountedPrice: 24.75,
+    price: 24.75,
+    popularity: 1,
+    hasNew: false,
+    category: ['пицца', 'presentation'],
+    weight: 400,
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    size: 8,
+    thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
+    imgFull: 'img/item-big-pizza.jpg' // replace with paths to images extracted from item layout
+},{
     id: '1',
     dateAdded: '2017-05-15T16:58:40.000Z',
     title: 'Филадельфия',
@@ -15,7 +31,7 @@ window.catalog = [{
     thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/item-big-pizza.jpg' // replace with paths to images extracted from item layout
 }, {
-    id: '2',
+    id: '22',
     dateAdded: '2017-06-12T15:35:13.000Z',
     title: 'The best food for you and your friends',
     description: 'The best food for you and your friends',
@@ -359,7 +375,7 @@ window.catalog = [{
     thumbnail: 'img/item-common.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/item-big.jpg',
 }, {
-    id: '22',
+    id: '2',
     dateAdded: '2017-06-12T15:35:13.000Z',
     title: 'The best food for you and your friends',
     description: 'The best food for you and your friends',
@@ -393,3 +409,8 @@ window.catalog = [{
     thumbnail: 'img/item-common.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/item-big.jpg' // replace with paths to images extracted from item layout
 },];
+
+
+window.catalog.sort(function(a,b){
+    return a.id - b.id;
+})

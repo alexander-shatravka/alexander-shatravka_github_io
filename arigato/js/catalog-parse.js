@@ -136,7 +136,7 @@ function setItemsHTML(displayCatalog) {
             '<div id="'+ displayCatalog[i].id  +'" class="item">\n'+
                 '<a class= "open-item" href="item.html">\n' +
                     '<div class="item-img">\n'+'<img src='+ displayCatalog[i].thumbnail +' alt=""></div>\n' +
-                    '<div class="descr-content">\n'+
+                    '<a href = "item.html" class="descr-content open-item">\n'+
                         '<h6 class="title">' + displayCatalog[i].title + '</h6>\n' +
                         '<span class="description">' + displayCatalog[i].description + '</span>\n' + 
                         '<div class="item-price"><span class="current-price">' + currentPrice + '<span class="grn">грн.</span></span>\n' +

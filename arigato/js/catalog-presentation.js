@@ -19,7 +19,7 @@ var placeholder = '';
 
 function setItemsHTMLPresentation(displayCatalog) {
     
-    for(var i = 0; i < 5; i++) {
+    for(var i = 0; i < 6; i++) {
         if(displayCatalog[i].category.some(function(value){return value === 'presentation'})) {    
 
         if (displayCatalog[i].discountedPrice < window.catalog.price) {
@@ -56,7 +56,7 @@ function setItemsHTMLPresentation(displayCatalog) {
             '<div id="'+ displayCatalog[i].id  +'" class="item">\n'+
                 '<a class="open-item" href="item.html">\n' +
                     '<div class="item-img">\n'+'<img src='+ displayCatalog[i].thumbnail +' alt=""></div>\n' +
-                    '<div class="descr-content">\n'+
+                    '<a href = "item.html" class="descr-content open-item">\n'+
                         '<h6 class="title">' + displayCatalog[i].title + '</h6>\n' +
                         '<span class="description">' + displayCatalog[i].description + '</span>\n' + 
                         '<div class="item-price"><span class="current-price">' + currentPrice + '<span class="grn">грн.</span></span>\n' +
@@ -65,8 +65,8 @@ function setItemsHTMLPresentation(displayCatalog) {
                         '</div>\n' +
                         '<span class="new">' + isNew + '</span>\n' +
                         /*'<span class="placeholder">' + placeholder + '</span>\n' +*/
-                        '<a href="" class="button btn-cart"><i class="fi flaticon-shopping-cart"></i>   </a>\n'+
-                    '</div>\n'+
+                        '<a href="" class="button btn-cart"><i class="fi flaticon-shopping-cart"></i></a>\n'+
+                    '</a>\n'+
                 '</a>\n' +
             '</div>'
 

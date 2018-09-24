@@ -1,13 +1,13 @@
-var id = localStorage['openedItemID'] - 1;
+var id = localStorage['openedItemID'];
 
 var currentItemHTML = 
-'<div class="item-card" id = "'+ id +'">\n'+	
+'<div class="item" id = "'+ id +'">\n'+	
     '<div class="item-img"><img src="'+ window.catalog[id].imgFull +'" alt=""></div>\n'+
     '<div class="container">\n'+	
         '<div class="item-menu">\n'+
             '<div class="row">\n'+
                 '<h6 class="title">'+ window.catalog[id].title +'</h6>\n'+
-                '<span><b class="heading">Выход</b></span><span class="details weight">'+ window.catalog[id].weight +'      гр</span>\n'+
+                '<span><b class="heading">Выход</b></span><span class="details weight">'+ window.catalog[id].weight +' гр</span>\n'+
             '</div>\n'+
             '<div class="row">\n'+
                 '<span><b class="heading">Количество</b></span>\n'+
@@ -18,7 +18,7 @@ var currentItemHTML =
                 '<span class="price"><span class="current-price"><b>'+ window.catalog[id].discountedPrice +'</b> грн</span></span>\n'+
             '</div>\n'+
             '<div class="row">	\n'+
-                '<a href="" class="button btn-cart">В корзину <i class="fi flaticon-shopping-cart"></i></a>\n'+
+                '<a href="" class="button btn-cart more-than-one-item">В корзину <i class="fi flaticon-shopping-cart"></i></a>\n'+
             '</div>\n'+
             '<a class="back-catalog" href="catalog.html">Продолжить покупки <span class="icon-tripple-arrow">›››</span></a>\n'+
         '</div>\n'+

@@ -9,21 +9,21 @@ function initPreloader() {
 initPreloader();
 
 $(document).ready(function(){
-initSlick();
-//initSlickAutoplay();
-initFancybox();
-initHeaderSlideLine();
-initPlayVideo();
-initPriceSlider();
-//initPagination();
-//initItemOpener();
-initFixedHeader();
-initAnchorsScrolling();
-initSelectFilters();
-initActiveOption();
-initItemCounter();
-initCartOpener();
-
+    initSlick();
+    //initSlickAutoplay();
+    initFancybox();
+    initHeaderSlideLine();
+    initPlayVideo();
+    initPriceSlider();
+    //initPagination();
+    //initItemOpener();
+    initFixedHeader();
+    initAnchorsScrolling();
+    initSelectFilters();
+    initActiveOption();
+    initItemCounter();
+    initCartOpener();
+});
 
 function initAnchorsScrolling() {
     $(".main-nav").on("click","a", function (event) {
@@ -31,7 +31,7 @@ function initAnchorsScrolling() {
         var id  = $(this).attr('href'),
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 1000);
-            showMenu.classList.remove('menu-icon-close');
+            //showMenu.classList.remove('menu-icon-close');
     });
 }
 
@@ -141,18 +141,18 @@ function initItemOpener(){
 
 function initPriceSlider() {
     $( "#slider-range" ).slider({
-      range: true,
-      min: 0,
-      max: 2000,
-      values: [ 75, 2000 ],
-      slide: function( event, ui ) {
+        range: true,
+        min: 0,
+        max: 2000,
+        values: [ 75, 2000 ],
+        slide: function( event, ui ) {
         $( "#amount" ).val( "грн " + ui.values[ 0 ] + " - грн " + ui.values[ 1 ] );
-      }
+        }
     });
     $( "#amount" ).val( "грн " + $( "#slider-range" ).slider( "values", 0 ) +
-      " - грн " + $( "#slider-range" ).slider( "values", 1 ) );
-  };
-});
+        " - грн " + $( "#slider-range" ).slider( "values", 1 ) );
+};
+
 
 function template(data) {
     var html = '';
@@ -205,16 +205,15 @@ function initItemCounter(){
     $('.counter').on('click', 'span', function(e){
         var quantity = $('.quantity');
         var quantityValue = Number($('.quantity').text());
-        
         if($(this).hasClass('plus')){
             quantity.text(quantityValue + 1);
             quantityValue ++;
-            initUpdateItemMenu();
+            initUpdateItemMenu($(this));
         }
         if($(this).hasClass('minus') && ($(this).hasClass('disabled')) === false){
             quantity.text(quantityValue - 1);
             quantityValue --;
-            initUpdateItemMenu()
+            initUpdateItemMenu($(this));
         }
         if(quantityValue === 1){
             $('.minus').addClass('disabled');
@@ -223,10 +222,10 @@ function initItemCounter(){
             $('.minus').removeClass('disabled');
         }
 
-        function initUpdateItemMenu() {
+        function initUpdateItemMenu(parent) {
             //$('.size').text((sizeOfSet * quantityValue) + ' шт');
             //$('.weight').text((weightOfSet * quantityValue) + ' гр'); 
-            $('.current-price b').text((priceOfSet * quantityValue)); 
+           parent.parents('.item').find('.current-price b').text((priceOfSet * quantityValue)); 
         }
     })
 }
@@ -244,12 +243,15 @@ function initCartOpener(){
 
     $(document).mouseup(function (e) {
         var container = $(".cart-container");
-        if (container.has(e.target).length === 0 && e.target.className !== 'cart-container open'){
+        if (container.has(e.target).length === 0 && e.target.className !== 'cart-container open' && e.target.className !== 'btn-cart'){
             $('.cart-container').removeClass('open');
         }
     });
-}
 
+    $('.btn-cart').on('click', function(e){
+        $('.cart-container').toggleClass('open');
+    })
+}
 
 
 
