@@ -1,0 +1,414 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:100,300,400,500,700,800,900&subset=cyrillic");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.clearfix:after, .container:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.ellipsis {
+  white-space: nowrap;
+  /* 1 */
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  /* 2 */
+  overflow: hidden; }
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Nunito-Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Nunito-Bold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/Nunito-ExtraBold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Bebas";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/BebasNeue Light.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Bebas";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/BebasNeue Regular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Bebas";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/BebasNeue Book.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Bebas";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/BebasNeue Bold.ttf") format("truetype"); }
+
+/*
+    Flaticon icon font: Flaticon
+    Creation date: 22/06/2016 15:35
+    */
+@font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/Flaticon.eot");
+  src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"), url("../fonts/Flaticon.woff") format("woff"), url("../fonts/Flaticon.ttf") format("truetype"), url("../fonts/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg"); } }
+
+.fi:before {
+  display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased; }
+
+.flaticon-avatar:before {
+  content: "\f100"; }
+
+.flaticon-avatar-1:before {
+  content: "\f101"; }
+
+.flaticon-back:before {
+  content: "\f102"; }
+
+.flaticon-book:before {
+  content: "\f103"; }
+
+.flaticon-cancel:before {
+  content: "\f104"; }
+
+.flaticon-chat:before {
+  content: "\f105"; }
+
+.flaticon-chat-1:before {
+  content: "\f106"; }
+
+.flaticon-chat-2:before {
+  content: "\f107"; }
+
+.flaticon-copy:before {
+  content: "\f108"; }
+
+.flaticon-dislike:before {
+  content: "\f109"; }
+
+.flaticon-download:before {
+  content: "\f10a"; }
+
+.flaticon-download-1:before {
+  content: "\f10b"; }
+
+.flaticon-edit:before {
+  content: "\f10c"; }
+
+.flaticon-envelope:before {
+  content: "\f10d"; }
+
+.flaticon-folder:before {
+  content: "\f10e"; }
+
+.flaticon-garbage:before {
+  content: "\f10f"; }
+
+.flaticon-glasses:before {
+  content: "\f110"; }
+
+.flaticon-hand:before {
+  content: "\f111"; }
+
+.flaticon-headphones:before {
+  content: "\f112"; }
+
+.flaticon-heart:before {
+  content: "\f113"; }
+
+.flaticon-house:before {
+  content: "\f114"; }
+
+.flaticon-like:before {
+  content: "\f115"; }
+
+.flaticon-link:before {
+  content: "\f116"; }
+
+.flaticon-logout:before {
+  content: "\f117"; }
+
+.flaticon-magnifying-glass:before {
+  content: "\f118"; }
+
+.flaticon-monitor:before {
+  content: "\f119"; }
+
+.flaticon-musical-note:before {
+  content: "\f11a"; }
+
+.flaticon-next:before {
+  content: "\f11b"; }
+
+.flaticon-next-1:before {
+  content: "\f11c"; }
+
+.flaticon-padlock:before {
+  content: "\f11d"; }
+
+.flaticon-paper-plane:before {
+  content: "\f11e"; }
+
+.flaticon-phone-call:before {
+  content: "\f11f"; }
+
+.flaticon-photo-camera:before {
+  content: "\f120"; }
+
+.flaticon-pie-chart:before {
+  content: "\f121"; }
+
+.flaticon-piggy-bank:before {
+  content: "\f122"; }
+
+.flaticon-placeholder:before {
+  content: "\f123"; }
+
+.flaticon-printer:before {
+  content: "\f124"; }
+
+.flaticon-reload:before {
+  content: "\f125"; }
+
+.flaticon-settings:before {
+  content: "\f126"; }
+
+.flaticon-settings-1:before {
+  content: "\f127"; }
+
+.flaticon-share:before {
+  content: "\f128"; }
+
+.flaticon-shopping-bag:before {
+  content: "\f129"; }
+
+.flaticon-shopping-cart:before {
+  content: "\f12a"; }
+
+.flaticon-shuffle:before {
+  content: "\f12b"; }
+
+.flaticon-speaker:before {
+  content: "\f12c"; }
+
+.flaticon-star:before {
+  content: "\f12d"; }
+
+.flaticon-tag:before {
+  content: "\f12e"; }
+
+.flaticon-upload:before {
+  content: "\f12f"; }
+
+.flaticon-upload-1:before {
+  content: "\f130"; }
+
+.flaticon-vector:before {
+  content: "\f131"; }
+
+html {
+  overflow-x: hidden !important; }
+
+body {
+  font-family: "Nunito", sans-serif !important;
+  overflow-x: hidden; }
+
+* {
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+      -ms-user-select: none !important;
+          user-select: none !important; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700; }
+
+p, a, span {
+  font-weight: 500; }
+
+b {
+  font-weight: 700; }
+
+a {
+  text-decoration: none;
+  outline: 0 !important; }
+
+#wrapper {
+  overflow-x: hidden !important; }
+
+#preloader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 999999999;
+  background: #fff; }
+  #preloader .preloader-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    height: 60px;
+    width: 200px; }
+
+* {
+  outline: 0 !important; }
+
+i {
+  font-family: "Flaticon"; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.container {
+  max-width: 1230px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+  @media (max-width: 1023px) {
+    .container {
+      padding: 0 24px; } }
+  @media (max-width: 767px) {
+    .container {
+      padding: 0 15px; } }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #181818;
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased; }
+
+#particles {
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+#intro {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 300px;
+  height: 113px; }
