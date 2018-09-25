@@ -3,6 +3,8 @@ $(document).ready(function(){
     initEmptyCart();
     initShowNumberOfItems();
     initRemovingItems();
+    initSetDynamicItem();
+    initTotalPrice();
 })
 
 function initEmptyCart(){
@@ -12,6 +14,7 @@ function initEmptyCart(){
         cartContainer.html(emptyHTML);  
         //alert(emptyHTML);
         $('.cart-icon').addClass('empty');
+        $('.order-block').removeClass('enable');
     }
 }
 
@@ -19,6 +22,7 @@ function initShowNumberOfItems(){
     if($('.cart-items-container .item').length > 0){
         $('.cart-icon').removeClass('empty');
         $('.items-in-bag').html($('.cart-items-container').children().length);  
+        $('.order-block').addClass('enable');
     }
 }
 
@@ -37,6 +41,8 @@ $('.btn-cart').on('click', function(e){
             initCartStorage();
             //initItemCounter();
             initRemovingItems();
+            initSetDynamicItem();
+            initTotalPrice();
         }
     }
     else {
@@ -47,6 +53,8 @@ $('.btn-cart').on('click', function(e){
         initCartStorage();
         //initItemCounter();
         initRemovingItems();
+        initSetDynamicItem();
+        initTotalPrice();
     }
 })
  
@@ -87,7 +95,21 @@ function initRemovingItems() {
         initCartStorage();
         initEmptyCart();
         initShowNumberOfItems();
+        initTotalPrice();
     })   
 }
+
+function initTotalPrice(){
+    var allPricesCollection = Array.from(document.querySelectorAll('.current-price-cart b'));
+    var allPrices = allPricesCollection.map(function(item){return Number(item.innerHTML)});
+    var totalPrice = (allPrices.reduce(function(sum, current) {
+        return sum + current;
+      }, 0)).toFixed(2);
+
+    $('.total-price b').html(totalPrice);
+}
+
+initTotalPrice();
+
 
 

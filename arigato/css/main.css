@@ -187,46 +187,16 @@ table {
     vertical-align: middle; }
 
 @font-face {
-  font-family: "Nunito";
+  font-family: "PT Sans-Narrow";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/Nunito-Regular.ttf") format("truetype"); }
+  src: url("../fonts/PT_Sans-Narrow-Web-Regular.ttf") format("truetype"); }
 
 @font-face {
-  font-family: "Nunito";
+  font-family: "PT Sans-Narrow";
   font-style: normal;
   font-weight: 700;
-  src: url("../fonts/Nunito-Bold.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "Nunito";
-  font-style: normal;
-  font-weight: 900;
-  src: url("../fonts/Nunito-ExtraBold.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "Bebas";
-  font-style: normal;
-  font-weight: 300;
-  src: url("../fonts/BebasNeue Light.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "Bebas";
-  font-style: normal;
-  font-weight: 500;
-  src: url("../fonts/BebasNeue Regular.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "Bebas";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/BebasNeue Book.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "Bebas";
-  font-style: normal;
-  font-weight: 900;
-  src: url("../fonts/BebasNeue Bold.ttf") format("truetype"); }
+  src: url("../fonts/PT_Sans-Narrow-Web-Bold.ttf") format("truetype"); }
 
 /*
     Flaticon icon font: Flaticon
@@ -412,7 +382,7 @@ html {
   overflow-x: hidden !important; }
 
 body {
-  font-family: "Nunito", sans-serif !important;
+  font-family: "PT Sans-Narrow", sans-serif !important;
   overflow-x: hidden; }
 
 * {
@@ -491,7 +461,7 @@ section {
     font-size: 42px;
     font-weight: bold;
     margin-bottom: 25px;
-    font-weight: 900;
+    font-weight: 700;
     color: #D0011B; }
     section .heading h2.white {
       color: #fff; }
@@ -552,13 +522,14 @@ section {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding: 0 10px;
+    padding: 0 20px;
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
     .cart-container .cart-head .icon-cart {
       font-size: 18px;
       text-transform: uppercase;
-      font-family: 'Bebas', sans-serif;
+      font-weight: 700;
+      font-family: 'PT Sans-Narrow', sans-serif;
       color: #4f4f4f; }
       .cart-container .cart-head .icon-cart i {
         display: inline-block;
@@ -573,11 +544,12 @@ section {
     position: absolute;
     top: 80px;
     width: 100%;
-    height: 100%;
+    height: 75%;
     right: 0;
     padding: 0 10px;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box; }
+            box-sizing: border-box;
+    overflow-y: hidden; }
     .cart-container .cart-items-container .empty-heading {
       height: 100px;
       width: 100%;
@@ -605,9 +577,9 @@ section {
               align-content: center;
       position: absolute;
       top: 50%;
-      -webkit-transform: translateY(-150%);
-          -ms-transform: translateY(-150%);
-              transform: translateY(-150%); }
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%); }
       .cart-container .cart-items-container .empty-heading span {
         color: #4f4f4f;
         display: inline-block;
@@ -662,7 +634,6 @@ section {
         .cart-container .cart-items-container .item .row .icon-remove {
           height: 15px;
           width: 12px;
-          margin-bottom: -2px;
           background: url("../img/trash-icon.svg") no-repeat center center;
           -webkit-background-size: contain;
                   background-size: contain;
@@ -670,12 +641,13 @@ section {
           cursor: pointer; }
         .cart-container .cart-items-container .item .row .details {
           display: inline-block;
-          font-family: 'Bebas', sans-serif;
+          font-family: 'PT Sans-Narrow', sans-serif;
           margin-right: 15px;
           font-size: 18px;
           color: #4f4f4f; }
         .cart-container .cart-items-container .item .row.flex-row {
           margin-top: 10px;
+          min-height: 20px;
           display: -webkit-box;
           display: -webkit-flex;
           display: -ms-flexbox;
@@ -732,19 +704,87 @@ section {
         .cart-container .cart-items-container .item .row .price {
           text-transform: uppercase;
           position: absolute;
-          right: 0;
-          bottom: -5px; }
+          right: 0; }
           .cart-container .cart-items-container .item .row .price span {
             font-size: 12px;
-            font-weight: 900;
+            font-weight: 700;
             color: #4f4f4f; }
           .cart-container .cart-items-container .item .row .price b {
-            font-family: 'Nunito', sans-serif;
-            font-weight: 900;
+            font-family: 'PT Sans-Narrow', sans-serif;
+            font-weight: 700;
             font-size: 24px;
             color: #D0011B;
             display: inline-block;
             margin-right: 5px; }
+  .cart-container .order-block {
+    position: absolute;
+    bottom: -20%;
+    width: 100%;
+    height: 20%;
+    right: 0;
+    padding: 0 10px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    z-index: 9999999999;
+    background: #fff;
+    -webkit-transition: bottom 0.5s;
+    -o-transition: bottom 0.5s;
+    transition: bottom 0.5s; }
+    .cart-container .order-block.enable {
+      bottom: 0;
+      -webkit-transition: bottom 0.5s;
+      -o-transition: bottom 0.5s;
+      transition: bottom 0.5s; }
+    .cart-container .order-block .total-row {
+      min-height: 50px;
+      padding: 20px 0 9px 0;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      border-bottom: 1px solid #E9E9E9;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: end;
+      -webkit-align-items: flex-end;
+          -ms-flex-align: end;
+              align-items: flex-end;
+      -webkit-align-content: flex-end;
+          -ms-flex-line-pack: end;
+              align-content: flex-end;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      position: relative; }
+      .cart-container .order-block .total-row b {
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #4f4f4f; }
+      .cart-container .order-block .total-row .total-price {
+        text-transform: uppercase;
+        position: absolute;
+        right: 0;
+        font-size: 20px;
+        font-weight: 700;
+        color: #4f4f4f; }
+        .cart-container .order-block .total-row .total-price b {
+          font-family: 'PT Sans-Narrow', sans-serif;
+          font-weight: 700;
+          font-size: 36px;
+          color: #D0011B;
+          display: inline-block;
+          margin-right: 5px; }
+    .cart-container .order-block .button {
+      margin: 25px auto; }
 
 .btn-red {
   width: 160px;
@@ -753,7 +793,7 @@ section {
           border-radius: 50px;
   text-transform: uppercase;
   color: #fff;
-  font-family: 'Bebas', sans-serif;
+  font-family: 'PT Sans-Narrow', sans-serif;
   font-size: 20px;
   background: #D0011B;
   display: block;
@@ -774,7 +814,8 @@ section {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  cursor: pointer; }
   .btn-red:hover {
     background: #840111;
     -webkit-transition: background 0.3s;
@@ -985,7 +1026,8 @@ header {
         transition: height 0.3s, width 0.3s; }
       header .container .cart-icon.empty .items-in-bag {
         height: 0;
-        width: 0; }
+        width: 0;
+        font-size: 0; }
 
 .intro-section {
   height: 92vh;
@@ -1039,7 +1081,7 @@ header {
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
       font-size: 36px;
-      font-weight: 900;
+      font-weight: 700;
       letter-spacing: 2.1px;
       color: #4a4a4a;
       height: 100%;
@@ -1113,7 +1155,7 @@ header {
             -ms-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
         text-transform: uppercase;
-        font-family: "Nunito", sans-serif !important;
+        font-family: 'PT Sans-Narrow', sans-serif;
         font-size: 80px;
         color: #fff;
         display: -webkit-box;
@@ -1121,7 +1163,7 @@ header {
         display: -ms-flexbox;
         display: flex;
         width: 100%;
-        font-weight: 900;
+        font-weight: 700;
         z-index: 3;
         height: 120px;
         -webkit-box-orient: horizontal;
@@ -1375,7 +1417,7 @@ header {
     text-align: center;
     max-width: 170px; }
     .about-section .about-badges .item h6 {
-      font-weight: 900;
+      font-weight: 700;
       margin-bottom: 20px;
       font-size: 18px;
       text-transform: uppercase; }
@@ -1807,7 +1849,7 @@ header {
       text-transform: uppercase;
       margin-right: 25px;
       cursor: pointer;
-      font-weight: 900;
+      font-weight: 700;
       -webkit-transition: color 0.3s;
       -o-transition: color 0.3s;
       transition: color 0.3s;
@@ -2112,11 +2154,11 @@ footer {
         .item-section .item .item-menu .row .details {
           display: inline-block;
           text-transform: uppercase;
-          font-family: 'Bebas', sans-serif;
+          font-family: 'PT Sans-Narrow', sans-serif;
           font-size: 24px;
           word-spacing: 8px; }
         .item-section .item .item-menu .row .heading {
-          font-family: 'Bebas', sans-serif;
+          font-family: 'PT Sans-Narrow', sans-serif;
           text-transform: uppercase;
           font-size: 18px;
           font-weight: 500; }
@@ -2157,18 +2199,18 @@ footer {
           line-height: 50px;
           text-transform: uppercase;
           color: #fff;
-          font-family: 'Bebas', sans-serif;
+          font-family: 'PT Sans-Narrow', sans-serif;
           font-size: 20px; }
           .item-section .item .item-menu .row .btn-cart i {
             margin-left: 10px; }
         .item-section .item .item-menu .row .price {
           text-transform: uppercase; }
           .item-section .item .item-menu .row .price span {
-            font-family: 'Bebas', sans-serif;
+            font-family: 'PT Sans-Narrow', sans-serif;
             font-size: 24px; }
           .item-section .item .item-menu .row .price b {
-            font-family: 'Nunito', sans-serif;
-            font-weight: 900;
+            font-family: 'PT Sans-Narrow', sans-serif;
+            font-weight: 700;
             font-size: 36px;
             color: #D0011B;
             display: inline-block;
@@ -2209,7 +2251,7 @@ footer {
             transition: background-color 0.5s; }
       .item-section .item .item-menu .title {
         font-size: 30px;
-        font-weight: 900;
+        font-weight: 700;
         margin-bottom: 15px;
         width: 100%; }
       .item-section .item .item-menu .back-catalog {
@@ -2220,7 +2262,7 @@ footer {
         color: #4f4f4f;
         display: block;
         margin-bottom: 20px;
-        font-family: 'Bebas', sans-serif; }
+        font-family: 'PT Sans-Narrow', sans-serif; }
         .item-section .item .item-menu .back-catalog .icon-tripple-arrow {
           font-size: 20px;
           font-family: sans-serif;
@@ -2269,7 +2311,7 @@ footer {
         -webkit-box-sizing: border-box;
                 box-sizing: border-box;
         font-size: 36px;
-        font-weight: 900;
+        font-weight: 700;
         letter-spacing: 2.1px;
         color: #4a4a4a;
         height: 100%;
