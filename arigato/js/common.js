@@ -23,7 +23,15 @@ $(document).ready(function(){
     initActiveOption();
     initItemCounter();
     initCartOpener();
+    initJcf();
+    initEnableFormOrder();
+    initFormButtonToggler();
+    //initCustomScrollBar();
 });
+
+function initJcf(){
+    jcf.replaceAll();
+};
 
 function initAnchorsScrolling() {
     $(".main-nav").on("click","a", function (event) {
@@ -196,15 +204,11 @@ function initActiveOption(){
         $('.select-block .selected').html($(this).html());
     })
 }
-
-
-var sizeOfSet = Number($('.size').text().split(' ')[0]);
-var weightOfSet = Number($('.weight').text().split(' ')[0]);
 var priceOfSet = Number($('.current-price b').text());
 function initItemCounter(){
     $('.counter').on('click', 'span', function(e){
-        var quantity = $('.quantity');
-        var quantityValue = Number($('.quantity').text());
+        var quantity = $(this).parents('.counter').find('.quantity');
+        var quantityValue = Number($(this).parents('.counter').find('.quantity').text());
         if($(this).hasClass('plus')){
             quantity.text(quantityValue + 1);
             quantityValue ++;
@@ -216,16 +220,16 @@ function initItemCounter(){
             initUpdateItemMenu($(this));
         }
         if(quantityValue === 1){
-            $('.minus').addClass('disabled');
+            $(this).parents('.counter').find('.minus').addClass('disabled');
         }
         else{
-            $('.minus').removeClass('disabled');
+            $(this).parents('.counter').find('.minus').removeClass('disabled');
         }
 
         function initUpdateItemMenu(parent) {
             //$('.size').text((sizeOfSet * quantityValue) + ' шт');
             //$('.weight').text((weightOfSet * quantityValue) + ' гр'); 
-           parent.parents('.item').find('.current-price b').text((priceOfSet * quantityValue)); 
+           parent.parents('.item-menu').find('.current-price b').text((priceOfSet * quantityValue)); 
         }
     })
 }
@@ -251,6 +255,58 @@ function initCartOpener(){
     $('.btn-cart').on('click', function(e){
         $('.cart-container').toggleClass('open');
     })
+}
+
+function initEnableFormOrder(){
+    $('.btn-open-form').on('click', function(){
+        $('.form-block').addClass('enable');
+        initOrderButton();
+    })
+    $('.form-closer').on('click', function(){
+        $('.form-block').removeClass('enable');
+        initOrderButton();
+    })
+}
+
+function initFormButtonToggler(){
+    $('.button-row').on('click', '.button', function(){
+        $(this).parents('.button-row').find('.button').removeClass('active');
+        $(this).addClass('active');
+        initFormActiveFields($(this));
+    })
+}
+
+function initFormActiveFields(button){
+    var buttonID = button.attr('id');
+    //alert(buttonID);
+    if(buttonID === 'delivery'){
+        $("#delivery-address").addClass('active');
+    }
+    
+    if(buttonID === 'self-pickup'){
+        $("#delivery-address").removeClass('active'); 
+        //$("#address").addClass('active');
+    }
+
+    if(buttonID === 'pick-date'){
+        $("#datepicker").addClass('active');
+    }
+
+    if(buttonID === 'delivery-now'){
+        $("#datepicker").removeClass('active');
+    }
+    
+}
+
+function initOrderButton(){
+    var formOpenerButtonHTML = '<a class="button btn-red btn-open-form">Заказать</a>';
+    var orderButtonHTML = '<a class="button btn-red" id="submit">Оформить Заказ</a>';
+
+    if($('.form-block').hasClass('enable')){
+        $('.cart-button-block').html(orderButtonHTML);
+    }
+    else $('.cart-button-block').html(formOpenerButtonHTML);
+    initEnableFormOrder();
 }
 
 

@@ -165,16 +165,54 @@
 			<div class="icon-cart"><i class="fi flaticon-shopping-cart"></i>Корзина</div>
 			<div class="icon-close"><i class="fa fa-times"></i></div> 
 		</div>
-		<div class="cart-items-container">
-			
+		<div class="jcf-scrollable">
+			<div class="cart-items-container"></div>
 		</div>
 		<div class="order-block">
 			<div class="total-row">
 				<b>К оплате</b>
 				<div class="total-price"><b>636</b>грн</div>
 			</div>
-			<a class="button btn-red btn-order">Заказать</a>
+			<div class="cart-button-block">
+				<a class="button btn-red btn-open-form">Заказать</a>
+			</div>
 		</div>
+		<div class="form-block">
+			<a class="close-form"><i class="form-closer fas fa-arrow-left"></i>Оформление заказа</a>
+			<form action="">
+				<div class="row">
+					<label for="name">Имя</label>
+					<input class="jcf-input" type="text" name="name" id="name">
+				</div>
+				<div class="row">
+					<label for="phone">Телефон</label>
+					<input type="tel" name="phone" id="phone" placeholder="+38 (0--) --- -- --">
+				</div>
+				<div class="button-row" id="delivery-way">
+					<a class="button btn-white active" id="delivery">Доставка</a>
+					<a class="button btn-white" id="self-pickup">Самовывоз</a>
+				</div>
+				<div class="row single-input dynamic active" id="delivery-address">
+					<input type="text" name="address" id="address" placeholder="Адрес">
+				</div>
+				<div class="button-row">
+					<a class="button btn-white active" id="delivery-now">На сейчас</a>
+					<a class="button btn-white" id="pick-date">На время</a>
+				</div>
+				<div class="row-cols dynamic" id="datepicker">
+					<input type="text" name="date" id="date" placeholder="Дата"> 
+					<input type="text" name="time" id="time" placeholder="Время">
+				</div>
+				<div class="row">
+					<label for="tools-quantity">Количество приборов</label>
+					<div class="counter">
+						<span class="plus">+</span>
+						<span class="quantity">1</span>
+						<span class="minus disabled">-</span>
+					</div>
+				</div>
+			</form>
+		</div>					
 	</div>
 	<section class="intro-section">
 		<div class="slick-slider">
