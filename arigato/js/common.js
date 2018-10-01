@@ -10,15 +10,16 @@ initPreloader();
 
 $(document).ready(function(){
     initSlick();
+    initBurgerMenu();
     //initSlickAutoplay();
     initFancybox();
-    initHeaderSlideLine();
+    //initHeaderSlideLine();
     initPlayVideo();
     initPriceSlider();
     //initPagination();
     //initItemOpener();
-    initFixedHeader();
-    initAnchorsScrolling();
+    //initFixedHeader();
+    //initAnchorsScrolling();
     initSelectFilters();
     initActiveOption();
     initItemCounter();
@@ -26,12 +27,29 @@ $(document).ready(function(){
     initJcf();
     initEnableFormOrder();
     initFormButtonToggler();
-    //initCustomScrollBar();
+    initEnablePickers();
+    destinationPicker();
+    //initCustomScrollBar();    
 });
 
 function initJcf(){
     jcf.replaceAll();
 };
+
+function initBurgerMenu(){
+    $('.menu-opener-block').on("click",function(){
+        $(this).toggleClass('opened');
+        $('#nav').toggleClass('open');
+    });
+    
+    $(document).on('click', function (e) {
+        var container = $("#nav");
+        if (container.has(e.target).length === 0 && e.target.className !== 'menu-opener-block opened' && e.target.className !== 'menu-burger' && e.target.className !== 'b-line'){
+            $('.menu-opener-block').removeClass('opened');
+            $('#nav').removeClass('open');
+        }
+    });
+}
 
 function initAnchorsScrolling() {
     $(".main-nav").on("click","a", function (event) {
@@ -108,7 +126,7 @@ function initSlick(){
 		infinite: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		dots: true,
+		dots: false,
 		arrows: true,
 		pauseOnFocus: false,
 		pauseOnHover: false,
@@ -268,6 +286,27 @@ function initEnableFormOrder(){
     })
 }
 
+function initEnablePickers(){
+    $('input[name="pickup-destination"]').on('click', function(e){
+        //alert($(this).attr('id'));
+        e.preventDefault();
+        $('.destination-picker').addClass('show');
+    })
+    $('input[name="date"]').on('click', function(e){
+        e.preventDefault();
+        $('.date-picker').addClass('show');
+    })
+    $('input[name="time"]').on('click', function(e){
+        e.preventDefault();
+        $('.time-picker').addClass('show');
+    })
+
+    $('.picker-closer').on('click', function(e){
+        $(this).parents('.picker').removeClass('show');
+        e.stopPropagation();
+    })
+}
+
 function initFormButtonToggler(){
     $('.button-row').on('click', '.button', function(){
         $(this).parents('.button-row').find('.button').removeClass('active');
@@ -280,12 +319,13 @@ function initFormActiveFields(button){
     var buttonID = button.attr('id');
     //alert(buttonID);
     if(buttonID === 'delivery'){
+        $("#pickup-address").removeClass('active');
         $("#delivery-address").addClass('active');
     }
     
-    if(buttonID === 'self-pickup'){
-        $("#delivery-address").removeClass('active'); 
-        //$("#address").addClass('active');
+    if(buttonID === 'self-pickup'){ 
+        $("#delivery-address").removeClass('active');
+        $("#pickup-address").addClass('active');
     }
 
     if(buttonID === 'pick-date'){
@@ -309,6 +349,39 @@ function initOrderButton(){
     initEnableFormOrder();
 }
 
+function destinationPicker(){
+    $('.destination-picker').on('click', 'li', function(){
+        $('.destination-picker a').removeClass('active');
+        $(this).find('a').addClass('active');
+        $(this).parents('div').find('.btn-red').removeClass('disabled');
+    })
+
+    $('.destination-picker').on('click', '.btn-red', function(){
+        if($(this).hasClass('disabled') === false){
+            $('input[name="pickup-destination"]').val('');
+            $('input[name="pickup-destination"]').val($('.destination-picker  .active').text());
+            //alert($('.destination-picker li .active').text());
+            $(this).parents('.picker').removeClass('show');
+        }
+    })
+}
+
+function datePicker(){
+    $('.date-picker').on('click', 'li', function(){
+        $('.date-picker a').removeClass('active');
+        $(this).find('a').addClass('active');
+        $(this).parents('div').find('.btn-red').removeClass('disabled');
+    })
+
+    $('.destination-picker').on('click', '.btn-red', function(){
+        if($(this).hasClass('disabled') === false){
+            $('input[name="pickup-destination"]').val('');
+            $('input[name="pickup-destination"]').val($('.destination-picker  .active').text());
+            //alert($('.destination-picker li .active').text());
+            $(this).parents('.picker').removeClass('show');
+        }
+    })
+}
 
 
 
