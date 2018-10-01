@@ -7,10 +7,11 @@ window.catalog = [{
     discountedPrice: 24.75,
     price: 24.75,
     popularity: 1,
-    hasNew: false,
+    hasNew: true,
     category: ['пицца', 'presentation'],
     weight: 400,
     info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
     size: 8,
     thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/item-big-pizza.jpg' // replace with paths to images extracted from item layout
@@ -23,10 +24,11 @@ window.catalog = [{
     discountedPrice: 24.75,
     price: 24.75,
     popularity: 1,
-    hasNew: false,
+    hasNew: true,
     category: ['пицца', 'presentation'],
     weight: 400,
     info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
     size: 8,
     thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/item-big-pizza.jpg' // replace with paths to images extracted from item layout
@@ -39,11 +41,12 @@ window.catalog = [{
     discountedPrice: 30,
     price: 30,
     popularity: 2,
-    hasNew: false,
+    hasNew: true,
     category: ['суши-2', 'presentation'],
     info: {},
     weight: 400,
     info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
     size: 8,
     thumbnail: 'img/item-суши-2.jpg', // replace with image extracted from item layout
     imgFull: 'img/item-big.jpg' // replace with paths to images extracted from item layout
@@ -56,11 +59,12 @@ window.catalog = [{
     discountedPrice: 35.75,
     price: 35.75,
     popularity: 3,
-    hasNew: false,
+    hasNew: true,
     category: ['суши' , 'presentation'],
     info: {},
     weight: 400,
     info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
     size: 8,
     thumbnail: 'img/item-common.jpg', // replace with image extracted from item layout
     imgFull: 'img/item-big.jpg' // replace with paths to images extracted from item layout
@@ -73,11 +77,12 @@ window.catalog = [{
     discountedPrice: 90,
     price: 120,
     popularity: 4,
-    hasNew: false,
+    hasNew: true,
     category: ['суши' , 'presentation'],
     info: {},
     weight: 400,
     info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
     size: 8,
     thumbnail: 'img/item-common.jpg', // replace with image extracted from item layout
     imgFull: 'img/item-big.jpg' // replace with paths to images extracted from item layout
@@ -90,11 +95,12 @@ window.catalog = [{
     discountedPrice: 85.75,
     price: 85.75,
     popularity: 5,
-    hasNew: false,
+    hasNew: true,
     category: ['суши-2' , 'presentation'],
     info: {},
     weight: 400,
     info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
     size: 8,
     thumbnail: 'img/item-суши-2.jpg', // replace with image extracted from item layout
     imgFull: 'img/item-big.jpg' // replace with paths to images extracted from item layout
@@ -107,11 +113,12 @@ window.catalog = [{
     discountedPrice: 90,
     price: 120,
     popularity: 6,
-    hasNew: false, //новинка false - нет, true - да
+    hasNew: true, //новинка false - нет, true - да
     category: ['пицца', 'best-sellers'], //категории и подкатегории
     info: {},
     weight: 400,
-    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'}, // вес сэта
+    info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад', // вес сэта
     size: 8, //сколько штук в сэте
     thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/item-big-pizza.jpg' // replace with paths to images extracted from item layout
@@ -124,11 +131,12 @@ window.catalog = [{
     discountedPrice: 85.75,
     price: 85.75,
     popularity: 7,
-    hasNew: false,
+    hasNew: true,
     category: ['пицца'],
     info: {},
     weight: 400,
     info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
     size: 8,
     thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/item-big-pizza.jpg' // replace with paths to images extracted from item layout
@@ -146,6 +154,7 @@ window.catalog = [{
     info: {},
     weight: 400,
     info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
     size: 8,
     thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/item-big-pizza.jpg' // replace with paths to images extracted from item layout
@@ -163,6 +172,7 @@ window.catalog = [{
     info: {},
     weight: 400,
     info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
     size: 8,
     thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/item-big-pizza.jpg' // replace with paths to images extracted from item layout
@@ -180,6 +190,7 @@ window.catalog = [{
     info: {},
     weight: 400,
     info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
     size: 8,
     thumbnail: 'img/item-суши-2.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/item-big.jpg' // replace with paths to images extracted from item layout
@@ -197,6 +208,7 @@ window.catalog = [{
     info: {},
     weight: 400,
     info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
     size: 8,
     thumbnail: 'img/item-суши-2.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/item-big.jpg' // replace with paths to images extracted from item layout
@@ -215,6 +227,7 @@ window.catalog = [{
     info: {},
     weight: 400,
     info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
     size: 8,
     thumbnail: 'img/item-напитки.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/item-big-drink.jpg', // replace with paths to images extracted from item layout
@@ -232,6 +245,7 @@ window.catalog = [{
     info: {},
     weight: 400,
     info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
     size: 8,
     thumbnail: 'img/item-напитки.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/item-big-drink.jpg' // replace with paths to images extracted from item layout
@@ -249,6 +263,7 @@ window.catalog = [{
     info: {},
     weight: 400,
     info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
     size: 8,
     thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/item-big-pizza.jpg', // replace with paths to images extracted from item layout
@@ -267,6 +282,7 @@ window.catalog = [{
     info: {},
     weight: 400,
     info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
     size: 8,
     thumbnail: 'img/item-суши-2.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/item-big.jpg',
@@ -284,6 +300,7 @@ window.catalog = [{
     info: {},
     weight: 400,
     info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
     size: 8,
     thumbnail: 'img/item-напитки.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/item-big-drink.jpg',
@@ -301,6 +318,7 @@ window.catalog = [{
     info: {},
     weight: 400,
     info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
     size: 8,
     thumbnail: 'img/item-суши-2.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/item-big.jpg',
@@ -319,6 +337,7 @@ window.catalog = [{
     info: {},
     weight: 400,
     info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
     size: 8,
     thumbnail: 'img/item-common.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/item-big.jpg',
@@ -336,6 +355,7 @@ window.catalog = [{
     info: {},
     weight: 400,
     info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
     size: 8,
     thumbnail: 'img/item-пицца.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/item-big-pizza.jpg',
@@ -353,6 +373,7 @@ window.catalog = [{
     info: {},
     weight: 400,
     info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
     size: 8,
     thumbnail: 'img/item-суши-2.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/item-big.jpg',
@@ -371,6 +392,7 @@ window.catalog = [{
     info: {},
     weight: 400,
     info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
     size: 8,
     thumbnail: 'img/item-common.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/item-big.jpg',
@@ -388,6 +410,7 @@ window.catalog = [{
     info: {},
     weight: 400,
     info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
     size: 8,
     thumbnail: 'img/item-common.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/item-big.jpg' // replace with paths to images extracted from item layout
@@ -405,6 +428,7 @@ window.catalog = [{
     info: {},
     weight: 400,
     info: {'калорий':'320','калорий':'320','гр. рыбы':'320','гр. риса':'320', 'процент':'50%', 'гр. майонеза': '10'},
+    ingredients: 'Копченый угорь, икра корюшки и огурец, обернутые в слайсы из авокад',
     size: 8,
     thumbnail: 'img/item-common.jpg', // replace with path to image extracted from catalog layout
     imgFull: 'img/item-big.jpg' // replace with paths to images extracted from item layout
