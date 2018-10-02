@@ -136,11 +136,46 @@ function initSlick(){
 	});
 }
 
-/*$('.slick-slider').on('afterChange', function(){
-    setTimeout(function(){
-        $('')
-    }, 1000)
-})*/
+
+function initItemInfoOnStart(){
+    //alert($('.slick-current').attr('id'));
+    $('.slick-slider').on('afterChange', function(){
+        var id = $('.slick-current').attr('id');
+        var infoHTML = '<li class="col">'+ window.catalog[id].title +'</li>\n'; 
+        var itemInfo = window.catalog[id].info;
+    
+        var counter = 0;
+        for (var key in itemInfo) { 
+            var arrInfo = itemInfo[key].split(' ');
+            var resultOfsecond = arrInfo[1] ? arrInfo[1]:'';
+            infoHTML += '<li class="col"><b>'+ arrInfo[0] +'</b>'+ resultOfsecond +'<span>'+ key +'</span></li>\n'
+            counter++;
+            //alert(arrInfo);
+        }
+
+        $('.item-info').html(infoHTML);
+    })
+    
+
+    //temprorary code
+    function setFirst(){ 
+        var id = 0;
+        var infoHTML = '<li class="col">'+ window.catalog[id].title +'</li>\n'; 
+        var itemInfo = window.catalog[id].info;
+    
+        var counter = 0;
+        for (var key in itemInfo) { 
+            var arrInfo = itemInfo[key].split(' ');
+            var resultOfsecond = arrInfo[1] ? arrInfo[1]:'';
+            infoHTML += '<li class="col"><b>'+ arrInfo[0] +'</b>'+ resultOfsecond +'<span>'+ key +'</span></li>\n'
+            counter++;
+            //alert(arrInfo);
+        }  
+        $('.item-info').html(infoHTML);
+    }
+    setTimeout(setFirst(),100);
+}
+initItemInfoOnStart();
 
 // lightbox init
 function initFancybox() {

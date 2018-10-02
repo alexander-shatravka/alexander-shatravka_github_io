@@ -74,8 +74,7 @@ function setItemsHTMLPresentation(displayCatalog, category, container, quantity,
                     '</a>\n'+
                 '</a>\n' +
             '</div>'
-
-            
+   
         }
         container.innerHTML = outputHTML;
     }
