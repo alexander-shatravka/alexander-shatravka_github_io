@@ -735,7 +735,8 @@ header {
     left: 0; }
     @media (max-width: 767px) {
       .intro-section .route-map {
-        background: #d8d8d8; } }
+        background: #d8d8d8;
+        top: -60px; } }
 
 #order {
   min-height: 400px;
