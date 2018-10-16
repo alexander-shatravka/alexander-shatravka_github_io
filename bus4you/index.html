@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Bus4you</title>
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="img/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="img/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="img/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="img/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="&nbsp;"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="img/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="img/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="img/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="img/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="img/mstile-310x310.png" />
+</head>
+<body>
+<div id="wrapper">
+	<!-- <div id="preloader">
+		<div class="preloader-logo">
+			
+		</div>
+	</div> -->
+	<header>
+		<div class="pre-header">
+			<div class="container-wide">
+				<ul class="phones">
+					<li><i class="flag ico-ua"></i><a href="tel:+38 (066) 362 05 06">+38 (066) 362 05 06</a></li>
+					<li><a href="tel:+38 (073) 127 28 48">+38 (073) 127 28 48</a></li>
+					<li><a href="tel:+38 (068) 913 15 18">+38 (068) 913 15 18</a></li>
+					<li><i class="flag ico-ru"></i><a href="tel:+79 (977) 891 33 71">+79 (977) 891 33 71</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="header">
+			<div class="container-wide">
+				<a href = "index.html" id="logo">Bus<strong>For</strong>You</a>
+				<div class="button-block">
+					<a href="" class="viber"><i class="ico-viber"></i><span>viber бот</span></a>
+					<a href="" class="phone"><i class="ico-ring"></i><span>заказать звонок</span></a>
+				</div>
+				<ul class="main-nav">
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="index.html">О сервисе</a></li>
+					<li><a href="index.html">Услуги</a></li>
+					<li><a href="index.html">Отзывы</a></li>
+					<li><a href="index.html">Блог</a></li>
+					<li><a href="index.html">Контакты</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<section class="intro-section">
+		<div class= "route-map"></div>
+		<div class="container-wide">
+			<form id="order">
+				<div class="row">
+					<label for="trip-type">Услуга <span>Тип поездки</span></label>
+					<select name="trip-type" id="trip-type">
+						<option value="Международная" selected>Международная</option>
+						<option value="Внутри страны">Внутри страны</option>
+					</select>
+				</div>
+				<div class="row">
+					<label for="destination-from">Откуда?</label>
+					<select name="destination-from" id="destination-from">
+						<option value="Харьков" selected>Харьков</option>
+						<option value="Москва">Москва</option>
+					</select>
+				</div>
+				<div class="row">
+					<label for="destination-to">Куда?</label>
+					<select name="destination-to" id="destination-to">
+						<option value="Харьков" selected>Харьков</option>
+						<option value="Москва">Москва</option>
+					</select>
+				</div>
+				<div class="row">
+					<label for="date">Когда?</label>
+					<input type="text" id="date" name="date" placeholder="дд.мм.гг">
+				</div>
+				<div class="row">
+					<label for="time">Время</label>
+					<select name="time" id="time">
+						<option value="18:00" selected>18:00</option>
+						<option value="12:00">12:00</option>
+					</select>
+				</div>
+				<div class="row">
+					<label for="destination-from">Количество человек</label>
+					<input type="number" name="tickets-number" id="tickets-number" value="1">
+				</div>
+				<div class="total-row">
+					<div class="row">
+						<label for="destination-from">Стоимость поездки</label>
+						<input type="text" name="total" id="total" value="0"><span class="grn">грн</span>
+					</div>
+					<a href = "#"class="btn-blue">Заказать билеты</a>
+				</div>
+				<div class="button-block desktop-hidden">
+					<a href="" class="viber"><i class="ico-viber"></i><span>viber бот</span></a>
+					<a href="" class="phone"><i class="ico-ring"></i><span>заказать звонок</span></a>
+				</div>
+			</form>
+		</div>
+	</section>
+</div>
+
+<script src="js/libs.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/data-trips.js"></script>
+<script src="js/common.js"></script>
+<script src="js/ajax.js"></script>
+
+</body>
+</html>
