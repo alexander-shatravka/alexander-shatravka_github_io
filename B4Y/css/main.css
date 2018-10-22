@@ -1032,6 +1032,7 @@ header {
       border: 0;
       outline: 0;
       font-size: 30px;
+      line-height: 1.0;
       font-weight: bold;
       float: right;
       text-align: right;
