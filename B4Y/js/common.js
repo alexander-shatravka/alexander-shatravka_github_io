@@ -1,5 +1,7 @@
 $(document).ready(function(){
     initDatepicker();
+    initMobileMenu();
+    initSlickSliders();
 })
 
 
@@ -17,4 +19,32 @@ function initDatepicker() {
     });
 
     jQuery('.datepicker').val(today);
+}
+
+function initMobileMenu(){
+    $('.hamburger').on('click', function(){
+        $(this).toggleClass('is-active'); 
+        $('.header-container').toggleClass('is-open');       
+    });
+}
+
+function initSlickSliders(){
+    if($(window).width() < 768){
+        $('.mobile-slider').slick({
+            autoplay: false,
+            vertical: false,
+            speed	: 1000,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true,
+            arrows: true,
+            draggable: true,
+            pauseOnFocus: false,
+            pauseOnHover: false,
+            pauseOnClick: false,
+            prevArrow: $('.slick-prev'),
+            nextArrow: $('.slick-next'),
+        })
+    }
 }
