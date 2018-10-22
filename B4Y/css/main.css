@@ -1021,6 +1021,12 @@ header {
     padding-top: 20px;
     border-top: 1px solid #333333;
     margin-top: 20px; }
+    #order .total-row .row {
+      -webkit-box-align: baseline;
+      -webkit-align-items: baseline;
+          -ms-flex-align: baseline;
+              align-items: baseline;
+      overflow: visible; }
     #order .total-row #total {
       width: 80px;
       border: 0;
