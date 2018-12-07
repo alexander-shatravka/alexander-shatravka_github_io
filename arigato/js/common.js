@@ -1,14 +1,11 @@
-function initPreloader() {
-	$(window).load(function() {
-		setTimeout(function() {
-			$('#preloader').fadeOut('slow', function() {});
-		}, 1000);
-	});
-} 
-
-initPreloader();
+// function initPreloader() {
+//     setTimeout(function() {
+//         $('#preloader').fadeOut('slow', function() {});
+//     }, 3000);
+// } 
 
 $(document).ready(function(){
+    //initPreloader();
     initSlick();
     initBurgerMenu();
     //initSlickAutoplay();
@@ -29,8 +26,11 @@ $(document).ready(function(){
     initFormButtonToggler();
     initEnablePickers();
     destinationPicker();
+    changeCursorPosition();
+    initAnimateHeading();
+   // registerValidationRules();
     //initCustomScrollBar();    
-});
+}); 
 
 function initJcf(){
     jcf.replaceAll();
@@ -116,7 +116,6 @@ function initSlickAutoplay(){
     
 }
 
-
 function initSlick(){
 	$('.slick-slider').slick({
         autoplay: true,
@@ -127,7 +126,8 @@ function initSlick(){
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: false,
-		arrows: true,
+        arrows: true,
+        draggable: true,
 		pauseOnFocus: false,
 		pauseOnHover: false,
         pauseOnClick: false,
@@ -141,7 +141,13 @@ function initItemInfoOnStart(){
     //alert($('.slick-current').attr('id'));
     $('.slick-slider').on('afterChange', function(){
         var id = $('.slick-current').attr('id');
-        var infoHTML = '<li class="col">'+ window.catalog[id].title +'</li>\n'; 
+        var infoHTML = '';
+        $('.intro-heading h1').html(window.catalog[id].title);
+        var ingridientsList = window.catalog[id].ingredients.split(':')[1];
+        $('.intro-heading h3').html(ingridientsList);
+        var itemInfo = window.catalog[id].info;
+        $('.intro-heading .weight').html(window.catalog[id].weight+' грамм');
+        $('.intro-heading .price').html(window.catalog[id].discountedPrice+' гривен');
         var itemInfo = window.catalog[id].info;
     
         var counter = 0;
@@ -160,7 +166,12 @@ function initItemInfoOnStart(){
     //temprorary code
     function setFirst(){ 
         var id = 0;
-        var infoHTML = '<li class="col">'+ window.catalog[id].title +'</li>\n'; 
+        var infoHTML = '';
+        $('.intro-heading h1').html(window.catalog[id].title);
+        var ingridientsList = window.catalog[id].ingredients.split(':')[1];
+        $('.intro-heading h3').html(ingridientsList);
+        $('.intro-heading .weight').html('<b>'+ window.catalog[id].weight +'</b> грамм');
+        $('.intro-heading .price').html('<b>'+ window.catalog[id].discountedPrice +'</b> гривен');
         var itemInfo = window.catalog[id].info;
     
         var counter = 0;
@@ -176,6 +187,18 @@ function initItemInfoOnStart(){
     setTimeout(setFirst(),100);
 }
 initItemInfoOnStart();
+
+function initAnimateHeading(){
+    var heading = $('.intro-heading');
+    $('.slick-slider').on('afterChange', function(){
+        heading.addClass('show'); 
+    })
+    $('.slick-slider').on('beforeChange', function(){
+        heading.removeClass('show');
+        heading.addClass('show-after');
+        setTimeout((function(){heading.removeClass('show-after')}),500);
+    })
+}
 
 // lightbox init
 function initFancybox() {
@@ -266,23 +289,36 @@ function initItemCounter(){
             quantity.text(quantityValue + 1);
             quantityValue ++;
             initUpdateItemMenu($(this));
+            setInputToolsQuantity();
+            initTotalPrice();
         }
         if($(this).hasClass('minus') && ($(this).hasClass('disabled')) === false){
             quantity.text(quantityValue - 1);
             quantityValue --;
             initUpdateItemMenu($(this));
+            setInputToolsQuantity();
+            initTotalPrice();
         }
-        if(quantityValue === 1){
+        if(quantityValue === 0){
             $(this).parents('.counter').find('.minus').addClass('disabled');
         }
         else{
             $(this).parents('.counter').find('.minus').removeClass('disabled');
         }
-
+        
         function initUpdateItemMenu(parent) {
             //$('.size').text((sizeOfSet * quantityValue) + ' шт');
             //$('.weight').text((weightOfSet * quantityValue) + ' гр'); 
            parent.parents('.item-menu').find('.current-price b').text((priceOfSet * quantityValue)); 
+        }
+
+        function setInputToolsQuantity() {
+            var toolsQuantity = $('.tools-quantity .quantity').text();
+            $('#tools-quantity').val(toolsQuantity); 
+            var sauseQuantity = $('.sause-quantity .quantity').text();
+            $('#sause-quantity').val(sauseQuantity); 
+            var vasabiQuantity = $('.vasabi-quantity .quantity').text();
+            $('#vasabi-quantity').val(vasabiQuantity); 
         }
     })
 }
@@ -306,7 +342,8 @@ function initCartOpener(){
     });
 
     $('.btn-cart').on('click', function(e){
-        $('.cart-container').toggleClass('open');
+        setTimeout((function(){$('.cart-container').addClass('open')}),500);
+        setTimeout((function(){$('.cart-container').removeClass('open')}),1500);
     })
 }
 
@@ -314,6 +351,7 @@ function initEnableFormOrder(){
     $('.btn-open-form').on('click', function(){
         $('.form-block').addClass('enable');
         initOrderButton();
+        setInputCartHTML();
     })
     $('.form-closer').on('click', function(){
         $('.form-block').removeClass('enable');
@@ -321,20 +359,32 @@ function initEnableFormOrder(){
     })
 }
 
+function setInputCartHTML(){
+    var cartText = $('.cart-items-container').text();
+    var cartItems = cartText.split('грн').join('грн <br>');
+    var cartOutput = cartItems + '<br>' + $('.order-block .total-row').text();
+    
+    var cartOutputForTelegram = cartText.split('грн').join('грн\n');
+
+    $('#cart-content').val(cartOutput);
+    $('#cart-content-for-telegram').val(cartOutputForTelegram);
+}
+
+
 function initEnablePickers(){
     $('input[name="pickup-destination"]').on('click', function(e){
         //alert($(this).attr('id'));
         e.preventDefault();
         $('.destination-picker').addClass('show');
     })
-    $('input[name="date"]').on('click', function(e){
+    /*$('input[name="date"]').on('click', function(e){
         e.preventDefault();
         $('.date-picker').addClass('show');
     })
     $('input[name="time"]').on('click', function(e){
         e.preventDefault();
         $('.time-picker').addClass('show');
-    })
+    })*/
 
     $('.picker-closer').on('click', function(e){
         $(this).parents('.picker').removeClass('show');
@@ -375,13 +425,14 @@ function initFormActiveFields(button){
 
 function initOrderButton(){
     var formOpenerButtonHTML = '<a class="button btn-red btn-open-form">Заказать</a>';
-    var orderButtonHTML = '<a class="button btn-red" id="submit">Оформить Заказ</a>';
+    var orderButtonHTML = '<a class="button btn-red" id="submit" type="submit" form="order" value="подтвердить заказ">подтвердить заказ</a>';
 
     if($('.form-block').hasClass('enable')){
         $('.cart-button-block').html(orderButtonHTML);
     }
     else $('.cart-button-block').html(formOpenerButtonHTML);
     initEnableFormOrder();
+    ajaxSendForm();
 }
 
 function destinationPicker(){
@@ -395,6 +446,7 @@ function destinationPicker(){
         if($(this).hasClass('disabled') === false){
             $('input[name="pickup-destination"]').val('');
             $('input[name="pickup-destination"]').val($('.destination-picker  .active').text());
+            $('input[name="address"]').val($('.destination-picker  .active').text());
             //alert($('.destination-picker li .active').text());
             $(this).parents('.picker').removeClass('show');
         }
@@ -419,6 +471,38 @@ function datePicker(){
 }
 
 
+function changeCursorPosition() {
+	jQuery('#phone').click(function(){
+		if (!jQuery(this).val()) {
+			jQuery(this).val('+38')//.caretTo('+38');	
+		}
+	});
+}
+
+// function registerValidationRules() {
+	
+// 	jQuery.validator.addMethod("onlyLetter", function(value, element) {
+// 		return this.optional(element) || /^[а-яА-ЯёЁіІїЇєЄґҐa-zA-Z \-, ]+$/i.test(value);
+// 	});
+// 	jQuery.validator.addMethod("phoneValidate", function(value, element) {
+// 		return this.optional(element) || /^\+38 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}$/i.test(value);
+// 	});
+// 	jQuery.validator.addMethod("dateValidate", function(value, element) {
+// 		return this.optional(element) || value.match(/^(0?[1-9]|[12][0-9]|3[0-1])[/., -](0?[1-9]|1[0-2])[/., -](19|20)?\d{2}$/);
+// 	});
+// }
+
+
+// function initValidation() {
+//     $('#order').validate({
+//         rules: {
+//             email: {
+//                 required: true,
+//                 email: true,
+//             }
+//         }
+//     })
+// }
 
 
 
