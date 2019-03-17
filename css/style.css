@@ -190,21 +190,22 @@ a, a:hover {
     position: relative;
     z-index: 9999;
     overflow: hidden;
+    transition: box-shadow 0.3s;
 }
 
 .work-item img{
     position: absolute;
     top: 0;
     left: 50%;
-    margin-left: -190px;
-    max-height: 240px;
-    width: 380px;
+    transform: translateX(-50%);
+    height: 100%;
+    width: auto;
     z-index: 9999;
     filter: brightness(80%);
+    transition: filter 0.3s;
 }
 .works-container a:hover img{
     filter: brightness(100%);
-
 }
 
 .works-container .work-item:hover a {
@@ -387,6 +388,7 @@ a, a:hover {
 .about h3{
     font-weight: bold;
     font-size: 25px;
+    line-height: 1.2;
 }
 
 .about p{
@@ -472,12 +474,6 @@ a, a:hover {
 
     .work-item a{
         height: 200px;
-    }
-
-    .work-item img {
-        height: 200px;
-        width: 300px;
-        margin-left: -150px;
     }
 
     .work-item .caption {
@@ -608,17 +604,9 @@ a, a:hover {
 
     .work-item a{
         height: 200px;
-
         -webkit-box-shadow: 10px 36px 112px 6px rgba(0,0,0,0.54);
         -moz-box-shadow: 10px 36px 112px 6px rgba(0,0,0,0.54);
         box-shadow: 10px 36px 112px 6px rgba(0,0,0,0.54);
-    }
-
-    .work-item img {
-        max-height: 200px;
-        width: 300px;
-        margin-left: -150px;
-        filter: brightness(100%);
     }
 
     .work-item .caption {

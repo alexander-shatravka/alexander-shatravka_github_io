@@ -9,8 +9,8 @@ function hideS(){
 }
 
 function showS(){
-    sidebar.addClass('show-sidebar');
-    body.addClass('scroll-off');
+    sidebar.toggleClass('show-sidebar');
+    body.toggleClass('scroll-off');
 
     $(document).mouseup(function (e) {
         var container = $(".sidebar");
